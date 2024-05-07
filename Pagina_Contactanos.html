@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="./grid.css">
+</head>
+<body>
+    <div class="Navegador">
+        <nav>
+            <img href="#Tienda" src="ruta-de-tu-imagen.jpg" alt="Logo">
+            <a href="#Tienda">Tienda</a>
+            <a href="#PawAmigo">Conoce a tu PawAmigo</a>
+            <a href="#Nosotras">Nosotras</a>
+            <a href="#Contacto">Contacto</a>
+            <img href="#Busqueda" src="ruta-de-tu-imagen.jpg" alt="Lupa">
+            <img href="#Carrito" src="ruta-de-tu-imagen.jpg" alt="Carrito">
+            <img href="#Usuario" src="ruta-de-tu-imagen.jpg" alt="Usuario">
+
+
+        </nav>
+    </div>
+
+    <h1>Contáctanos</h1>
+
+
+    <div class="container grid-container">
+
+        <div class="grid-item item" id="izquierda">Imagen</div>
+
+        <div class="grid-item item" id="Contactanos">
+            <form action="#" method="post">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Nombre Completo">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Correo Electronico">
+                <label for="telefono">Numero telefonico:</label>
+                <input type="lada" placeholder="(+52)" readonly>
+                <input type="telefono" id="telefono" name="telefono" required placeholder="XXX XXX XXXX">
+                <label for="mensaje">Comentario:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Mensaje"></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+
+            <div class="paraIngresar">
+                <label for="pregunta">¿Ya tienes una cuenta?    |</label>
+                <a href="#Tienda">Ingresa</a>
+            </div>
+
+        </div>
+
+        <div class="grid-item item" id="derecha">Imagen</div>
+
+    </div>
+    
+</body>
+</html>
+
+
+
+
+<!--
+    .grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Divide la página en tres partes iguales */
+    grid-gap: 0; /* Elimina cualquier espacio entre las áreas */
+
+}
+-->
+
