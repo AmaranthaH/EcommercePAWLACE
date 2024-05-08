@@ -4,45 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
-    <link rel="stylesheet" href="./grid.css">
+   <link rel="stylesheet" href="../nav1/style.css"> 
+    <link rel="stylesheet" href="./Pagina_Contactanos.css">
+  <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script><!--Enlace de una pagina llamada FontAwesome, de iconos libres, es para poder tener nuestro menu de 3 lineas en un celular--> 
+    <script src="../nav1/index.js" defer async></script>  <!--Poner siempre debajo de fontawesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jacquard+24&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="Navegador">
-        <nav>
-            <img href="#Tienda" src="ruta-de-tu-imagen.jpg" alt="Logo">
-            <a href="#Tienda">Tienda</a>
-            <a href="#PawAmigo">Conoce a tu PawAmigo</a>
-            <a href="#Nosotras">Nosotras</a>
-            <a href="#Contacto">Contacto</a>
-            <img href="#Busqueda" src="ruta-de-tu-imagen.jpg" alt="Lupa">
-            <img href="#Carrito" src="ruta-de-tu-imagen.jpg" alt="Carrito">
-            <img href="#Usuario" src="ruta-de-tu-imagen.jpg" alt="Usuario">
+   <header class = "header">
+    <nav class = "nav">
+            <img src ="../nav1/Imagenes-nav/PAWLACE LOGO.1-Photoroom.png-Photoroom.png" class= "logo"
+            alt="PAWLACE">
 
+            <button class = "nav-toggle"> <!--Para mis barritas de mi celular-->
+               <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class = "nav-menu">
+
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Tienda</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Nosotras</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Contacto</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Buscar</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Carrito</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Perfil</a></li>
+
+            </ul>
 
         </nav>
-    </div>
 
-    <h1>Contáctanos</h1>
-
-
+    </header> 
+    
+       
+    
     <div class="container grid-container">
 
         <div class="grid-item item" id="izquierdaContactanos">Imagen</div>
 
         <div class="grid-item item" id="centroContactanos">
             <form action="#" method="post">
-                <label for="contactoNombre">Nombre completo:</label>
+                <h2>Contáctanos
+                </h2>
+              <p><br></p> 
                 <input type="text" id="contactoNombre" name="contactoNombre" required placeholder="Nombre Completo">
-                <label for="contactoEmail">Correo electrónico:</label>
+                <p><br>
+                </p>
+
                 <input type="email" id="contactoEmail" name="contactoEmail" required placeholder="Correo Electronico">
-                <label for="contactoTelefono">Numero telefonico:</label>
+                 <p><br>
+                </p>
                 <input type="lada" placeholder="(+52)" readonly>
+
                 <input type="telefono" id="contactoTelefono" name="contactoTelefono" required placeholder="XXX XXX XXXX">
-                <label for="contactoMensaje">Comentario:</label>
-                <textarea id="contactoMensaje" name="contactoMensaje" rows="5" placeholder="Mensaje"></textarea>
+                
+                <p><br>
+                </p>
+                <textarea id="contactoMensaje" name="contactoMensaje" rows="5" placeholder="Comentarios"></textarea>
+                <p><br>
+                </p>
                 <input type="submit" value="Enviar">
             </form>
-
+<br>
             <div class="paraIngresar">
                 <label for="pregunta">¿Ya tienes una cuenta?    |</label>
                 <a href="#Tienda">Ingresa</a>
@@ -50,7 +75,7 @@
 
         </div>
 
-        <div class="grid-item item" id="derechaContactanos">Imagen</div>
+        <div class="grid-item item" id="derechaContactanos">Imagen</div> 
 
     </div>
     
