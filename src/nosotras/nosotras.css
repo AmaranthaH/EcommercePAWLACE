@@ -1,4 +1,15 @@
 .card{
     background-color: var(--navbar);
-    size: 16px;
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+}
+
+.h-100{
+    width: 400px;
+    
+}
+
+
+.mb-5 {
+    height: 50px;
 }
