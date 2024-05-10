@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+ <link rel="stylesheet" href="./nav1/style.css"> 
+ <link rel="stylesheet" href="./pagina_contactanos.css">
+     
+   <script src="./nav1/index.js" defer async></script><!--Poner siempre debajo de fontawesome --> 
+    <script src="./pagina_contactanos.js" defer async></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jacquard+24&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+   <header class = "header">
+    <nav class = "nav">
+            <img src ="./nav1/Imagenes-nav/PAWLACE LOGO.1-Photoroom.png-Photoroom.png" class= "logo"
+            alt="PAWLACE">
+
+            <button class = "nav-toggle"> <!--Para mis barritas de mi celular-->
+               <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class = "nav-menu">
+
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Tienda</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Nosotras</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Contacto</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Buscar</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Carrito</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Perfil</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header> 
+    
+       
+    
+    <div class="container grid-container">
+
+        <div class="grid-item item" id="izquierdaContactanos"></div>
+
+        <div class="grid-item item" id="centroContactanos">
+            <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formContactanos" > 
+                <h2>Contáctanos
+                </h2>
+              <p><br></p> 
+                <input type="text" 
+                class="informacion" id="contactoNombre" name="contactoNombre" required placeholder="Nombre Completo">
+                <p><br>
+                </p>
+
+                <input type="email" id="contactoEmail" class="informacion" name="contactoEmail" required placeholder="Correo Electronico">
+                 <p><br>
+                </p>
+
+            <div class="input-wrapper">
+                <input type="lada" 
+                class="informacion" 
+                id="lada" name="lada" required placeholder="(+52)">
+
+                <input type="telefono" 
+                id="contactoTelefono" class="informacion"
+                name="contactoTelefono"
+                required placeholder="XXX XXX XXXX">
+            </div>
+                
+                <p><br>
+                </p>
+                <textarea id="contactoMensaje" class="informacion" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
+                <p><br>
+                    <br>
+                </p>
+                <div class="Bottom-enviar">
+                <input class="Bottom" type="submit" value="Enviar">
+            </div>
+            </form>
+<br>
+<br>
+            <div class="paraIngresar">
+                <label for="pregunta">¿Ya tienes una cuenta?    |</label>
+                <a href="#Tienda">Ingresa</a>
+            </div>
+
+        </div>
+
+    
+        <div class="grid-item item" id="derechaContactanos"></div>
+        
+
+    </div>
+    
+</body>
+</html>
+
+
+
+
+<!--
+    .grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Divide la página en tres partes iguales */
+    grid-gap: 0; /* Elimina cualquier espacio entre las áreas */
+
+}
+-->

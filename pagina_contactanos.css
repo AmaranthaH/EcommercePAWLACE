@@ -1,58 +1,66 @@
-.grid-container{
+.grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Divide la página en tres partes iguales */
-    margin-top: -20px; /*Pagar al header la imagen*/
-    margin-left: -20px; /* Pegar al Margen de laizquierda */
-    margin-right: -20px; /* Pegar al Margen de la derecha */
-}
-#centroContactanos{
-    padding: 20px; /* Agrega un relleno interno para compensar los márgenes negativos */
-
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
-form {
+#centroContactanos {
+    padding: 20px;
+}
+
+#izquierdaContactanos, #derechaContactanos {
+    position: relative;
+}
+
+#izquierdaContactanos::before, #derechaContactanos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#izquierdaContactanos::before {
+    background-image: url('./imagenes_pagina_contactanos/Perrito-izquierdo.jpg');
+}
+
+#derechaContactanos::before {
+    background-image: url('./imagenes_pagina_contactanos/Perrito-derecho.jpg');
+}
+
+#centroContactanos form {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.Bottom{
-    text-align: center; /* Centrar boton horizontalmente */
+
+.Bottom {
+    text-align: center;
 }
 
-#lada{
-width: 4.2em;
-background-color:var(--fondo)
+#lada {
+    width: 4.2em;
+    background-color: var(--fondo);
 }
-#contactoTelefono{
-    width: 28em;
+
+#contactoTelefono {
+    width: 21em;
 }
 
 .input-wrapper, .paraIngresar {
-    white-space: nowrap; /* Para asegurarse de que los elementos se mantengan en una línea */
+    white-space: nowrap;
     text-align: center;
-  }
-  
-  .input-wrapper, .paraIngresar input {
-    display: inline-block; /* Para colocar los elementos en línea */
-    margin-right: 10px; /* Espacio entre los inputs, ajusta según sea necesario */
-  }
+}
 
-  #izquierdaContactanos{
-    margin-right: auto; /* Esto desplaza la imagen hacia la izquierda */
-
-    }
-#derechaContactanos{
-    margin-left: auto;
-        }
-    
-    .imagen-contactanos{
-        width: 22em;  /*Ancho del contenedor */
-        height: 35em;  /*Alto del contenedor */
-        /*object-fit: cover;  La imagen se ajusta para cubrir todo el contenedor */
-    }
-    
+.input-wrapper, .paraIngresar input {
+    display: inline-block;
+    margin-right: 10px;
+}
 
   
