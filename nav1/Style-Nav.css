@@ -1,69 +1,16 @@
-/*Colores*/
-:root{
-    --fondo:#FFF7F0;
-    --naranja:#FAC172;
-    --botones: #D95043;
-    --navbar: #89D5C9;
-    --nosotras: #AEC965;
-    --negro:#000000;
-    --cusorNav:#6dada38b;
-
-}
-/*Tamaño de los titulos*/
-h1 {
-    font-size: 2.5em;
-    color: var(--negro);
-}
-h2{
-    font-size:1.8em;
-    color: var(--botones);
-}
-h3{
-    font-size:0.875em ;
-}
-h1,h2,h3{
-    font-family: "Oswald", sans-serif;
-}
-
-body{
-    background-color:var(--fondo);
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    padding: 90px 20px 0; /* nuesto menú estaría siempre flotando sin que intervenga con mi contenido */
-}
-
-/*Boton*/
-.Bottom{
-    background-color:var(--botones);
-    color:var(--fondo);
-    border-radius: 10px;
-    padding: 8px; 
-    width: 10em;
-    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
-
-}
-.Bottom:hover{
-    background-color:var(--navbar); 
-    color:var(--negro);
-    
-}
-/*Inputs (agregar ingormacion)*/
-.informacion{
-    text-align: center;
-    border-color: var(--negro);
-    border-radius: 8px;
-    padding: 12px; 
-    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
-}
-
-/* Estilos globales  Navbar*/
+/* Estilos globales */
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: sans-serif;
+    padding: 90px 20px 0; /* nuesto menú estaría siempre flotando sin que intervenga con mi contenido */
+}
+
 .header {
-    background-color: var(--navbar); /* Color de mi barra de navegacion */
+    background-color: #89D5C9; /* Color de mi barra de navegacion */
     height: 80px;
     position: fixed; /* Para que la barra quede fija */
     width: 100%;
@@ -83,14 +30,31 @@ body{
 
 .nav-link {
     /* Para quitar la linea del enlace y se vean commo yo los quiero */
-    color: var(--negro); /* Color de mi letra */
+    color: black; /* Color de mi letra */
     text-decoration: none;
 }
 
 .logo {
-    width: 4.0em; /* Define el ancho de la imagen */
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 20px; /* Arriba y abajo 0px. Izquierda y derecha 20px */
+    line-height: 80px; /* Para que quede centrado. 80px que es el alto de mi barra de navegación*/
+    
+}
+
+.logo img {
+   /* max-width: 90px; /* Establece un ancho máximo para la imagen */
+  /*  height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
+  /*  margin: 0 10px; /* Agrega espacio alrededor de la imagen */
+  /*  padding: 0 12px; /* Arriba y abajo 0px. Izquierda y derecha 20px */
+  /*  line-height: 80px; /* Para que quede centrado. 80px que es el alto de mi barra de navegación*/
+  /*  vertical-align: left; /*Alinea verticalmente el logo */
+   /* position: fixed; /* checar a que se fija la imagen, si a la página o a la bara */
+    width: 2em; /* Define el ancho de la imagen */
     height:auto ; /* Mantiene la proporción original de la imagen */
 }
+
+
 
 .nav-menu {
     display: flex; /* para que los elementos queden de manera horizontal */
@@ -99,7 +63,7 @@ body{
 }
 
 .nav-menu-item {
-    font-size: 1em;
+    font-size: 18px;
     margin: 0 10px; /* Arriba y abajo 0px. Izquierda y derecha 20px */
     line-height: 80px; /* Para centrarlo (como lo hicimos en el logo. 80px que es el alto de mi barra de navegación */
     width: max-content; /* Para que cuando tengo más de una palabra no me corte o me lleve a otro lado mi contenido */
@@ -111,21 +75,76 @@ body{
 }
 
 .nav-menu-link:hover { /* Para que cuando le pase el cursor por arriba me ponga un sombreado */
-    background-color: var(--cusorNav);
+    background-color: #6dada38b;
     transition: 0.3s;
 }
 
 .nav-toggle {
-    color:var(--fondo);
+    color: aliceblue;
     background: none;
     border: none;
     font-size: 30px;
     padding: 0 20px;
     line-height: 60px;
     cursor: pointer;
+  
 
     display: none; /* Porque no queremos que se vea en computadora */
 }
+
+
+.nav-toggle-search{
+    color: #000000;
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 0 20px; /* para la distancia entre cada uno*/
+    line-height: 32px;
+    cursor: pointer;
+  
+}
+
+.nav-toggle-search:hover {
+    background-color: #6dada38b;
+    transition: 0.3s;
+}
+    
+
+
+.nav-toggle-cart {
+    color: #000000;
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 0 20px;
+    line-height: 32px;
+    cursor: pointer;
+   
+   
+
+   
+} 
+
+.nav-toggle-cart:hover {
+    background-color: #6dada38b;
+    transition: 0.3s;
+}
+.nav-toggle-user {
+    color: #000000;
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 0 20px;
+    line-height: 32px;
+    cursor: pointer;
+   
+}
+.nav-toggle-user:hover {
+    background-color: #6dada38b;
+    transition: 0.3s;
+}
+
+
 
 /* Para que se vea el diseño en celular */
 @media (max-width: 768px) { /*cuando mi dispositivo tenga menos de 768px se le van a aplicar estos estilos*/
@@ -139,15 +158,18 @@ body{
     }
     
     .logo {
-            width: 3.0em; /* Define el ancho de la imagen */
-            height:auto ; /* Mantiene la proporción original de la imagen */
+        font-size: 25px;
+        padding: 0 10px; /* Arriba y abajo 0px. Izquierda y derecha 20px */
+        line-height: 60px; /* Para que quede centrado. 80px que es el alto de mi barra de navegación*/
+        align-items: center; 
     }
+   
     
     .nav-menu {
         flex-direction: column; /*Para que los elementos queden de manera vertical porque es en celular*/
         align-items: center;
         margin: 0px;/* para que queden separados de la derecha 30px */
-        background-color: var(--navbar);
+        background-color: #89D5C9;
         position: fixed;
         left: 0;
         top: 60px;
@@ -168,7 +190,7 @@ body{
     
     .nav-menu-link:hover { 
         background: none; /*Aqui no quiero que se ponga la sombra en forma de cuandrado, sino en mi texto */
-        color: var(--fondo);
+        color: #ffffff;
     }
 
     .nav-toggle { /*Para que se vean mis barras*/
