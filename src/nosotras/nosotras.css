@@ -1,15 +1,67 @@
-.card{
+.card-container-prueba {
+    perspective: 1000px;
+    /* Efecto de perspectiva para el volteo */
+    margin: 50px auto;
+    background-color: var(--fondo);
+}
+
+.card {
     background-color: var(--navbar);
-    --bs-card-spacer-y: 1rem;
-    --bs-card-spacer-x: 1rem;
 }
 
-.h-100{
-    width: 400px;
-    
+.card-prueba {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    /* Preservar el efecto de transformación */
+    transition: transform 0.5s ease;
+    /* Transición suave al voltear */
+    border-color: var(--navbar);
 }
 
+.card-front-prueba,
+.card-back-prueba {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    /* Ocultar el reverso de la tarjeta al inicio */
+}
 
-.mb-5 {
-    height: 50px;
+.card-front-prueba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back-prueba {
+    transform: rotateY(180deg);
+    /* Voltear la tarjeta hacia atrás */
+    padding: 20px;
+    color: #333;
+}
+
+/* Estilo para el botón dentro de la tarjeta */
+.card-prueba button {
+    margin-top: 10px;
+}
+
+/* Clase para voltear la tarjeta */
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.linkedin {
+    background-color:white;
+    border-color: var(--navbar);
+    margin:auto;
+    border-radius: 25px;
+}
+
+.btn-reversa {
+    background-color:var(--botones);
+    color: white;
+    margin:auto;
+    border-radius: 25px;
 }

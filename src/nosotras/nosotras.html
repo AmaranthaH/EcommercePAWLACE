@@ -21,7 +21,7 @@
     <!--NavBar-->
     <!--Carrusel-->
     <nav class="header nav">
-        <a class="logo" href="/EcommercePAWLACE/">
+        <a class="logo" href="/">
             <img src="../assets/PAWLACE LOGO.png" class="logo" alt="PAWLACE">
         </a>
 
@@ -90,23 +90,31 @@
         </button>
     </div>
 
-    <!------INICIO DE LOS CARDS DE PRESENTACION-->
+
+
+
+
+
+
+
+
     <!--QUIÉNES SOMOS [TÍTULO]-->
     <div class="container py-5">
         <h1 class="text-center">Quiénes somos</h1>
 
-        <!-- Inician CARDS -->
-        <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+        <!--Inician CARDS-->
+        <div class="row row-cols-1 row-cols-md-3 g-4 py-5"> <!--Este código crea una fila que contiene columnas ->
 
-            <!-- CARD 1 -->
+            S <!-CARD 1 -->
             <div class="col">
                 <div class="card h-100">
                     <img src="./assets/PROFILE-BIANCA.jpeg" class="card-img-top" alt="foto de Mariela">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Mariela González</h5>
-                        <p class="card-text">Desarrolladora Full Stack y profesora de inglés. Apasionada por la
-                            educación y la tecnología, fusión de habilidades lingüísticas con conocimientos en
-                            programación. ¡Transformando ideas en código desde la pasión por el aprendizaje!</p>
+                        <p class="card-text">Desarrolladora Full Stack y profesora 
+                            de inglés con un gusto especial por el Frontend. ¡Transformando grandes ideas en 
+                            código desde la pasión por el aprendizaje!
+                        </p>
                     </div>
                     <div class="mb-5 d-flex justify-content-around">
                         <a href="https://github.com/marielabi" target="_blank">
@@ -119,53 +127,84 @@
                 </div>
             </div>
 
-            <!-- CARD 2 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="./assets/PROFILE-CINTHYA.png" class="card-img-top" alt="foto de Cinthya">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Cinthya Gómez</h5>
-                        <p class="card-text">Soy una desarrolladora Java Full Stack Jr. con formación en Matemáticas
-                            Aplicadas y Computación. Combino habilidades técnicas con un enfoque analítico y creativo.
-                        </p>
+            <!--CARD 2-->
+            <div class="col card-container-prueba">
+                <div class="card h-100 w-100 card-prueba card-2">
+                    <div class="card h-100 w-100 card-front-prueba">
+                        <img id="intImg9" class="card-img-top" alt="foto de Cinthya" src="./assets/PROFILE-CINTHYA.png">
+                        <div class="card-body d-flex flex-column">
+                            <h5 id="intNomb9" class="card-title">Cinthya Gómez</h5>
+                            <p id="intDesc9" class="card-text">Soy una desarrolladora Java Full Stack Jr. con formación en Matemáticas Aplicadas y Computación. Combino habilidades técnicas con un enfoque analítico y creativo</p>
+                            <div class="mb-5 d-flex justify-content-around">
+                                <div>
+                                    <a id="intGit9" target="_blank" href="https://github.com/CinthyaAbigailGomezCarreto">
+                                        <img src="./assets/github.svg" alt="GitHub">
+                                    </a>    
+                                </div>
+                                <div class="linkedin">
+                                    <a id="intLkd9" target="_blank" href="https://www.linkedin.com/in/cinthya-abigail-gomez">
+                                        <img src="./assets/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                </div>
+                                <div>
+                                    <button class="btn btn-reversa" onclick="voltearTarjeta(2)">PawAmigo</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-5 d-flex justify-content-around">
-                        <a href="https://github.com/CinthyaAbigailGomezCarreto" target="_blank">
-                            <img src="./assets/github (1).png" alt="GitHub">
-                        </a>
-                        <a href="https://www.linkedin.com/in/cinthya-abigail-gomez" target="_blank">
-                            <img src="./assets/linkedin (3).png" alt="LinkedIn">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- CARD 3 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="./assets/PROFILE-ANDY.png" class="card-img-top" alt="foto de Andy">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Andrea Sánchez </h5>
-                        <p class="card-text">Ingeniera mecatrónica con interés en el área de desarrollo, con gusto por
-                            la literatura, la danza y amante del café. Mi bebé tiene 4 patitas y se llama Chaparringuis.
-                        </p>
-                    </div>
-                    <div class="mb-5 d-flex justify-content-around">
-                        <a href="https://github.com/Andrea-SST " target="_blank">
-                            <img src="./assets/github (1).png" alt="GitHub">
-                        </a>
-                        <a href="https://www.linkedin.com/in/andrea-susana-sanchez-torres-a145a6207/ " target="_blank">
-                            <img src="./assets/linkedin (3).png" alt="LinkedIn">
-                        </a>
+                    <div class="card h-100 w-100 card-back-prueba">
+                        <img id="pawImg9" src="./assets/PAWAMIGO-CINTHYA.jpg" class="card-img-top" alt="PawAmigo de Nancy">
+                        <div class="card-body">
+                            <h5 id="pawNomb9" class="card-title">Pecas</h5>
+                            <p id="pawDesc9" class="card-text">El gato mas guapo</p>
+                            <a class="btn btn-reversa" onclick="voltearTarjeta(2)">Volver</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- CARD 4 -->
+            <!--CARD 3-->
+            <div class="col card-container-prueba">
+                <div class="card h-100 w-100 card-prueba card-3">
+                    <div class="card h-100 w-100 card-front-prueba">
+                        <img id="intImg9" class="card-img-top" alt="foto de Andy" src="./assets/PROFILE-ANDY.png">
+                        <div class="card-body d-flex flex-column">
+                            <h5 id="intNomb9" class="card-title">Andrea Sánchez</h5>
+                            <p id="intDesc9" class="card-text">Ingeniera mecatrónica con interés en el área de desarrollo, con gusto por la literatura, la danza y amante del café. Mi bebé tiene 4 patitas y se llama Chaparringuis.</p>
+                            <div class="mb-5 d-flex justify-content-around">
+                                <div>
+                                    <a id="intGit9" target="_blank" href="https://github.com/Andrea-SST ">
+                                        <img src="./assets/github.svg" alt="GitHub">
+                                    </a>    
+                                </div>
+                                <div class="linkedin">
+                                    <a id="intLkd9" target="_blank" href="https://www.linkedin.com/in/andrea-susana-sanchez-torres-a145a6207/ ">
+                                        <img src="./assets/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                </div>
+                                <div>
+                                    <button class="btn btn-reversa" onclick="voltearTarjeta(3)">PawAmigo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card h-100 w-100 card-back-prueba">
+                        <img id="pawImg9" src="./assets/PAWAMIGO-ANDREA.JPG" class="card-img-top" alt="PawAmigo de Nancy">
+                        <div class="card-body">
+                            <h5 id="pawNomb9" class="card-title">Chaparringuis</h5>
+                            <p id="pawDesc9" class="card-text">Me encanta jugar, correr y comer</p>
+                            <a class="btn btn-reversa" onclick="voltearTarjeta(3)">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--CARD 4-->
             <div class="col">
                 <div class="card h-100">
-                    <img src="./assets/PROFILE-SANDY.png" class="card-img-top" alt="foto de Cinthya">
+                    <img src="./assets/PROFILE-SANDY.png" class="card-img-top" alt="foto de Sandra">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Sandra Cirnes</h5>
+                        <h5 class="card-title">Sandra Hernández</h5>
                         <p class="card-text">Desarrolladora Java Full Stack y Bióloga molecular. Amante de la
                             tecnología, las ciencias, las artes, y claro, de nuestros queridos compañeros peludos. Mi
                             vida está impulsada por la pasión de crear cosas nuevas, y qué mejor manera de hacerlo que a
@@ -179,50 +218,84 @@
                             <img src="./assets/linkedin (3).png" alt="LinkedIn">
                         </a>
                     </div>
-                </div>
-            </div>
-            <!-- CARD 5 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="./assets/PROFILE-XIME.jpeg" class="card-img-top" alt="foto de Ximena">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Sandra Cirnes</h5>
-                        <p class="card-text">Desarrolladora Java Full Stack y Bióloga molecular. Amante de la
-                            tecnología, las ciencias, las artes, y claro, de nuestros queridos compañeros peludos. Mi
-                            vida está impulsada por la pasión de crear cosas nuevas, y qué mejor manera de hacerlo que a
-                            través del código.</p>
-                    </div>
-                    <div class="mb-5 d-flex justify-content-around">
-                        <a href="https://github.com/ximejm" target="_blank">
-                            <img src="./assets/github (1).png" alt="GitHub">
-                        </a>
-                        <a href="https://www.linkedin.com/in/ximena-ju%C3%A1rez-142178a9/" target="_blank">
-                            <img src="./assets/linkedin (3).png" alt="LinkedIn">
-                        </a>
+                    <div class="card h-100 w-100 border-success mb-3" style="max-width: 18rem;">
+
                     </div>
                 </div>
             </div>
-            <!-- CARD 6 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="./assets/PROFILE-AMARANTHA-Photoroom.jpg" class="card-img-top" alt="foto de Amarantha">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Amarantha Hernández</h5>
-                        <p class="card-text">Ingeniera en mecatrónica con pasión por la tecnología, inmersa en el área
-                            de Java Full Stack Jr., demostrando compromiso con el aprendizaje continuo.</p>
+            <!--CARD 5-->
+            <div class="col card-container-prueba">
+                <div class="card h-100 w-100 card-prueba card-5">
+                    <div class="card h-100 w-100 card-front-prueba">
+                        <img id="intImg9" class="card-img-top" alt="foto de Ximena" src="./assets/PROFILE-XIME.jpeg">
+                        <div class="card-body d-flex flex-column">
+                            <h5 id="intNomb9" class="card-title">Ximena Juárez</h5>
+                            <p id="intDesc9" class="card-text">Apasionada por leer y aprender para compartirlo en donde se pueda. Para mi las TI son un puente que conecta y reduce brechas.</p>
+                            <div class="mb-5 d-flex justify-content-around">
+                                <div>
+                                    <a id="intGit9" target="_blank" href="https://github.com/ximejm">
+                                        <img src="./assets/github.svg" alt="GitHub">
+                                    </a>    
+                                </div>
+                                <div class="linkedin">
+                                    <a id="intLkd9" target="_blank" href="https://www.linkedin.com/in/ximena-ju%C3%A1rez-142178a9/">
+                                        <img src="./assets/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                </div>
+                                <div>
+                                    <button class="btn btn-reversa" onclick="voltearTarjeta(5)">PawAmigo</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-5 d-flex justify-content-around">
-                        <a href="https://github.com/AmaranthaH" target="_blank">
-                            <img src="./assets/github (1).png" alt="GitHub">
-                        </a>
-                        <a href="https://www.linkedin.com/in/amarantha-hernandez-ricardez/" target="_blank">
-                            <img src="./assets/linkedin (3).png" alt="LinkedIn">
-                        </a>
+                    <div class="card h-100 w-100 card-back-prueba">
+                        <img id="pawImg9" src="./assets/PAWAMIGO-XIMENA.jpg" class="card-img-top" alt="PawAmigo de Nancy">
+                        <div class="card-body">
+                            <h5 id="pawNomb9" class="card-title">Kiara</h5>
+                            <p id="pawDesc9" class="card-text">Mi cosa favorita en el mundo son los paseos matutinos</p>
+                            <a class="btn btn-reversa" onclick="voltearTarjeta(5)">Volver</a>
+                        </div>
+                    </div>
+2                </div>
+            </div>
+
+            <!--CARD 6-->
+            <div class="col card-container-prueba">
+                <div class="card h-100 w-100 card-prueba card-6">
+                    <div class="card h-100 w-100 card-front-prueba">
+                        <img id="intImg9" class="card-img-top" alt="foto de Amarantha" src="./assets/PROFILE-AMARANTHA-Photoroom.jpg">
+                        <div class="card-body d-flex flex-column">
+                            <h5 id="intNomb9" class="card-title">Amarantha Hernández</h5>
+                            <p id="intDesc9" class="card-text">Ing. en Sistemas Inteligentes, con experiencia, en IAM,busco desarrollarme profesionalmente como Desarrolladora Front-End</p>
+                            <div class="mb-5 d-flex justify-content-around">
+                                <div>
+                                    <a id="intGit9" target="_blank" href="https://github.com/AmaranthaH">
+                                        <img src="./assets/github.svg" alt="GitHub">
+                                    </a>    
+                                </div>
+                                <div class="linkedin">
+                                    <a id="intLkd9" target="_blank" href="https://www.linkedin.com/in/amarantha-hernandez-ricardez/">
+                                        <img src="./assets/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                </div>
+                                <div>
+                                    <button class="btn btn-reversa" onclick="voltearTarjeta(6)">PawAmigo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card h-100 w-100 card-back-prueba">
+                        <img id="pawImg9" src="./assets/PAWAMIGO-AMARANTHA.png" class="card-img-top" alt="PawAmigo de Nancy">
+                        <div class="card-body">
+                            <h5 id="pawNomb9" class="card-title">Ninfa</h5>
+                            <p id="pawDesc9" class="card-text">Solo como, duermo y grito</p>
+                            <a class="btn btn-reversa" onclick="voltearTarjeta(6)">Volver</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- CARD 7 -->
+            <!--CARD 7-->
             <div class="col">
                 <div class="card h-100">
                     <img src="./assets/Porfile Kenia Estrada (1).jpg" class="card-img-top" alt="foto de Kenia">
@@ -242,52 +315,83 @@
                     </div>
                 </div>
             </div>
-            <!-- CARD 8 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="./assets/PROFILE-VIRY.png" class="card-img-top" alt="foto de Viridiana">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Viridiana Castillo</h5>
-                        <p class="card-text">Farmacéutica apasionada por la salud, la ciencia, la danza y el
-                            cheerleading, explorando y desarrollándome en el universo TI para convertir mis sueños más
-                            salvajes en realidad.</p>
+
+            <!--CARD 8-->
+            <div class="col card-container-prueba">
+                <div class="card h-100 w-100 card-prueba card-8">
+                    <div class="card h-100 w-100 card-front-prueba">
+                        <img id="intImg9" class="card-img-top" alt="foto de Viridiana" src="./assets/PROFILE-VIRY.png">
+                        <div class="card-body d-flex flex-column">
+                            <h5 id="intNomb9" class="card-title">Viridiana Castillo</h5>
+                            <p id="intDesc9" class="card-text">Ing. en Sistemas Inteligentes, con experiencia, en IAM,busco desarrollarme profesionalmente como Desarrolladora Front-End</p>
+                            <div class="mb-5 d-flex justify-content-around">
+                                <div>
+                                    <a id="intGit9" target="_blank" href="https://github.com/Viriiviriibamba">
+                                        <img src="./assets/github.svg" alt="GitHub">
+                                    </a>    
+                                </div>
+                                <div class="linkedin">
+                                    <a id="intLkd9" target="_blank" href="https://mx.linkedin.com/in/dulce-viridiana-castillo-martinez">
+                                        <img src="./assets/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                </div>
+                                <div>
+                                    <button class="btn btn-reversa" onclick="voltearTarjeta(8)">PawAmigo</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-5 d-flex justify-content-around">
-                        <a href="https://github.com/Viriiviriibamba" target="_blank">
-                            <img src="./assets/github (1).png" alt="GitHub">
-                        </a>
-                        <a href="https://mx.linkedin.com/in/dulce-viridiana-castillo-martinez" _blank>
-                            <img src="./assets/linkedin (3).png" alt="LinkedIn">
-                        </a>
+                    <div class="card h-100 w-100 card-back-prueba">
+                        <img id="pawImg9" src="./assets/PAWAMIGO-VIRI.png" class="card-img-top" alt="PawAmigo de Nancy">
+                        <div class="card-body">
+                            <h5 id="pawNomb9" class="card-title">Capuchina</h5>
+                            <p id="pawDesc9" class="card-text">Me gusta comer migajón, paletas heladas, dormir y ver la tele con mi papá</p>
+                            <a class="btn btn-reversa" onclick="voltearTarjeta(8)">Volver</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- CARD 9 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="./assets/Profile-Nancy (1).jpg" class="card-img-top" alt="foto de Nancy">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Nancy Galicia</h5>
-                        <p class="card-text">Ing. en Sistemas Inteligentes, con experiencia, en IAM,busco desarrollarme
-                            profesionalmente como Desarrolladora Front-End</p>
+
+            <!--CARD 9-->
+            <div class="col card-container-prueba">
+                <div class="card h-100 w-100 card-prueba card-9">
+                    <div class="card h-100 w-100 card-front-prueba">
+                        <img id="intImg9" class="card-img-top" alt="foto de Nancy" src="./assets/Profile-Nancy (1).jpg">
+                        <div class="card-body d-flex flex-column">
+                            <h5 id="intNomb9" class="card-title">Nancy Galicia</h5>
+                            <p id="intDesc9" class="card-text">Ing. en Sistemas Inteligentes, con experiencia, en IAM,busco desarrollarme profesionalmente como Desarrolladora Front-End</p>
+                            <div class="mb-5 d-flex justify-content-around">
+                                <div>
+                                    <a id="intGit9" target="_blank" href="https://github.com/ncgalicia">
+                                        <img src="./assets/github.svg" alt="GitHub">
+                                    </a>    
+                                </div>
+                                <div class="linkedin">
+                                    <a id="intLkd9" target="_blank" href="https://www.linkedin.com/in/yareli-galicia">
+                                        <img src="./assets/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                </div>
+                                <div>
+                                    <button class="btn btn-reversa" onclick="voltearTarjeta(9)">PawAmigo</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-5 d-flex justify-content-around">
-                        <a href="https://github.com/ncgalicia" target="_blank">
-                            <img src="./assets/github (1).png" alt="GitHub">
-                        </a>
-                        <a href="https://www.linkedin.com/in/yareli-galicia" _blank">
-                            <img src="./assets/linkedin (3).png" alt="LinkedIn">
-                        </a>
+                    <div class="card h-100 w-100 card-back-prueba">
+                        <img id="pawImg9" src="./assets/PAWAMIGO-CINTHYA.jpg" class="card-img-top" alt="PawAmigo de Nancy">
+                        <div class="card-body">
+                            <h5 id="pawNomb9" class="card-title">Nombre</h5>
+                            <p id="pawDesc9" class="card-text">El gato mas guapo</p>
+                            <a class="btn btn-reversa" onclick="voltearTarjeta(9)">Volver</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        <!--TERMINAN CARDS-->
 
-    <!--TERMINAN CARDS-->
-
-    <!--
+        <!--
 
                               / )
               (\__/)         ( (
@@ -304,10 +408,28 @@
 
     -->
 
-    <!--Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
+        <!--Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+            </script>
+        <script src="./nosotras.js"></script>
+        <!--script src="./data.js"></script>
+        <script>
+            // Llenar el párrafo con la información del archivo JS
+            for(const i=0; i < integrante.length; i++){
+                document.getElementById(`intImg${i+8}`).src = integrante[i].img;
+                document.getElementById(`intNomb${i+8}`).textContent = integrante[i].nombre;
+                document.getElementById(`intDesc${i+8}`).textContent = integrante[i].descripcion;
+                document.getElementById(`intGit${i+8}`).href = integrante[i].git;
+                document.getElementById(`intLkd${i+8}`).href = integrante[i].linkedin;
+                
+            }
+            for(const i=0; i < pawfriend.length; i++){
+                document.getElementById(`pawImg${i+9}`).src = pawfriend[i].img;
+                document.getElementById(`pawNomb${i+9}`).textContent = pawfriend[i].nombre;
+                document.getElementById(`pawDesc${i+9}`).textContent = pawfriend[i].descripcion;
+            }            
+        </script-->
 </body>
 
 </html>
