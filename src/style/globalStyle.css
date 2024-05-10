@@ -73,10 +73,12 @@ body{
 
 .nav {
     /* Para que nuestro logo quede de lado izquierdo y lo demás de lado derecho */
-    display: flex;
     justify-content: space-between;
-    
-
+    z-index: 1000;
+    display:grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width:100%;
     /* Si la pantalla donde se ve es muy grande se va a centrar
     max-width: 922px;  
     margin: 0 auto; */
