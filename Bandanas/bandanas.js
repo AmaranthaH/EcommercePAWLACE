@@ -42,12 +42,20 @@ function updatePrice() {
 updatePrice();
 
 
+let selectedColor = 'black'; // Color inicial del texto
+
+function selectColor(color) {
+    selectedColor = color === 'yellow' ? 'black' : color; // Asegurar legibilidad para el color amarillo
+    updateTextStyle(); // Actualizar estilo de texto con el nuevo color
+}
+
 function updateTextStyle() {
     const fontSelect = document.getElementById('fontSelect').value;
     const textInput = document.getElementById('textInput').value;
     const outputText = document.getElementById('outputText');
 
     outputText.style.fontFamily = fontSelect;
+    outputText.style.color = selectedColor;
     outputText.textContent = textInput || 'Tu texto aparecerá aquí...';
 }
 
