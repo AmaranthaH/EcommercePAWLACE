@@ -1,0 +1,66 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+#centroContactanos {
+    padding: 25px;
+}
+
+#izquierdaContactanos, #derechaContactanos {
+    position: relative;
+}
+
+#izquierdaContactanos::before, #derechaContactanos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#izquierdaContactanos::before {
+    background-image: url('./imagenes_pagina_contactanos/Perrito-izquierdo.jpg');
+}
+
+#derechaContactanos::before {
+    background-image: url('./imagenes_pagina_contactanos/Perrito-derecho.jpg');
+}
+
+#centroContactanos form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Bottom {
+    text-align: center;
+}
+
+#lada {
+    width: 4.1em;
+    background-color: var(--fondo);
+}
+
+#contactoTelefono {
+    width: 18em;
+}
+
+.input-wrapper, .paraIngresar {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.input-wrapper, .paraIngresar input {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+  

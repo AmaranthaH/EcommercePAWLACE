@@ -1,0 +1,128 @@
+/* Contenido de otro-estilos.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr; /* Una parte mucho más grande que la otra */
+    margin-top: -10px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+
+#izquierdaCarrito {
+    position: relative;
+    width: 100%; /* Ancho del contenedor al 100% */
+    height: 100vh;
+    padding-bottom: 100%; /* Establece la altura como un porcentaje del ancho para mantener la relación de aspecto 1:1 */
+    background-color: #89D5C9;
+}
+
+.circle {
+    width: 60%; /* Ancho del círculo en relación con el contenedor */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    position: absolute;
+    margin-top: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+}
+
+#imagenCarrito {
+    display: block;
+    width: 100%; /* Ancho de la imagen al 100% */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+}
+
+#derechaCarrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    /* Otros estilos si los hay */
+}
+
+#carritoTable {
+    width: auto; /* La tabla ocupa todo el ancho disponible */
+    text-align: left; /* Alinea el texto a la izquierda dentro de la tabla */
+    margin: 10px; /* Margen de 10px en todas las áreas alrededor de la tabla */
+    border-collapse: separate; /* Separa los bordes de las celdas */
+    border-spacing: 0 10px; /* Establece el margen vertical entre las filas de 10px */
+
+
+}
+
+#cantidad {
+    display: flex;
+    width: 10em;
+}
+
+.botonera {
+    display: flex;
+    gap: 5px; /* Espacio entre los botones */
+}
+
+.Bottom {
+    padding: 3px 3px; /* Tamaño de padding más pequeño para botones */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+.Bottom:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+/* Estilos para las celdas de la tabla */
+#carritoTable th,
+#carritoTable td {
+    padding: 5px; /* Espaciado interno de las celdas */
+    border: 1px solid #ccc; /* Borde de 1px sólido con color gris */
+}
+
+/* Estilos para tamaños de pantalla pequeños */
+@media (max-width: 768px) {
+    #carritoTable {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+    }
+
+    #cantidad {
+        width: 10em; /* Establecer un ancho máximo para la celda de cantidad */
+        display: flex;
+        align-items: center; /* Centra verticalmente los elementos */
+        justify-content: center; /* Centra horizontalmente los elementos */
+    }
+    
+    .Bottom {
+        flex: 0 0 25%; /* Establecer un ancho máximo para los botones */
+        font-size: 12px; /* Reducir aún más el tamaño de la fuente */
+        transition: font-size 0.5s ease; /* Ajustar la duración y el tipo de transición */
+    }
+}
+
+/* Estilos para tamaños de pantalla muy pequeños */
+@media (max-width: 480px) {
+    #carritoTable {
+        font-size: 12px; /* Reducir el tamaño de la fuente */
+    }
+
+    #cantidad {
+        width: 10em; /* Establecer un ancho máximo para la celda de cantidad */
+        display: flex;
+        align-items: center; /* Centra verticalmente los elementos */
+        justify-content: center; /* Centra horizontalmente los elementos */
+    }
+    
+    .botonera {
+        flex-wrap: wrap; /* Permitir que los botones se envuelvan en múltiples líneas */
+    }
+    
+    .Bottom {
+        flex: 0 0 33%; /* Establecer un ancho máximo para los botones */
+        font-size: 10px; /* Reducir el tamaño de la fuente */
+        padding: 5px; /* Agregar un poco de espacio entre los botones */
+        transition: font-size 0.5s ease; /* Ajustar la duración y el tipo de transición */
+    }
+}
