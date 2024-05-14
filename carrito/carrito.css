@@ -72,7 +72,7 @@
 
 .Bottom {
     padding: 3px 3px; /* Tamaño de padding más pequeño para botones */
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc;*/
     background-color: #fff;
     cursor: pointer;
     font-size: 14px; /* Tamaño de fuente más pequeño */
@@ -90,7 +90,7 @@
 #carritoTable th,
 #carritoTable td {
     padding: 5px; /* Espaciado interno de las celdas */
-    border: 1px solid #ccc; /* Borde de 1px sólido con color gris */
+    /* border: 1px solid #ccc;  Borde de 1px sólido con color gris */
 }
 
 /* Estilos para tamaños de pantalla pequeños */
