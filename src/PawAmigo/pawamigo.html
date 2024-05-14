@@ -1,15 +1,14 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style/globalStyle.css">
-  <link rel="stylesheet" href="../addproducts/addproducts.css">
+  <link rel="stylesheet" href="../PawAmigo/pawamigo.css">
   <script defer src = "../nosotras/navbar.js"></script>
   <title>Subir Producto</title>
   <link rel="icon" type="image/png" href="../assets/LOGO.png">
-  <!-- Enlace a Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
 </head>
 <body>
   
@@ -45,46 +44,46 @@
 
       </ul>
   </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
-  <div class="container mt-5">
-    <h1 class="mb-4">Subir Nuevo Producto</h1>
-    <form id="productForm">
-      <div class="form-group">
-        <label for="productName">Nombre:</label>
-        <input type="text" id="productName" class="form-control" required>
-      </div>
 
-      <div class="form-group">
-        <label for="productDescription">Descripción:</label>
-        <textarea id="productDescription" class="form-control" rows="4" required></textarea>
-      </div>
+    <div class="container">
+        <aside>
+            <ul>
+                <li><button>Perro</button></li>
+                <li><button>Gato</button></li>
+                <li><button>Hamster</button></li>
+                <li><button>Conejo</button></li>
+                <li><button>Hurón</button></li>
+                <li><button>Otro</button></li>
+            </ul>
+        </aside>
 
-      <div class="form-group">
-        <label for="productPrice">Precio:</label>
-        <input type="number" id="productPrice" class="form-control" min="0" step="0.01" required>
-      </div>
-
-      <div class="form-group">
-        <label for="productQuantity">Cantidad en Stock:</label>
-        <input type="number" id="productQuantity" class="form-control" min="0" required>
-      </div>
-
-      <div class="form-group">
-        <label for="productImage">Imagen:</label>
-        <input type="file" id="productImage" class="form-control-file">
-      </div>
-
-      <button type="submit" class="btn btn-primary">Subir Producto</button>
-    </form>
-  </div>
-
-  <!-- Enlace a Bootstrap JS y JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="addproducts.js"></script>
+        <main>
+            <h1>Recuerda...</h1>
+            <div class="content">
+                <img src="./assets/PawAmigoMilo.png" alt="Pawamigo">
+                <ul class="tips">
+                    <li>
+                        <p>Antes de dirigirte al veterinario, es recomendable sacar a tus mascotas a pasear. Esto ayudará a evitar que asocien entrar al carro con la visita al veterinario.</p>
+                    </li>
+                    <li>
+                        <p>Los Pawamigos tienen dificultades para regular su temperatura corporal, ya sea en climas cálidos o fríos. Es fundamental mantenerlos hidratados con suero y humectar sus narices y almohadillas con bálsamos especiales o aceite de coco extra virgen.</p>
+                    </li>
+                    <li>
+                        <p>El aceite de coco extra virgen es un excelente desparasitante natural (aunque no desparasita al 100%), fuente de energía, bactericida natural, beneficioso para su piel, facilita la digestión, y ayuda a mantener un aliento fresco y limpia sus dientes. No se recomienda ingerir más de una cucharada por semana.</p>
+                    </li>
+                    <li>
+                        <p>No olvides cepillar los dientes de tu Pawamigo regularmente para garantizar su salud bucal.</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
-
- 
