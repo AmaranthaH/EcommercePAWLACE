@@ -47,13 +47,22 @@
     margin: 10px; /* Margen de 10px en todas las áreas alrededor de la tabla */
     border-collapse: separate; /* Separa los bordes de las celdas */
     border-spacing: 0 10px; /* Establece el margen vertical entre las filas de 10px */
+}
 
-
+#imagenArticuloCarrito{
+    max-width: 100%; /* Hace que la imagen sea responsive */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    width: 40%; /* Ocupa el 100% del ancho del contenedor padre */
+    max-height: 200px; /* Establece el límite máximo de altura */
+    
 }
 
 #cantidad {
     display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
     width: 10em;
+    height: 20em; /* Altura del contenedor al 100% del contenedor principal */
+    
 }
 
 .botonera {
@@ -67,6 +76,8 @@
     background-color: #fff;
     cursor: pointer;
     font-size: 14px; /* Tamaño de fuente más pequeño */
+        align-items: center; /* Centra verticalmente los elementos */
+
 }
 
 .Bottom:hover {
