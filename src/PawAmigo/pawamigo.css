@@ -2,7 +2,7 @@ body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #FFF7F0;
 }
 
 header {
@@ -20,7 +20,7 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: #FFF7F0;
     text-decoration: none;
     font-size: 1.2em;
 }
@@ -37,7 +37,7 @@ nav a {
 }
 
 aside {
-    background-color: #ffd3b6;
+    background-color: #FAC172;
     padding: 1em;
     width: 200px;
 }
@@ -48,7 +48,7 @@ aside ul {
 }
 
 aside button {
-    background-color: #ff6f61;
+    background-color: #D95043;
     border: none;
     color: white;
     padding: 10px;
@@ -61,12 +61,13 @@ aside button {
 main {
     flex: 1;
     padding: 1em;
-    background-color: white;
+    
     margin-left: 20px;
 }
 
 h1 {
-    color: #ff6f61;
+    color: #D95043;
+    
 }
 
 .content {
@@ -85,7 +86,7 @@ h1 {
 }
 
 .tips p {
-    background-color: #f4f4f4;
+    
     padding: 1em;
     border-radius: 8px;
     margin: 10px 0;
@@ -98,4 +99,22 @@ h1 {
     left: -30px;
     top: 10px;
     font-size: 1.5em;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 0.5rem;
+}
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }

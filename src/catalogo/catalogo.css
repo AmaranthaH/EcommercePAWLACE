@@ -1,0 +1,68 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 0.5rem;
+}
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FAC172;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.hero-content button {
+    background-color: #ff7043;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.card {
+    margin-bottom: 20px;
+}
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -3,6 +3,7 @@
 /* Estilos para el cuerpo de la página */
 
   /* Estilos para el contenedor principal */
+
   .container {
     max-width: 600px;
     margin: auto;
@@ -17,7 +18,7 @@
     margin-bottom: 20px;
   }
   
-  /* Estilo para el botón de enviar */
+  Estilo para el botón de enviar 
   .btn-primary {
     background-color:#D95043;
     color:var(--fondo);
@@ -26,18 +27,12 @@
     width: 10em;
     box-shadow: 0 5px 2px rgba(112,112,112,0.54);
   }
-
-
-  /* Estilos adicionales para mejorar la apariencia */
-  h1 {
+  .footer {
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  textarea {
-    resize: vertical; /* Permite redimensionar verticalmente el textarea */
-  }
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,15 +1,15 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style/globalStyle.css">
-  <link rel="stylesheet" href="../addproducts/addproducts.css">
-  <script defer src = "../nosotras/navbar.js"></script>
-  <title>Subir Producto</title>
+  <title>Añadir Productos</title>
   <link rel="icon" type="image/png" href="../assets/LOGO.png">
   <!-- Enlace a Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="../style/globalStyle.css">
+  <link rel="stylesheet" href="../addproducts/addproducts.css"> 
+  <script defer src = "../nosotras/navbar.js"></script>
 </head>
 <body>
   
@@ -28,7 +28,7 @@
 
       <ul class="nav-menu">
 
-          <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Tienda</a></li>
+        <li class="nav-menu-item"><a href="../catalogo/catalogo.html" class="nav-menu-link nav-link">Catálogo</a></li>
           <li class="nav-menu-item"><a href="../PawAmigo/pawamigo.html" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
           <li class="nav-menu-item"><a href="../nosotras/nosotras.html" class="nav-menu-link nav-link">Nosotras</a></li>
           <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Contacto</a></li>
@@ -48,7 +48,7 @@
 
 
   <div class="container mt-5">
-    <h1 class="mb-4">Subir Nuevo Producto</h1>
+    <h2 class="mb-4">Subir Nuevo Producto</h2>
     <form id="productForm">
       <div class="form-group">
         <label for="productName">Nombre:</label>
@@ -61,7 +61,8 @@
       </div>
 
       <div class="form-group">
-        <label for="productPrice">Precio:</label>
+      <!-- <label for="productPrice">Precio:</label> */ -->
+       <p></p>
         <input type="number" id="productPrice" class="form-control" min="0" step="0.01" required>
       </div>
 
@@ -75,9 +76,18 @@
         <input type="file" id="productImage" class="form-control-file">
       </div>
 
-      <button type="submit" class="btn btn-primary">Subir Producto</button>
+      <button type="submit" class="Bottom">Añadir Producto</button>
     </form>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <footer class="footer w-100">
+    <p>&copy; 2024 Paw Lace. Todos los derechos reservados.</p>
+</footer>
 
   <!-- Enlace a Bootstrap JS y JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -86,5 +96,3 @@
   <script src="addproducts.js"></script>
 </body>
 </html>
-
- 
