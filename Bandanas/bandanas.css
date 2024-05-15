@@ -3,9 +3,12 @@ h2{
 }
 .imagen-bandana{
     width: 22em;  /* Ancho de la imagen */
-    height: 22em; /* Alto de la imagen */
+    height: 27em; /* Alto de la imagen */
     padding: 10px; /* Espacio entre la imagen y el borde */
     border-radius: 3em; /* Esquinas redondeadas, opcional */
+}
+#outputText{
+    text-align: left;
 }
 
 #decrementButton, #incrementButton{
@@ -115,10 +118,24 @@ h2{
     #carrito1 {
         display: none;
     }
+
 }
+@media (max-width:700px) {
+.imagen-bandana{
+    width: 18em;  /* Ancho de la imagen */
+    height: 22em; /* Alto de la imagen */
+    padding: 10px; /* Espacio entre la imagen y el borde */
+    border-radius: 3em; /* Esquinas redondeadas, opcional */
+}}
 
 @media (min-width:769px) {
     #carrito2 {
         display: none;
+    }
+    imagen-bandana{
+        width: 28em;  /* Ancho de la imagen */
+        height: 32em; /* Alto de la imagen */
+        padding: 10px; /* Espacio entre la imagen y el borde */
+        border-radius: 3em; /* Esquinas redondeadas, opcional */
     }
 }
