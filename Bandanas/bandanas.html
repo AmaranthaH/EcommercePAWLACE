@@ -87,10 +87,15 @@
             <span id="numberDisplay">0</span>
             <button id="incrementButton" onclick="changeNumber(1)">+</button>
         </div>
+       
+    
         <br>
         <div>
-            <input class="Bottom" id="carrito" type="submit" value="Añadir al carrito">
+            <input class="Bottom" id="carrito1" type="submit" value="Añadir al carrito">
         </div>
+
+
+
         <br>
         <div>
            
@@ -103,7 +108,6 @@
     
     <div class="col">
       <div class="p-3">
-        <br>
         <div>
             <p id="priceDisplay">Precio: $10.00</p>
         </div>
@@ -136,65 +140,74 @@
               </div>
             </div>
 
-            <br><br> <br>
-            <h2>Personaliza tu Texto
-            </h2>
-            <div class="container text-center">
-                <div class="row">
-                  <div class="col-sm-5 col-md-6">  <p>Color de texto</p></div>
-                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-               
-
+            <br><br>
+    <h2>Personaliza tu Texto</h2>
+    <br>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-5 col-md-6"><p>Color de texto</p></div>
+            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
                 <div id="color">
                     <button class="color-button red" onclick="selectColor('red')"></button>
                     <button class="color-button blue" onclick="selectColor('blue')"></button>
                     <button class="color-button green" onclick="selectColor('green')"></button>
                     <button class="color-button yellow" onclick="selectColor('yellow')"></button>
+                    <button class="color-button purple" onclick="selectColor('purple')"></button>
+                    <button class="color-button pink" onclick="selectColor('pink')"></button>
+                    <button class="color-button orange" onclick="selectColor('orange')"></button>
+                    <button class="color-button cafe" onclick="selectColor('brown')"></button>
+                    <button class="color-button celeste" onclick="selectColor('lightblue')"></button>
+                    <button class="color-button gray" onclick="selectColor('gray')"></button>
                 </div>
             </div>
         </div>
-      </div>
-
-      <div class="container text-center">
+    </div>
+    <br>
+    <div class="container text-center">
         <div class="row">
-          <div class="col-sm-5 col-md-6">  <p>Tipografia</p></div>
-          <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-
-                <div 
-                class="input-group">
+            <div class="col-sm-5 col-md-6"><p>Tipografía</p></div>
+            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                <div class="input-group">
                     <label for="fontSelect"></label>
                     <select id="fontSelect" onchange="updateTextStyle()">
-                        <option value="Arial">Arial</option>
-                        <option value="Courier New">Courier New</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <option value="Verdana">Verdana</option>
+                        <option value="Arial" style="font-family: Arial;">Arial</option>
+                        <option value="Courier New" style="font-family: 'Courier New';">Courier New</option>
+                        <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+                        <option value="Times New Roman" style="font-family: 'Times New Roman';">Times New Roman</option>
+                        <option value="Verdana" style="font-family: Verdana;">Verdana</option>
+                        <option value="'Montserrat', sans-serif" style="font-family: 'Montserrat', sans-serif;">Montserrat</option>
+                        <option value="'Raleway', sans-serif" style="font-family: 'Raleway', sans-serif;">Raleway</option>
+                        <option value="'Playfair Display', serif" style="font-family: 'Playfair Display', serif;">Playfair Display</option>
+                        <option value="'Poppins', sans-serif" style="font-family: 'Poppins', sans-serif;">Poppins</option>
+                        <option value="'Oswald', sans-serif" style="font-family: 'Oswald', sans-serif;">Oswald</option>
+                        <option value="'Lobster', cursive" style="font-family: 'Lobster', cursive;">Lobster</option>
+                        <option value="'Roboto', sans-serif" style="font-family: 'Roboto', sans-serif;">Roboto</option>
+                        <option value="'Pacifico', cursive" style="font-family: 'Pacifico', cursive;">Pacifico</option>
                     </select>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="container text-center">
         <div class="row">
-          <div class="col-sm-5 col-md-6">   <p>Texto</p></div>
-          <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-
-            <div class="input-group">
-                <label for="textInput"></label>
-                <input type="text" id="textInput" oninput="updateTextStyle()">
+            <div class="col-sm-5 col-md-6"><p>Texto</p></div>
+            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                <div class="input-group">
+                    <label for="textInput"></label>
+                    <input type="text" id="textInput" oninput="updateTextStyle()" placeholder="20 caracteres maximo...">
+                </div>
+                <div class="output-group">
+                    <br>
+                    <p id="outputText">Tu texto aparecerá aquí...</p>
+                </div>
             </div>
-            <div class="output-group">
-                <br>
-                <p id="outputText"> Maximo 12 caracteres... </p>
-            </div>
-        
         </div>
-              </div>
-            </div>
-          </div>
+    </div>
         
-
+          <br>
+          <div>
+              <input class="Bottom" id="carrito2" type="submit" value="Añadir al carrito">
+          </div>
 
 
       </div>

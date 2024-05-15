@@ -40,7 +40,7 @@ h2{
     height: 3em;
     border-radius: 50%; /* Hace que el botón sea redondo */
     background-color: var(--navbar); /* Color de fondo azul */
-    color: var(--fondo); /* Color del texto blanco */
+    color: black; /* Color del texto blanco */
     font-size: .8em; /* Tamaño del texto */
     border: none; /* Sin borde */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
@@ -55,8 +55,8 @@ h2{
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    height: 2em;
-    width: 5em;
+    height: 5em;
+    width: 7em;
     border: none;
     cursor: pointer;
     user-select: none;
@@ -76,13 +76,49 @@ h2{
     background-color: #AEC985;
 }
 
-.color-button.yellow {
-    background-color: #FAC172;
-    color: black; /* Para mejor contraste */
+.color-button.pink{
+    background-color:#fdcae1;
 }
+.color-button.purple{
+    background-color:#CE97FB;
+}
+.color-button.orange{
+    background-color:orange;
+
+}
+.color-button.celeste{
+    background-color:#00FFFF;
+}
+
+.color-button.yellow {
+    background-color: #FDDF7E;
+}
+
+.color-button.gray {
+    background-color: #c5c6c8;
+}
+
+.color-button.cafe {
+    background-color:#a68069;
+}
+
+
+
 
 #textInput{
     box-shadow: 0 5px 2px rgba(112,112,112,0.54);
     border-radius:1em;
 
+}
+
+@media (max-width:768px) {
+    #carrito1 {
+        display: none;
+    }
+}
+
+@media (min-width:769px) {
+    #carrito2 {
+        display: none;
+    }
 }
