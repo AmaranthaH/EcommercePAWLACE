@@ -118,3 +118,12 @@ h1 {
     bottom: 0;
     width: 100%;
 }
+footer {
+    background-color: #000; /* Color negro de fondo */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.negro p {
+    color: #fff; /* Color blanco para el texto del footer */
+}
