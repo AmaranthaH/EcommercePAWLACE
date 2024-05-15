@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos</title>
+    <title>Carrito de compras</title>
 
     <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script> <!--Enlace de una pagina llamada FontAwesome, de iconos libres, es para poder tener nuestro menu de 3 lineas en un celular-->
     <link rel="stylesheet" href="./carrito.css"> 
@@ -72,42 +72,43 @@
         
         <div class="grid-item item" id="derechaCarrito">
             <h2>Carrito de Compras</h2>
+            
             <table id="carritoTable">
                 <thead>
                     <tr>
-                        <th>Producto</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Eliminar</th>
+                        <th id="productoCTitulo">Producto</th>
+                        <th id="nombreCTitulo">Nombre</th>
+                        <th id="precioCTitulo">Precio</th>
+                        <th id="cantidadCTitulo">Cantidad</th>
+                        <th id="eliminarCTitulo">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td id="imagenArticuloCarrito"><img src="./imagenes/imagenRandomDeEjemplo.jpg" alt="PAWLACE" id="imagenCarrito"></td>
-                        <td>Nombre de producto</td>
-                        <td id="precio">$15</td>
-                        <td id="cantidad">
-                            <button class="Bottom" id="btnMenos">-</button>
+                        <td data-cell="Nombre" id="nombreProducto">Nombre de producto</td>
+                        <td data-cell="Precio" id="precio">$15</td>
+                        <td data-cell="Cantidad" id="cantidad">
+                            <button class="Bottom " id="btnMenos">-</button>
                             <button class="Bottom" id="btnCantidad">1</button>
                             <button class="Bottom" id="btnMas">+</button>
                         </td>
-                        <td>
-                            <button class="Bottom" id="eliminarCarrito">Eliminar</button>
+                        <td id="eliminarCarrito">
+                            <button class="Bottom" id="eliminarDeCarrito">Eliminar</button>
                         </td>
                         
                     </tr>
                     
                 </tbody>
                 <tfoot>
-                    <tr>
-                        <td colspan="3" style="text-align: right;">
+                    <tr id="totales">
+                        <td colspan="3" id="precioTotalTotal">
                             <strong>Total:</strong>
                         </td>
                         <td id="precioTotal">cantidad de precio total</td>
                     </tr>
-                    <tr>
-                        <td colspan="4" style="text-align: right;">
+                    <tr id="procederPago">
+                        <td colspan="4">
                             <button class="Bottom" id="procederPagoBtn">Proceder al Pago</button>
                         </td>
                     </tr>
