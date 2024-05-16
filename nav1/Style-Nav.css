@@ -1,6 +1,6 @@
 /* Estilos globales */
 * {
-    margin: 0;
+    margin: 1;
     box-sizing: border-box;
 }
 
@@ -26,6 +26,7 @@ body {
     /* Si la pantalla donde se ve es muy grande se va a centrar
     max-width: 922px;  
     margin: 0 auto; */
+    
 }
 
 
@@ -40,7 +41,6 @@ body {
     font-weight: bold;
     padding: 0 20px; /* Arriba y abajo 0px. Izquierda y derecha 20px */
     line-height: 80px; /* Para que quede centrado. 80px que es el alto de mi barra de navegación*/
-    
 }
 
 .logo img {
@@ -89,10 +89,8 @@ body {
     line-height: 60px;
     cursor: pointer;
   
-
     display: none; /* Porque no queremos que se vea en computadora */
 }
-
 
 .nav-toggle-search{
     color: #000000;
@@ -102,15 +100,12 @@ body {
     padding: 0 20px; /* para la distancia entre cada uno*/
     line-height: 32px;
     cursor: pointer;
-  
 }
 
 .nav-toggle-search:hover {
     background-color: #6dada38b;
     transition: 0.3s;
 }
-    
-
 
 .nav-toggle-cart {
     color: #000000;
@@ -120,10 +115,6 @@ body {
     padding: 0 20px;
     line-height: 32px;
     cursor: pointer;
-   
-   
-
-   
 } 
 
 .nav-toggle-cart:hover {
@@ -138,14 +129,12 @@ body {
     padding: 0 20px;
     line-height: 32px;
     cursor: pointer;
-   
 }
+
 .nav-toggle-user:hover {
     background-color: #6dada38b;
     transition: 0.3s;
 }
-
-
 
 /* Para que se vea el diseño en celular */
 @media (max-width: 768px) { /*cuando mi dispositivo tenga menos de 768px se le van a aplicar estos estilos*/
