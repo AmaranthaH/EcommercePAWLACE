@@ -1,8 +1,8 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-
-const navToggle = document.querySelector(".nav-toggle")
-const navMenu = document.querySelector(".nav-menu")
-
-navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("nav-menu-visible");
-})
+    navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('nav-menu-visible');
+    });
+});
