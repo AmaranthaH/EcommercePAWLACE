@@ -1,30 +1,86 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function() {
+  const catalog = document.getElementById('catalog');
   const productForm = document.getElementById('productForm');
 
-  productForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  function loadProducts() {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      const categories = [...new Set(products.map(item => item.category))];
 
-    const productName = document.getElementById('productName').value;
-    const productDescription = document.getElementById('productDescription').value;
-    const productPrice = parseFloat(document.getElementById('productPrice').value);
-    const productQuantity = parseInt(document.getElementById('productQuantity').value);
-    const productImage = document.getElementById('productImage').files[0]; // File object
+      catalog.innerHTML = '';
 
-    // Crear objeto JSON con los datos del producto
-    const productData = {
-      name: productName,
-      description: productDescription,
-      price: productPrice,
-      quantity: productQuantity,
-      image: productImage.name // Solo se guarda el nombre de la imagen
-    };
+      categories.forEach(category => {
+          const categoryDiv = document.createElement('div');
+          categoryDiv.className = 'category-section';
+          categoryDiv.innerHTML = `<h2>${category}</h2>`;
 
-    console.log(productData); // Para verificar los datos en la consola (puedes enviar estos datos a un servidor)
+          const row = document.createElement('div');
+          row.className = 'row';
 
-    // Aquí puedes agregar la lógica para enviar los datos a tu servidor, almacenar en una base de datos, etc.
-    // Puedes usar fetch u otra librería para realizar la solicitud.
+          products.filter(item => item.category === category).forEach(item => {
+              const col = document.createElement('div');
+              col.className = 'col-md-3 mb-4';
+              col.innerHTML = `
+                  <div class="card">
+                      <img src="${item.img}" class="card-img-top" alt="${item.name}">
+                      <div class="card-body">
+                          <h5 class="card-title">${item.name}</h5>
+                          <p class="card-text">${item.price}</p>
+                          <button class="personaliza-btn" data-id="${item.id}" data-name="${item.name}" data-price="${item.price}">Personaliza</button>
+                      </div>
+                  </div>
+              `;
+              row.appendChild(col);
+          });
 
-    // Limpia el formulario después de enviar
-    productForm.reset();
+          categoryDiv.appendChild(row);
+          catalog.appendChild(categoryDiv);
+      });
+  }
+
+  productForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(productForm);
+
+      // Validar campos obligatorios
+      const requiredFields = ['productName', 'category', 'productDescription', 'productPrice', 'productQuantity', 'sizes', 'productImage'];
+      for (const field of requiredFields) {
+          if (!formData.get(field)) {
+              alert(`Por favor complete el campo: ${field}`);
+              return;
+          }
+      }
+
+      const productData = {
+          id: Date.now(),
+          name: formData.get('productName'),
+          category: formData.get('category'),
+          description: formData.get('productDescription'),
+          price: parseFloat(formData.get('productPrice')),
+          stock: parseInt(formData.get('productQuantity'), 10),
+          sizes: formData.getAll('sizes'),
+          img: URL.createObjectURL(formData.get('productImage'))
+      };
+
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      products.push(productData);
+      localStorage.setItem('products', JSON.stringify(products));
+
+      productForm.reset();
+
+      loadProducts();
   });
+
+  catalog.addEventListener('click', function(event) {
+      if (event.target.classList.contains('personaliza-btn')) {
+          const button = event.target;
+          const itemId = button.getAttribute('data-id');
+          const itemName = button.getAttribute('data-name');
+          const itemPrice = button.getAttribute('data-price');
+          console.log(`Personalizar: ${itemId} - ${itemName} - ${itemPrice}`);
+      }
+  });
+
+  loadProducts();
 });
+
