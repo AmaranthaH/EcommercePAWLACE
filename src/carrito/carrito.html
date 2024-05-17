@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+
+    <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script> <!--Enlace de una pagina llamada FontAwesome, de iconos libres, es para poder tener nuestro menu de 3 lineas en un celular-->
+    <link rel="stylesheet" href="./carrito.css"> 
+    <link rel="stylesheet" href="../style-global.css"> 
+    <link rel="stylesheet" href="./pagina_contactanos1.css">
+    <script src="./carrito.js" defer async></script>
+
+
+    <link rel="stylesheet" href="../nav1/Style-Nav.css"> 
+    <script src="../nav1/index.js" defer async></script><!--Poner siempre debajo de fontawesome --> 
+   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jacquard+24&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class = "header">
+        <nav class = "nav">
+            <a href="#" class="logo nav-link">
+                <img src="../nav1/Imagenes-nav/PAWLACE LOGO.1-Photoroom.png-Photoroom.png" alt="PAWLACE">
+            </a>
+            <button class = "nav-toggle"> <!--Para mis barritas de mi celular-->
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class = "nav-menu">
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Tienda</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Nosotras</a></li>
+                <li class="nav-menu-item"><a href="/PaginaContactanos/pagina_contactanos1.html" class="nav-menu-link nav-link">Contacto</a></li>
+                <!--Para el botón de buscar--> 
+                <li class ="nav-menu-item">
+                    <button class="nav-toggle-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>   
+                <!--Para el botón de carrito-->   
+               <li class ="nav-menu-item" >
+                    <a href="./carrito.html">
+                        <button class="nav-toggle-cart" >
+                                <i class="fa-solid fa-cart-shopping" ></i>
+                        </button>
+                    </a>
+                    
+                </li>
+                <!--Para el botón de perfil-->        
+                <li class ="nav-menu-item">   
+                    <button class ="nav-toggle-user">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+            </ul>
+        </nav>
+    </header>
+    
+       
+    <div class="container grid-container">
+
+        <div class="grid-item item" id="izquierdaCarrito">
+            <div class="circle">
+                <img src="./imagenes/pata.png" alt="PAWLACE" id="imagenCarrito">
+            </div>
+        </div>
+        
+        
+        <div class="grid-item item" id="derechaCarrito">
+            <h2>Carrito de Compras</h2>
+            
+            <table id="carritoTable">
+                <thead>
+                    <tr>
+                        <th id="productoCTitulo">Producto</th>
+                        <th id="nombreCTitulo">Nombre</th>
+                        <th id="precioCTitulo">Precio</th>
+                        <th id="cantidadCTitulo">Cantidad</th>
+                        <th id="eliminarCTitulo">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="imagenArticuloCarrito"><img src="./imagenes/imagenRandomDeEjemplo.jpg" alt="PAWLACE" id="imagenCarrito"></td>
+                        <td data-cell="Nombre" id="nombreProducto">Nombre de producto</td>
+                        <td data-cell="Precio" id="precio">$15</td>
+                        <td data-cell="Cantidad" id="cantidad">
+                            <button class="Bottom " id="btnMenos">-</button>
+                            <button class="Bottom" id="btnCantidad">1</button>
+                            <button class="Bottom" id="btnMas">+</button>
+                        </td>
+                        <td id="eliminarCarrito">
+                            <button class="Bottom" id="eliminarDeCarrito">Eliminar</button>
+                        </td>
+                        
+                    </tr>
+                    
+                </tbody>
+                <tfoot>
+                    <tr id="totales">
+                        <td colspan="3" id="precioTotalTotal">
+                            <strong>Total:</strong>
+                        </td>
+                        <td id="precioTotal">cantidad de precio total</td>
+                    </tr>
+                    <tr id="procederPago">
+                        <td colspan="4">
+                            <button class="Bottom" id="procederPagoBtn">Proceder al Pago</button>
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                </tfoot>
+            </table>
+        </div>
+        
+        
+        
+    </div>
+    
+</body>
+</html>
+

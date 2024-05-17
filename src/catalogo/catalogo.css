@@ -1,0 +1,219 @@
+
+/*---------Carrusel-------------*/
+
+.text-center{
+    color:#D95043;
+    font-size: 3.8em;
+}
+
+/* Modificar el tamaño del carrusel */
+
+.carousel {
+    width: 70%; /* Ancho del carrusel */
+    margin: auto;
+    border-radius: 35px;
+    
+    
+  }
+  
+  /* Modificar el tamaño de las imágenes */
+  .carousel-item img {
+    width: 100%; /* Ancho de la imagen */
+    height: 100%; /* Alto de la imagen */
+    border-radius: 35px;
+  }
+  
+  /* Modificar el tamaño de los controles del carrusel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; /* Ancho de los controles */
+    height: 100%; /* Alto de los controles */
+    font-size: 50px; /* Tamaño de la flecha */
+  }
+
+  /*Media Query para celualres*/
+
+  @media (max-width: 767px) {
+    .carousel {
+      width: 90%; 
+      
+    }
+    .carousel-indicators {
+    /*Se oculatran los indicadores cuando este en celulares*/
+        display: none; 
+      }
+      
+  }
+
+
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 0.5rem;
+}
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FAC172;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.hero-content button {
+    background-color: #D95043;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.card {
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #000; /* Color negro de fondo */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.negro p {
+    color: #fff; /* Color blanco para el texto del footer */
+}
+.catalogo-header {
+    background-color: #D95043;
+    padding: 20px; /* Ajusta el espaciado del diseño */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.catalogo-header h1 {
+    color: #fff; /* Color del texto */
+    margin: 0; /* Elimina el margen predeterminado del h1 */
+    font-size: 2em; /* Tamaño de fuente del título */
+    font-family: "Oswald", sans-serif;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--fondo);
+    padding: 20px;
+    margin: 0;
+}
+
+.category-section {
+    margin-bottom: 2rem;
+}
+
+.category-section h2 {
+    font-size: 2em;
+    color: var(--negro);
+    margin-bottom: 1rem;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.personaliza-btn {
+    background-color: var(--botones);
+    color: var(--fondo);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.personaliza-btn:hover {
+    background-color: var(--navbar);
+    color: var(--negro);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

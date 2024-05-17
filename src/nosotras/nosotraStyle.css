@@ -1,0 +1,112 @@
+
+/*---------Carrusel-------------*/
+
+.text-center{
+    color:#D95043;
+    font-size: 3.8em;
+}
+
+/* Modificar el tamaño del carrusel */
+
+.carousel {
+    width: 60%; /* Ancho del carrusel */
+    margin: auto;
+    border-radius: 35px;
+    
+    
+  }
+  
+  /* Modificar el tamaño de las imágenes */
+  .carousel-item img {
+    width: 100%; /* Ancho de la imagen */
+    height: 100%; /* Alto de la imagen */
+    border-radius: 35px;
+  }
+  
+  /* Modificar el tamaño de los controles del carrusel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; /* Ancho de los controles */
+    height: 100%; /* Alto de los controles */
+    font-size: 20px; /* Tamaño de la flecha */
+  }
+
+  /*Media Query para celualres*/
+
+  @media (max-width: 767px) {
+    .carousel {
+      width: 90%; 
+      
+    }
+    .carousel-indicators {
+    /*Se oculatran los indicadores cuando este en celulares*/
+        display: none; 
+      }
+      
+  }
+  
+
+/*---------Cards de presentación--------*/
+.card {
+    background-color: var(--naranja);
+   
+}
+
+
+.card-title{
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size:1.8em;
+}
+.card-text{
+    text-align: justify;
+}
+
+/* Media queries para celulares */
+@media (max-width: 768px) {
+    .row-cols-1 {
+        flex-direction: column;
+        
+    }
+}
+
+/* Media queries para dispositivos tablets*/
+@media (min-width: 768px) and (max-width: 992px) {
+    .row-cols-md-3 {
+        flex-direction: row;
+        
+    }
+/* se refiere a cualquier hijo directo (*) de los elementos con la clase */  
+        .row-cols-md-3 > * {
+/* Establece que cada elemento ocupe el 50% del ancho */
+            flex: 0 0 50%; 
+            max-width: 50%; /
+    }
+    
+}
+
+/* Media queries para dispositivos Laptos,PC*/
+@media (min-width: 992px) {
+    .row-cols-md-3 {
+        flex-direction: row;
+        
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 0.5rem;
+}
+footer {
+    background-color: #000; /* Color negro de fondo */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.negro p {
+    color: #fff; /* Color blanco para el texto del footer */
+}

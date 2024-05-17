@@ -1,0 +1,38 @@
+/* styles.css */
+
+/* Estilos para el cuerpo de la página */
+
+  /* Estilos para el contenedor principal */
+
+  .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilos para los campos del formulario */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  Estilo para el botón de enviar 
+  .btn-primary {
+    background-color:#D95043;
+    color:var(--fondo);
+    border-radius: 10px;
+    padding: 8px; 
+    width: 10em;
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+  }
+  footer {
+    background-color: #000; /* Color negro de fondo */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.negro p {
+    color: #fff; /* Color blanco para el texto del footer */
+}

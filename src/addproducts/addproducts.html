@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir Productos</title>
+  <link rel="icon" type="image/png" href="../assets/LOGO.png">
+  <!-- Enlace a Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="../style/globalStyle.css">
+  <link rel="stylesheet" href="../addproducts/addproducts.css"> 
+  <script defer src = "../nosotras/navbar.js"></script>
+</head>
+<body>
+  
+  <!--NavBar-->
+    <!--Carrusel-->
+    <nav class="header nav">
+      <a class="logo" href="/">
+          <img src="../assets/PAWLACE LOGO.png" class="logo" alt="PAWLACE">
+      </a>
+
+      <!--<a href = "./PAWLACE LOGO.1-Photoroom.png-Photoroom.png" class = "logo nav-link">Logo</a> -->
+
+      <button class="nav-toggle"> <!--Para mis barritas de mi celular-->
+          <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu">
+
+        <li class="nav-menu-item"><a href="../catalogo/catalogo.html" class="nav-menu-link nav-link">Catálogo</a></li>
+          <li class="nav-menu-item"><a href="../PawAmigo/pawamigo.html" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
+          <li class="nav-menu-item"><a href="../nosotras/nosotras.html" class="nav-menu-link nav-link">Nosotras</a></li>
+          <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Contacto</a></li>
+          <li class="nav-menu-item"><a href="../addproducts/addproducts.html" class="nav-menu-link nav-link">Añadir Producto</a></li>
+          <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">
+                  <img src="../assets/search_24dp.svg" class="cambiar" alt="cambiar">
+              </a></li>
+          <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">
+                  <img src="../assets/shopping_cart_24dp.svg" class="cambiar" alt="cambiar">
+              </a></li>
+          <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">
+                  <img src="../assets/account_circle_24dp.svg" class="cambiar" alt="cambiar">
+              </a></li>
+
+      </ul>
+  </nav>
+
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Subir Nuevo Producto</h2>
+    <form id="productForm">
+      <div class="form-group">
+        <label for="productName">Nombre:</label>
+        <input type="text" id="productName" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="productDescription">Descripción:</label>
+        <textarea id="productDescription" class="form-control" rows="4" required></textarea>
+      </div>
+
+      <div class="form-group">
+      <!-- <label for="productPrice">Precio:</label> */ -->
+       <p></p>
+        <input type="number" id="productPrice" class="form-control" min="0" step="0.01" required>
+      </div>
+
+      <div class="form-group">
+        <label for="productQuantity">Cantidad en Stock:</label>
+        <input type="number" id="productQuantity" class="form-control" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label for="productImage">Imagen:</label>
+        <input type="file" id="productImage" class="form-control-file">
+      </div>
+
+      <button type="submit" class="Bottom">Añadir Producto</button>
+    </form>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <footer class="negro">
+    <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
+  </footer>
+  <!-- Enlace a Bootstrap JS y JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="addproducts.js"></script>
+</body>
+</html>
