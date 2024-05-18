@@ -106,12 +106,14 @@ body {
 .card {
     margin-bottom: 20px;
 }
+
 footer {
-    background-color: #000; /* Color negro de fondo */
+    background-color: #333; /* Color negro de fondo */
     color: #fff;
     text-align: center;
     padding: 10px;
 }
+
 .negro p {
     color: #fff; /* Color blanco para el texto del footer */
 }

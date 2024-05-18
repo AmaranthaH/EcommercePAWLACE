@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandanas Personalizadas</title>
+    <link rel="icon" type="image/png" href="../assets/LOGO.png">
 
     <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script> <!--Enlace de una pagina llamada FontAwesome, de iconos libres, es para poder tener nuestro menu de 3 lineas en un celular-->
 
@@ -31,49 +32,40 @@
 
 <body>
 
-    <header class = "header">
+ <!--NavBar-->
+    <!--Carrusel-->
+    <nav class="header nav">
+        <a class="logo" href="../catalogo/catalogo.html">
+            <img src="../assets/PAWLACE LOGO.png" class="logo" alt="PAWLACE">
+        </a>
+  
+        <!--<a href = "./PAWLACE LOGO.1-Photoroom.png-Photoroom.png" class = "logo nav-link">Logo</a> -->
+  
+        <button class="nav-toggle"> <!--Para mis barritas de mi celular-->
+            <i class="fa-solid fa-bars"></i>
+        </button>
+  
+        <ul class="nav-menu">
+  
+          <li class="nav-menu-item"><a href="../catalogo/catalogo.html" class="nav-menu-link nav-link">Catálogo</a></li>
+            <li class="nav-menu-item"><a href="../PawAmigo/pawamigo.html" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
+            <li class="nav-menu-item"><a href="../nosotras/nosotras.html" class="nav-menu-link nav-link">Nosotras</a></li>
+            <li class="nav-menu-item"><a href="../PaginaContactanos/pagina_contactanos1.html" class="nav-menu-link nav-link">Contacto</a></li>
+            <li class="nav-menu-item"><a href="../addproducts/addproducts.html" class="nav-menu-link nav-link">Añadir Producto</a></li>
+            <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">
+                    <img src="../assets/search_24dp.svg" class="cambiar" alt="cambiar">
+                </a></li>
+            <li class="nav-menu-item"><a href="../carrito/carrito.html" class="nav-menu-link nav-link">
+                    <img src="../assets/shopping_cart_24dp.svg" class="cambiar" alt="cambiar">
+                </a></li>
+            <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">
+                    <img src="../assets/account_circle_24dp.svg" class="cambiar" alt="cambiar">
+                </a></li>
+  
+        </ul>
+    </nav>
 
-        <nav class = "nav">
 
-            <a href="#" class="logo nav-link">
-                <img src="/EcommercePAWLACE/src/" alt="PAWLACE">
-            </a>
-
-      
-            
-            <button class = "nav-toggle"> <!--Para mis barritas de mi celular-->
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <ul class = "nav-menu">
-
-                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Tienda</a></li>
-                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
-                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Nosotras</a></li>
-                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Contacto</a></li>
-               <!--Para el botón de buscar--> 
-               <li class ="nav-menu-item">
-                <button class="nav-toggle-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </li>   
-            <!--Para el botón de carrito-->   
-               <li class ="nav-menu-item">
-    <button class="nav-toggle-cart">
-<i class="fa-solid fa-cart-shopping"></i>
-</button>
-</li>
-<!--Para el botón de perfil-->        
-<li class ="nav-menu-item">   
-    <button class ="nav-toggle-user">
-    <i class="fa-solid fa-user"></i>
-</button>
-</ul>
-            </ul>
-
-        </nav>
-
-    </header>
     <br>
     <h2>Bandanas Personalizadas</h2>
 <div class="container overflow-hidden text-center">
@@ -101,7 +93,7 @@
         <br>
         <div>
            
-            <a href="otra_pagina.html" id="linkToOtherPage">Conoce a tu PawAmigo</a>
+            <a href="../PawAmigo/pawamigo.html" id="linkToOtherPage">Conoce a tu PawAmigo</a>
         </div>
 
      </div>
@@ -111,7 +103,7 @@
     <div class="col">
       <div class="p-3">
         <div>
-            <p id="priceDisplay">Precio: $10.00</p>
+            <p id="priceDisplay">Precio: $120.00 MXN </p>
         </div>
         
         <br>
@@ -233,7 +225,11 @@
 });
 </script>
 
-<a href="carrito.html">Ir al carrito</a>
+<!-- <a href="carrito.html">Ir al carrito</a> -->
+
+<footer class="footer">
+    <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>

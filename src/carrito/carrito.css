@@ -175,4 +175,13 @@
         text-align: right; /* Centra el texto */
         padding: 10px 0; /* Añade espaciado interno */
     }
+
+    
+}
+
+footer {
+    background-color: #333; /* Color negro de fondo */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
