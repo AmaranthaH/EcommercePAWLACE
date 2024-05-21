@@ -7,8 +7,8 @@
 
     <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script> <!--Enlace de una pagina llamada FontAwesome, de iconos libres, es para poder tener nuestro menu de 3 lineas en un celular-->
  <link rel="stylesheet" href="../style-global.css"> 
- <link rel="stylesheet" href="../PaginaContactanos/pagina_contactanos1.css">
- <script src="../PaginaContactanos/pagina_contactanos1.js" defer async></script>
+ <link rel="stylesheet" href="../Validation/welcome.css"> <!-- CSS de Welcome-->
+ <script src="" defer async></script> <!--js de welcome-->
 
 
  <link rel="stylesheet" href="../nav1/Style-Nav.css"> 
@@ -19,8 +19,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jacquard+24&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
  
-
-
 </head>
 
 <body>
@@ -33,8 +31,6 @@
                 <img src="../nav1/Imagenes-nav/PAWLACE LOGO.1-Photoroom.png-Photoroom.png" alt="PAWLACE">
             </a>
 
-      
-            
             <button class = "nav-toggle"> <!--Para mis barritas de mi celular-->
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -70,60 +66,29 @@
     
        
     
-    <div class="container grid-container">
+    <div class="container grid-container"> <!--Contenedor de columnas-->
 
-        <div class="grid-item item" id="izquierdaContactanos"></div>
+        <div class="grid-item item" id="izquierdaWelcome"></div> <!--Imagen Izquierda-->
         
 
-        <div class="grid-item item" id="centroContactanos">
-            <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formContactanos" > 
-                <h2>Contáctanos
-                </h2>
-                    <p><br> 
+        <div class="grid-item item" id="centroWelcome"> <!--Bienvenido-->
+                <h2>¡Hola!</h2>
+                    <p> Bienvenido a Pawlace. Ingresa a tu cuenta o crea una nueva para comprar los productos que más te gustan <br> 
                     </p> 
-                <input type="text" 
-                class="informacion" id="contactoNombre" name="contactoNombre" required placeholder="Nombre Completo">
-                    <p><br>
-                    </p>
-
-                <input type="email" id="contactoEmail" class="informacion" name="contactoEmail" required placeholder="Correo Electronico">
-                    <p><br>
-                    </p>
-
-            <div class="input-wrapper">
-                <input type="lada" 
-                class="informacion" 
-                id="lada" name="lada" required placeholder="+52">
-
-                <input type="telefono" 
-                id="contactoTelefono" class="informacion"
-                name="contactoTelefono"
-                required placeholder="XXX XXX XXXX">
-            </div>
-                
-                <p><br>
-                </p>
-                <textarea id="contactoMensaje" class="informacion" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
-                <p><br>
+                    <p> </p> 
                     <br>
-                </p>
-                <div class="Bottom-enviar">
-                <input class="Bottom" type="submit" value="Enviar">
-            </div>
-            </form>
-<br>
-<br>
-            <div class="paraIngresar">
-                <label for="pregunta">¿Ya tienes una cuenta?    |</label>
-                <a href="#Tienda">Ingresa</a>
-            </div>
-
+                <div class="Registrarte">
+                <input class="Bottom" type="register" value="Registrarte">
+                </div> 
+                <p> </p> <br>
+                <div class="Login"> 
+                <input class="Bottom" type="Login" value="Inicia sesión">
+                </div>
         </div>
-
-    
-        <div class="grid-item item" id="derechaContactanos"></div>
         
-
+<br>
+<br>
+        <div class="grid-item item" id="derechaWelcome"></div> <!--Imagen Derecha-->
     </div>
     
 </body>
@@ -131,16 +96,3 @@
 
 
 
-
-<!--
-    .grid-container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    gap:20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Divide la página en tres partes iguales */
-    grid-gap: 0; /* Elimina cualquier espacio entre las áreas */
-
-}
--->
