@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>   
+    
+<script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script> <!--Enlace de una pagina llamada FontAwesome, de iconos libres, es para poder tener nuestro menu de 3 lineas en un celular-->
+ <link rel="stylesheet" href="../style-global.css"> 
+ <link rel="stylesheet" href="../Recuperar contraseña/recuperar_contraseña.css">
+ <script src="" defer async></script>
+
+
+ <link rel="stylesheet" href="../nav1/Style-Nav.css"> 
+   <script src="../nav1/index.js" defer async></script><!--Poner siempre debajo de fontawesome --> 
+   
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jacquard+24&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+ 
+
+
+</head>
+
+<body>
+
+    <header class = "header">
+
+        <nav class = "nav">
+
+            <a href="#" class="logo nav-link">
+                <img src="../nav1/Imagenes-nav/PAWLACE LOGO.1-Photoroom.png-Photoroom.png" alt="PAWLACE">
+            </a>
+
+      
+            
+            <button class = "nav-toggle"> <!--Para mis barritas de mi celular-->
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class = "nav-menu">
+
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Tienda</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Nosotras</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Contacto</a></li>
+               <!--Para el botón de buscar--> 
+               <li class ="nav-menu-item">
+                <button class="nav-toggle-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </li>   
+            <!--Para el botón de carrito-->   
+               <li class ="nav-menu-item">
+    <button class="nav-toggle-cart">
+<i class="fa-solid fa-cart-shopping"></i>
+</button>
+</li>
+<!--Para el botón de perfil-->        
+<li class ="nav-menu-item">   
+    <button class ="nav-toggle-user">
+    <i class="fa-solid fa-user"></i>
+</button>
+</ul>
+            </ul>
+
+        </nav>
+
+    </header>
+    
+       
+    
+    <div class="container grid-container">
+
+        <div class="grid-item item" id="izquierdaRecuperarContraseña"></div>
+        
+
+        <div class="grid-item item" id="centroRecuperarContraseña">
+            <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formInicioSesion" > 
+                <h2>Cambiá tu contraseña
+                </h2>
+              <p><br> </p> 
+                
+                <input type="contraseña" class="informacion" name="nuevaContraseña" required placeholder="Nueva Contraseña">
+                 <p><br>
+                </p>
+
+            
+                <input type="contraseña" 
+                id="Contraseña" class="informacion"
+                name="contraseña"
+                required placeholder="Confirmar contraseña">
+           
+                <p><br></p>
+                <div class="Bottom-enviar">
+                <input class="Bottom" type="submit" value="Iniciar sesión">
+            </div>
+            </form>
+<br>
+<br>
+          
+</body>
+</html>
+
