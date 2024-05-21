@@ -1,0 +1,57 @@
+/*Colores*/
+:root{
+    --fondo:#FFF7F0;
+    --naranja:#FAC172;
+    --botones: #D95043;
+    --navbar: #89D5C9;
+    --nosotras: #AEC965;
+    --negro:#000000;
+    --cusorNav:#6dada38b;
+
+}
+/*Tamaño de los titulos*/
+h1 {
+    font-size: 2.5em;
+    color: var(--negro);
+}
+h2{
+    font-size:1.8em;
+    color: var(--botones);
+}
+h3{
+    font-size:0.875em ;
+}
+h1,h2,h3{
+    font-family: "Oswald", sans-serif;
+}
+
+body{
+    background-color:var(--fondo);
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    padding: 90px 20px 0; /* nuesto menú estaría siempre flotando sin que intervenga con mi contenido */
+}
+
+/*Boton*/
+.Bottom{
+    background-color:var(--botones);
+    color:var(--fondo);
+    border-radius: 10px;
+    padding: 8px; 
+    width: 10em;
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+
+}
+.Bottom:hover{
+    background-color:var(--navbar); 
+    color:var(--negro);
+    
+}
+/*Inputs (agregar ingormacion)*/
+.informacion{
+    text-align: center;
+    border-color: var(--negro);
+    border-radius: 8px;
+    padding: 12px; 
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+}
