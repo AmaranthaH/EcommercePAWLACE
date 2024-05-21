@@ -58,3 +58,4 @@ function updateTextStyle() {
     outputText.style.color = selectedColor;
     outputText.textContent = textInput || 'Tu texto aparecerá aquí...';
 }
+
