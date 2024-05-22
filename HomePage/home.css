@@ -1,0 +1,64 @@
+ img { 
+    max-width:100%
+}
+
+.container { 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-contain{
+    display:flex;
+    text-align:center; 
+    padding: 75px;
+    margin: auto;
+    background-color: var(--naranja);
+}
+
+.header-img {
+flex-basis: 50%;
+text-align: center;
+}
+
+.header-img img {
+    width: 400px;
+
+}
+/*División catálogo*/
+.catalogo-content {
+    padding:75px;
+    background-color: var(--botones);
+    color:var(--background);
+    text-align: center;
+    border-color: var(--background);
+    font-size: large;
+}
+/*Tarjetas de categorías*/
+.categorias { 
+    display:flex; 
+    flex-wrap: wrap;
+}
+/* Media queries para celulares */
+@media (max-width: 768px) {
+    .row-cols-1 {
+        flex-direction: column;
+    }
+}
+
+/* Media queries para dispositivos tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+    .row-cols-md-3 {
+        flex-direction: row;
+    }
+    .row-cols-md-3 > * {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Media queries para dispositivos Laptops, PCs */
+@media (min-width: 992px) {
+    .row-cols-md-3 {
+        flex-direction: row;
+    }
+}
