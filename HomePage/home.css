@@ -28,9 +28,11 @@ text-align: center;
 .catalogo-content {
     padding:75px;
     background-color: var(--botones);
-    color:var(--background);
     text-align: center;
     border-color: var(--background);
+}
+p{ 
+    color:var(--background);
     font-size: large;
 }
 /*Tarjetas de categorías*/
