@@ -1,0 +1,141 @@
+h2{
+    text-align: center;
+}
+.imagen-bandana{
+    width: 22em;  /* Ancho de la imagen */
+    height: 27em; /* Alto de la imagen */
+    padding: 10px; /* Espacio entre la imagen y el borde */
+    border-radius: 3em; /* Esquinas redondeadas, opcional */
+}
+#outputText{
+    text-align: left;
+}
+
+#decrementButton, #incrementButton{
+    background-color:var(--botones);
+    color:var(--fondo);
+    border-radius: 1em;
+    padding: 8px; 
+    width: 6em;
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+}
+
+#numberDisplay{
+    background-color:var(--botones);
+    color:var(--fondo);
+    padding: 1em; 
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+}
+
+
+#decrementButton:hover, #incrementButton:hover{
+    background-color:var(--navbar); 
+    color:var(--negro);
+    
+}
+
+#carrito{
+    width: 20em;
+}
+
+.size-button{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    background-color: var(--navbar); /* Color de fondo azul */
+    color: black; /* Color del texto blanco */
+    font-size: .8em; /* Tamaño del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    outline: none; /* Elimina el contorno al hacer clic */
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+
+}
+
+
+#color {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    height: 5em;
+    width: 7em;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+
+.color-button.red {
+    background-color: #D95043;
+}
+
+.color-button.blue {
+    background-color: #89D5C9;
+}
+
+.color-button.green {
+    background-color: #AEC985;
+}
+
+.color-button.pink{
+    background-color:#fdcae1;
+}
+.color-button.purple{
+    background-color:#CE97FB;
+}
+.color-button.orange{
+    background-color:orange;
+
+}
+.color-button.celeste{
+    background-color:#00FFFF;
+}
+
+.color-button.yellow {
+    background-color: #FDDF7E;
+}
+
+.color-button.gray {
+    background-color: #c5c6c8;
+}
+
+.color-button.cafe {
+    background-color:#a68069;
+}
+
+
+
+
+#textInput{
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+    border-radius:1em;
+
+}
+
+@media (max-width:768px) {
+    #carrito1 {
+        display: none;
+    }
+
+}
+@media (max-width:700px) {
+.imagen-bandana{
+    width: 18em;  /* Ancho de la imagen */
+    height: 22em; /* Alto de la imagen */
+    padding: 10px; /* Espacio entre la imagen y el borde */
+    border-radius: 3em; /* Esquinas redondeadas, opcional */
+}}
+
+@media (min-width:769px) {
+    #carrito2 {
+        display: none;
+    }
+    imagen-bandana{
+        width: 28em;  /* Ancho de la imagen */
+        height: 32em; /* Alto de la imagen */
+        padding: 10px; /* Espacio entre la imagen y el borde */
+        border-radius: 3em; /* Esquinas redondeadas, opcional */
+    }
+}
