@@ -1,0 +1,87 @@
+.grid-container {
+   
+    display: grid;
+     /* Divide la página en dos columnas de igual ancho */
+    grid-template-columns: 1fr 1fr;
+    /* Centra verticalmente los elementos */
+    /*align-items: center; */
+}
+
+#izquierdaWelcome{
+    /* Centra horizontalmente la imagen */
+    text-align: center; 
+}
+
+.image-perrito {
+    /* Ajusta la imagen para que no se salga del contenedor */
+    max-width: 69%; 
+    /* Mantiene la proporción de aspecto original */
+    height: auto; 
+}
+
+
+#centroWelcome{
+    /* Añade un poco de espacio alrededor del formulario */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    /*margin: auto;*/
+   /*margin-top: -50px 5cm;*/
+ 
+}
+
+.image-patita {
+    
+    width: 100px; 
+    height: auto; 
+    margin-bottom: 20px; 
+    align-self: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.informacion {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; 
+}
+
+
+.titulo-registro {
+    font-family: 'Oswald', sans-serif;
+    color: #D95043;
+}
+
+.boton-registro {
+    background-color: #D95043;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.boton-registro:hover {
+    background-color: #B43D36;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en dispositivos móviles */
+    }
+
+    .olvideContraseña {
+        order: 3; /* Hace que el texto "olvidar contraseña" aparezca debajo del formulario en dispositivos móviles */
+    }
+
+   
+
+
+}
