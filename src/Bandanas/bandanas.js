@@ -1,19 +1,19 @@
 // Precios por talla
 const prices = {
-    'XXCH': 5.00,
-    'XCH': 10.00,
-    'CH': 15.00,
-    'M': 20.00,
-    'G': 25.00,
-    'XG': 30.00,
-    'XXG': 35.00,
+    'XXCH': 100.00,
+    'XCH': 100.00,
+    'CH': 100.00,
+    'M': 120.00,
+    'G': 130.00,
+    'XG': 130.00,
+    'XXG': 150.0
 };
 
 // Cantidad actual de productos
 let currentQuantity = 0;
 
 // Talla seleccionada
-let currentSize = 'S';
+let currentSize = 'M'; // Cambié la talla inicial a 'M' para que coincida con los precios definidos
 
 // Función para cambiar la cantidad de productos
 function changeNumber(amount) {
@@ -35,20 +35,22 @@ function selectSize(size) {
 function updatePrice() {
     const unitPrice = prices[currentSize];
     const totalPrice = (unitPrice * currentQuantity).toFixed(2);
-    document.getElementById('priceDisplay').innerText = `Precio: $${totalPrice}`;
+    document.getElementById('itemPrice').innerText = `Precio: $${totalPrice}`;
 }
 
 // Actualizar el precio inicial
 updatePrice();
 
+// Color inicial del texto
+let selectedColor = 'black'; 
 
-let selectedColor = 'black'; // Color inicial del texto
-
+// Función para seleccionar el color del texto
 function selectColor(color) {
     selectedColor = color;
-    updateTextStyle(); // Actualizar estilo de texto con el nuevo color
+    updateTextStyle(); // Actualizar el estilo del texto con el nuevo color
 }
 
+// Función para actualizar el estilo del texto
 function updateTextStyle() {
     const fontSelect = document.getElementById('fontSelect').value;
     const textInput = document.getElementById('textInput').value;
@@ -58,3 +60,22 @@ function updateTextStyle() {
     outputText.style.color = selectedColor;
     outputText.textContent = textInput || 'Tu texto aparecerá aquí...';
 }
+
+// Actualizar el estilo de texto inicial
+updateTextStyle();
+
+// Cuando se cargue el DOM
+document.addEventListener('DOMContentLoaded', function() {
+    // Recuperar el artículo seleccionado de localStorage
+    const selectedItem = JSON.parse(localStorage.getItem('personalizedItem'));
+    
+    // Verificar si hay un artículo seleccionado almacenado en localStorage
+    if (selectedItem) {
+        // Mostrar los detalles del artículo seleccionado en la página de personalización
+        document.getElementById('itemName').textContent = selectedItem.name;
+        document.getElementById('itemPrice').textContent = selectedItem.price;
+
+        // Mostrar la imagen del artículo seleccionado
+        document.getElementById('itemImg').src = selectedItem.img;
+    } 
+});

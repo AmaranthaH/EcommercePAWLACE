@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
         { name: "Bandana Orange", price: "120.00 MXN", img: "../catalogo/assets/orange.jpg", category: "Foodie" },
         { name: "Bandana Carrots", price: "120.00 MXN", img: "../catalogo/assets/carrots.jpg", category: "Foodie" },
         { name: "Bandana Colorfull", price: "120.00 MXN", img: "../catalogo/assets/pride2.jpg", category: "Colorfull" }
-        
     ];
 
     // Obtener categorías únicas
@@ -48,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="card-body">
                         <h5 class="card-title">${item.name}</h5>
                         <p class="card-text">${item.price}</p>
-                        <button class="personaliza-btn" data-name="${item.name}" data-price="${item.price}">Personaliza</button>
+                        <button class="personaliza-btn" data-name="${item.name}" data-price="${item.price}" data-img="${item.img}">Personaliza</button>
                     </div>
                 </div>
             `;
@@ -64,21 +63,15 @@ document.addEventListener("DOMContentLoaded", function() {
             const button = event.target;
             const itemName = button.getAttribute('data-name');
             const itemPrice = button.getAttribute('data-price');
+            const itemImg = button.getAttribute('data-img'); // Obtener la ruta de la imagen del atributo data-img
             console.log(`Personalizar: ${itemName} - ${itemPrice}`);
-
-            // Guardar el nombre y precio en localStorage
-            const personalizedItem = { name: itemName, price: itemPrice};
+    
+            // Guardar los detalles del artículo en localStorage
+            const personalizedItem = { name: itemName, price: itemPrice, img: itemImg }; // Añadir la ruta de la imagen al objeto
             localStorage.setItem('personalizedItem', JSON.stringify(personalizedItem));
-            /**
-             * Cuando se hace clic en el botón "Personalizar", creamos un objeto con el nombre y el precio del artículo y se guarda en el localStorage usando localStorage.setItem(). El objeto se convierte en una cadena JSON antes de ser guardado, y esto se hace con JSON.stringify(personalizedItem). Esto asegura que los datos se guarden correctamente en el localStorage y así :3 :D
-             */
 
-
-            //Momento de redirigir a la página de personalización:
+            // Redirigir a la página de personalización
             window.location.href = '/EcommercePAWLACE/src/Bandanas/bandanas.html';
-
-            console.log(`Personalizar ${itemName} - ${itemPrice}`);
-
         }
     });
 });
