@@ -163,7 +163,6 @@ html, body {
     #btnMenos,#btnCantidad,#btnMas {
         flex: 0 0 35%; /* Establecer un ancho máximo para los botones */
         transition: font-size 0.5s ease; /
-        margin: 100px;
     }
     
 
