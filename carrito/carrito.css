@@ -106,19 +106,6 @@ html, body {
     text-align: right;
 }
 
-/* Estilos para tamaños de pantalla pequeños */
-@media (max-width: 768px) {
-    #carritoTable {
-        font-size: 14px; /* Reducir el tamaño de la fuente */
-    }
-
-    #cantidad {
-        width: 10em; /* Establecer un ancho máximo para la celda de cantidad */
-        display: flex;
-        align-items: center; /* Centra verticalmente los elementos */
-        justify-content: center; /* Centra horizontalmente los elementos */
-    }
-}
 
 /* Estilos para tamaños de pantalla pequeños */
 @media (max-width: 786px) {
@@ -154,31 +141,27 @@ html, body {
         height: auto; /* Mantiene la proporción de aspecto de la imagen */
         width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
         max-height: 350px; /* Establece el límite máximo de altura */
-    }
+        padding: 10px; /* Ajusta el relleno según sea necesario */
 
-    #imagenArticuloCarrito {
-    padding: 10px; /* Ajusta el relleno según sea necesario */
-}
+    }
 
 #imagenArticuloCarrito img {
     margin: 0; /* Ajusta el margen según sea necesario */
 }
 
     #cantidad {
-        display: flex;
-        align-items: center; /* Centra verticalmente los elementos */
-        justify-content: space-between; /* Espacia uniformemente los botones */
-        width: 80%; /* Ancho máximo para que ocupe todo el contenedor */
+        width: 10em;; /* Ancho máximo para que ocupe todo el contenedor */
         height: auto; /* Ajusta automáticamente la altura */
         flex-direction: row; /* Asegura que los botones estén en fila */
     }
 
+    #cantidad::before{
+        margin-right: 5px;
+    }
+
     /* Ajuste específico para el botón de cantidad */
     #btnMenos,#btnCantidad,#btnMas {
-        width: auto; /* Ancho automático para el botón de cantidad */
-        margin-left: 10px;
-        flex: 0 0 25%; /* Establecer un ancho máximo para los botones */
-        font-size: 12px; /* Reducir aún más el tamaño de la fuente */
+        flex: 0 0 35%; /* Establecer un ancho máximo para los botones */
         transition: font-size 0.5s ease; /
     }
     
