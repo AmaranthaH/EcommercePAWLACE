@@ -1,3 +1,4 @@
+
 h2{
     text-align: center;
 }
@@ -15,8 +16,8 @@ h2{
     background-color:var(--botones);
     color:var(--fondo);
     border-radius: 1em;
-    padding: 8px; 
-    width: 6em;
+    padding: 5px; 
+    width: 3em;
     box-shadow: 0 5px 2px rgba(112,112,112,0.54);
 }
 
@@ -24,6 +25,7 @@ h2{
     background-color:var(--botones);
     color:var(--fondo);
     padding: 1em; 
+    width: 1em;
     box-shadow: 0 5px 2px rgba(112,112,112,0.54);
 }
 
@@ -114,26 +116,31 @@ h2{
 
 }
 
-@media (max-width:768px) {
+@media (max-width:700px) {
     #carrito1 {
         display: none;
     }
+    .imagen-bandana{
+        width: 16em;  /* Ancho de la imagen */
+        height: 18em; /* Alto de la imagen */
+        padding: 10px; /* Espacio entre la imagen y el borde */
+        border-radius: 3em; /* Esquinas redondeadas, opcional */
+    }
 
 }
-@media (max-width:700px) {
+
+
+@media (min-width:701px) {
+    #carrito2 {
+        display: none;
+   
+}
 .imagen-bandana{
-    width: 23em;  /* Ancho de la imagen */
+    width: 16em;  /* Ancho de la imagen */
     height: 18em; /* Alto de la imagen */
     padding: 10px; /* Espacio entre la imagen y el borde */
     border-radius: 3em; /* Esquinas redondeadas, opcional */
-}}
-
-@media (min-width:769px) {
-    #carrito2 {
-        display: none;
-    }
-
-
+}
 }
 
 footer {

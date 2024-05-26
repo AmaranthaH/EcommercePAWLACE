@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandanas Personalizadas</title>
     <link rel="icon" type="image/png" href="../assets/LOGO.png">
+
     <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script> <!-- Enlace a FontAwesome para iconos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/EcommercePAWLACE/src/style/globalStyle.css">
+
+    <link rel="stylesheet" href="../style/globalStyle.css">
     <link rel="stylesheet" href="./bandanas.css">
     <script src="./bandanas.js" defer></script>
 
     <script src="../nosotras/navbar.js" defer></script>
+    <script src="./carrito.js" defer></script>
+    <script src="./pedido.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jacquard+24&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -23,24 +28,50 @@
     <a class="logo" href="../catalogo/catalogo.html">
         <img src="../assets/PAWLACE LOGO.png" class="logo" alt="PAWLACE">
     </a>
+    <!--Para mis barritas de mi celular-->
     <button class="nav-toggle">
         <i class="fa-solid fa-bars"></i>
     </button>
+
     <ul class="nav-menu">
         <li class="nav-menu-item"><a href="../catalogo/catalogo.html" class="nav-menu-link nav-link">Catálogo</a></li>
         <li class="nav-menu-item"><a href="../PawAmigo/pawamigo.html" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
         <li class="nav-menu-item"><a href="../nosotras/nosotras.html" class="nav-menu-link nav-link">Nosotras</a></li>
         <li class="nav-menu-item"><a href="../PaginaContactanos/pagina_contactanos1.html" class="nav-menu-link nav-link">Contacto</a></li>
         <li class="nav-menu-item"><a href="../addproducts/addproducts.html" class="nav-menu-link nav-link">Añadir Producto</a></li>
+
         <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">
             <img src="../assets/search_24dp.svg" class="cambiar" alt="Buscar">
         </a></li>
-        <li class="nav-menu-item"><a href="../carrito/carrito.html" class="nav-menu-link nav-link">
-            <img src="../assets/shopping_cart_24dp.svg" class="cambiar" alt="Carrito">
-        </a></li>
-        <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">
+
+
+        <li class="nav-menu-item"><a href="../inicioSesion/Inicio_de_sesion.html" class="nav-menu-link nav-link">
             <img src="../assets/account_circle_24dp.svg" class="cambiar" alt="Cuenta">
         </a></li>
+
+        <!--Para el botón de carrito-->   
+        <li class="nav-menu-item">
+            <button class="nav-toggle-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="carrito">
+                    <table id="lista-carrito" class="u-full-width">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaProductos"></tbody>
+                    </table>
+
+                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                    <a href="../carrito/carrito.html" id="ver-carrito" class="button u-full-width">Ver Carrito</a>
+                </div>
+            </button>
+        </li>
     </ul>
 </nav>
 
@@ -49,7 +80,7 @@
 <div class="container overflow-hidden text-center">
     <div class="row gx-5">
         <div class="col">
-            <div class="p-3">
+            <div class="p-3" id="lista-productos">
                 <img id="itemImg" class="imagen-bandana img-thumbnail" src="" alt="Bandana">
                 <br><br>
                 <div>
@@ -59,7 +90,7 @@
                 </div>
                 <br>
                 <div>
-                    <input class="Bottom" id="carrito1" type="submit" value="Añadir al carrito">
+                    <input class="Bottom agregar-carrito" id="carrito1" type="submit" value="Añadir al carrito">
                 </div>
                 <br>
                 <div>
@@ -68,7 +99,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="p-3">
+            <div class="p-3" id="lista-precios">
                 <div>
                     <h3 id="itemName">Nombre de la Bandana</h3>
                     <p id="itemPrice">Precio: $0.00 MXN</p>
@@ -133,39 +164,31 @@
                                     <option value="'Oswald', sans-serif" style="font-family: 'Oswald', sans-serif;">Oswald</option>
                                     <option value="'Lobster', cursive" style="font-family: 'Lobster', cursive;">Lobster</option>
                                     <option value="'Roboto', sans-serif" style="font-family: 'Roboto', sans-serif;">Roboto </option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-sm-5 col-md-6"><p>Texto</p></div>
-            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-                <div class="input-group">
-                    <label for="textInput"></label>
-                    <input type="text" id="textInput" oninput="updateTextStyle()" placeholder="20 caracteres maximo...">
-                </div>
-                <div class="output-group">
+                                </select>
+                            </div>    
+                        </div>    
+                    </div> 
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-6"><p>Texto</p></div>
+                            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                                <div class="input-group">
+                                    <label for="textInput"></label>
+                                    <input type="text" id="textInput" oninput="updateTextStyle()" placeholder="20 caracteres maximo...">
+                                </div>
+                                <div class="output-group">
+                                    <br>
+                                    <p id="outputText">Tu texto aparecerá aquí...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <br>
-                    <p id="outputText">Tu texto aparecerá aquí...</p>
-                </div>
-            </div>
+            <div> <input class="Bottom" id="carrito2" type="submit" value="Añadir al carrito"> </div>
         </div>
-    </div>
-        
-          <br>
-          <div>
-              <input class="Bottom" id="carrito2" type="submit" value="Añadir al carrito">
-          </div>
+    </div> 
 
-
-      </div>
-    </div>
-  </div>
-  
-</div>
-
+</div> 
 <!-- <a href="carrito.html">Ir al carrito</a> -->
 
 <footer class="footer">

@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem('personalizedItem', JSON.stringify(personalizedItem));
 
             // Redirigir a la página de personalización
-            window.location.href = '/EcommercePAWLACE/src/Bandanas/bandanas.html';
+            window.location.href = '../Bandanas/bandanas.html';
         }
     });
 });
