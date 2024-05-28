@@ -16,7 +16,7 @@ loginForm.addEventListener('submit', (e) => {
     if (user.password === password) {
         alert('¡Inicio de sesión exitoso!');
         // Redirigir al usuario a la página principal o a su perfil
-        window.location.href = 'home.html'; // Cambia 'home.html' a la página deseada
+        window.location.href = '../catalogo/catalogo.html'; // Cambia 'home.html' a la página deseada
     } else {
         alert('Correo o contraseña incorrectos');
     }
