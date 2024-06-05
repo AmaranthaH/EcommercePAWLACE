@@ -69,7 +69,6 @@
                 <div class="botones-container">
                     <input class="btn btn-primary d-none d-lg-block" id="carrito1" type="submit" value="Añadir al carrito">
                 </div>
-                <br>
                 <div>
                     <a href="../PawAmigo/pawamigo.html" id="linkToOtherPage" class="btn btn-link">Conoce a tu PawAmigo</a>
                 </div>
@@ -94,10 +93,11 @@
                                 <button class="btn btn-outline-primary size-button" onclick="selectSize('XG')">XG</button>
                                 <button class="btn btn-outline-primary size-button" onclick="selectSize('XXG')">XXG</button>
                             </div>
+                            <div> <p>¿No conoces su talla?</p><a href="../Bandanas/Guía de Tallas para tu PawAmigo (1).pdf" id="linkToOtherPage" class="btn btn-link"> Aqui tienes una guia te tallas para tu PawAmigo</a></div>
                         </div>
                     </div>
                 </div>  
-                <br><br>
+                <br>
                 <h2>Personaliza tu Texto</h2>
                 <br>
                 <div class="container text-center">
@@ -115,6 +115,19 @@
                                 <button class="color-button cafe" onclick="selectColor('brown')"></button>
                                 <button class="color-button celeste" onclick="selectColor('lightblue')"></button>
                                 <button class="color-button gray" onclick="selectColor('gray')"></button>
+                                <!-- Nuevos botones con nuevos colores -->
+                                <button class="color-button teal" onclick="selectColor('teal')"></button>
+                                <button class="color-button cyan" onclick="selectColor('cyan')"></button>
+                                <button class="color-button magenta" onclick="selectColor('magenta')"></button>
+                                <button class="color-button lime" onclick="selectColor('lime')"></button>
+                                <button class="color-button indigo" onclick="selectColor('indigo')"></button>
+                                <button class="color-button olive" onclick="selectColor('olive')"></button>
+                                <button class="color-button navy" onclick="selectColor('navy')"></button>
+                                <button class="color-button maroon" onclick="selectColor('maroon')"></button>
+                                <button class="color-button fuchsia" onclick="selectColor('fuchsia')"></button>
+                                <button class="color-button salmon" onclick="selectColor('salmon')"></button>
+                                <button class="color-button white" onclick="selectColor('white')"></button>
+                                <button class="color-button black" onclick="selectColor('black')"></button>
                             </div>
                         </div>
                     </div>
@@ -151,7 +164,7 @@
                                     <label for="textInput"></label>
                                     <input type="text" id="textInput" class="form-control" oninput="updateTextStyle()" maxlength="20" placeholder="20 caracteres máximo...">
                                 </div>
-                                <div class="output-group">
+                                <div id="texto" class="output-group">
                                     <br>
                                     <p id="outputText">Tu texto aparecerá aquí...</p>
                                 </div>

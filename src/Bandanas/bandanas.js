@@ -64,6 +64,20 @@ function updateTextStyle() {
 // Actualizar el estilo de texto inicial
 updateTextStyle();
 
+function selectColor(color) {
+    var outputDiv = document.getElementById("texto");
+    var outputText = document.getElementById("outputText");
+    
+    if (color === 'white') {
+        outputText.style.color = 'white'; // Cambiar el color del texto a blanco
+        outputDiv.style.backgroundColor = 'black'; // Cambiar el color de fondo del div a negro
+    } else {
+        outputText.style.color = color; // Restaurar el color del texto al predeterminado
+        outputDiv.style.backgroundColor = '#FFF7F0'; // Restaurar el color de fondo del div al predeterminado
+    }
+}
+
+
 // Cuando se cargue el DOM
 document.addEventListener('DOMContentLoaded', function() {
     // Recuperar el artículo seleccionado de localStorage

@@ -51,8 +51,8 @@ h2{
 }
 
 .size-button{
-    width: 3em;
-    height: 3em;
+    width: 4.3em;
+    height: 4.3em;
     border-radius: 50%; /* Hace que el botón sea redondo */
     background-color: var(--navbar); /* Color de fondo azul */
     color: black; /* Color del texto blanco */
@@ -70,8 +70,8 @@ h2{
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    height: 5em;
-    width: 7em;
+    height: 7em;
+    width: 9em;
     border: none;
     cursor: pointer;
     user-select: none;
@@ -79,43 +79,29 @@ h2{
 }
 
 
-.color-button.red {
-    background-color: #D95043;
-}
-
-.color-button.blue {
-    background-color: #89D5C9;
-}
-
-.color-button.green {
-    background-color: #AEC985;
-}
-
-.color-button.pink{
-    background-color:#fdcae1;
-}
-.color-button.purple{
-    background-color:#CE97FB;
-}
-.color-button.orange{
-    background-color:orange;
-
-}
-.color-button.celeste{
-    background-color:#00FFFF;
-}
-
-.color-button.yellow {
-    background-color: #FDDF7E;
-}
-
-.color-button.gray {
-    background-color: #c5c6c8;
-}
-
-.color-button.cafe {
-    background-color:#a68069;
-}
+.red { background-color: red; }
+.blue { background-color: blue; }
+.green { background-color: green; }
+.yellow { background-color: yellow; }
+.purple { background-color: purple; }
+.pink { background-color: pink; }
+.orange { background-color: orange; }
+.cafe { background-color: brown; }
+.celeste { background-color: lightblue; }
+.gray { background-color: gray; }
+/* Nuevos colores */
+.teal { background-color: teal; }
+.cyan { background-color: cyan; }
+.magenta { background-color: magenta; }
+.lime { background-color: lime; }
+.indigo { background-color: indigo; }
+.olive { background-color: olive; }
+.navy { background-color: navy; }
+.maroon { background-color: maroon; }
+.fuchsia { background-color: fuchsia; }
+.salmon { background-color: salmon; }
+.white { background-color: white; } /* Cambiar el color del texto para que se vea en blanco */
+.black { background-color: black; }
 
 #textInput{
     box-shadow: 0 5px 2px rgba(112,112,112,0.54);
