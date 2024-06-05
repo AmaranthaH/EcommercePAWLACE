@@ -1,0 +1,173 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr; /* Una parte mucho más grande que la otra */
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 100vh;
+}
+
+#izquierdaCarrito {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 80%; /* Asegúrate de que ocupa todo el ancho disponible */
+    background-color: #89D5C9;
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en la altura total */
+}
+
+.circle {
+    width: 70%; /* Ancho del círculo en relación con el contenedor */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    background-color: white;
+    border-radius: 50%;
+}
+
+#imagenCarrito {
+    max-width: 100%; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+}
+
+
+#derechaCarrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#carritoTable {
+    width: auto; /* La tabla ocupa todo el ancho disponible */
+    text-align: left; /* Alinea el texto a la izquierda dentro de la tabla */
+    margin: 10px; /* Margen de 10px en todas las áreas alrededor de la tabla */
+    margin-top: 0px;
+    border-collapse: separate; /* Separa los bordes de las celdas */
+    font-family: "Montserrat", sans-serif;
+    height: auto; /* Restauramos la altura automática para tamaños de pantalla grandes */
+}
+
+#imagenArticuloCarrito{
+    max-width: 100%; /* Hace que la imagen sea responsive */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    width: 40%; /* Ocupa el 100% del ancho del contenedor padre */
+    max-height: 200px; /* Establece el límite máximo de altura */
+}
+
+#cantidad {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    width: 10em;
+    height: 20em; /* Altura del contenedor al 100% del contenedor principal */
+}
+
+.botonera {
+    display: flex;
+    gap: 5px; /* Espacio entre los botones */
+}
+
+.Bottom {
+    padding: 3px 3px; /* Tamaño de padding más pequeño para botones */
+    /* border: 1px solid #ccc;*/
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    align-items: center; /* Centra verticalmente los elementos */
+    font-family: "Montserrat", sans-serif;
+}
+
+.Bottom:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para las celdas de la tabla */
+#carritoTable th,
+#carritoTable td {
+    padding: 5px; /* Espaciado interno de las celdas */
+    /* border: 1px solid #ccc;  Borde de 1px sólido con color gris */
+}
+
+#totales{
+    text-align: right;
+    padding: 0;
+
+}
+
+#procederPago{
+    text-align: right;
+}
+
+
+/* Estilos para tamaños de pantalla pequeños */
+@media (max-width: 786px) {
+
+    thead {
+        display: none; /* Oculta la fila de encabezado en pantallas pequeñas */
+    }
+
+    table {
+        width: 100%;
+        padding: 0;
+    }
+
+    table tr {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    table td[data-cell] {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em; /* Espaciado interno */
+    }
+
+    table td[data-cell]::before {
+        content: attr(data-cell); /* Muestra el contenido del atributo data-cell */
+        font-weight: bold; /* Texto en negrita */
+    }
+
+    #imagenArticuloCarrito {
+        max-width: 100%; /* Hace que la imagen sea responsive */
+        height: auto; /* Mantiene la proporción de aspecto de la imagen */
+        width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+        max-height: 350px; /* Establece el límite máximo de altura */
+        padding: 10px; /* Ajusta el relleno según sea necesario */
+
+    }
+
+#imagenArticuloCarrito img {
+    margin: 0; /* Ajusta el margen según sea necesario */
+}
+
+    #cantidad {
+        width: 10em;; /* Ancho máximo para que ocupe todo el contenedor */
+        height: auto; /* Ajusta automáticamente la altura */
+        flex-direction: row; /* Asegura que los botones estén en fila */
+    }
+
+    #cantidad::before{
+        margin-right: 5px;
+    }
+
+    /* Ajuste específico para el botón de cantidad */
+    #btnMenos,#btnCantidad,#btnMas {
+        flex: 0 0 35%; /* Establecer un ancho máximo para los botones */
+        transition: font-size 0.5s ease; /
+    }
+    
+
+    #eliminarCarrito,#totales, #procederPago {
+        text-align: right; /* Centra el texto */
+        padding: 10px 0; /* Añade espaciado interno */
+    }
+}
