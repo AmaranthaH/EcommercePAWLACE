@@ -1,4 +1,20 @@
- img { 
+/*Colores*/
+:root{
+    --fondo:#FFF7F0;
+    --naranja:#FAC172;
+    --botones: #D95043;
+    --navbar: #89D5C9;
+    --nosotras: #AEC965;
+    --negro:#000000;
+    --cusorNav:#6dada38b;
+
+}
+
+body{ 
+    background-color: var (--naranja)
+}
+
+img { 
     max-width:100%
 }
 
@@ -7,13 +23,6 @@
     margin: 0 auto;
 }
 
-.header-contain{
-    display:flex;
-    text-align:center; 
-    padding: 75px;
-    margin: auto;
-    background-color: var(--naranja);
-}
 
 .header-img {
 flex-basis: 50%;
