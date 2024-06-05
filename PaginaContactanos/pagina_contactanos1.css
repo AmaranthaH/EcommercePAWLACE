@@ -1,11 +1,9 @@
-/* Elimina las propiedades de grid que afectan el diseño */
 .body{
     padding: 1px 1px 0;
 }
 
 .container-fluid {
     margin-top: -20px;
-    
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -20,9 +18,6 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    justify-content: center;
-    height: 100vh; /* Ajustamos la altura para que cubra toda la pantalla */
     overflow: hidden; /* Asegura que las imágenes no se salgan del contenedor */
 
 }
@@ -49,6 +44,7 @@
 
 /* Agrega estilos específicos de Bootstrap para el centro */
 #centroContactanos{
+    margin-top: 12vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -56,17 +52,16 @@
 }
 
 
-/* Estilo para el prefijo de la lada */
+/* Estilo Telefono*/
 #lada {
     background-color: #D95043;
     color: white;
     border: 1px solid var(--negro);
     border-radius: 8px 0 0 8px;
-    padding: 12px;
+    padding: 8px;
     box-shadow: 0 5px 2px rgba(112, 112, 112, 0.54);
 }
 
-/* Estilo para el input */
 #contactoTelefono {
     border-left: none;
     border-radius: 0 8px 8px 0;
@@ -103,15 +98,15 @@
     width: auto;
 }
 
+/*Pie de pagina*/
 .footer {
     background-color: #333;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
-    position: relative;
+    position:relative;
     bottom: 0;
     width: 100%;
-    position: absolute;
 }
 
 footer {
@@ -121,28 +116,56 @@ footer {
     padding: 10px;
 }
 
+@media (max-width: 770px){
+    #centroContactanos{
+        margin-top: 3vh;
+    }
+}
 
 /* Estilos responsivos específicos */
-@media (max-width: 700px) {
-    .container {
-        flex-direction: column;
-        height: auto;
-    }
-
+@media (max-width: 750px) {
     #izquierdaContactanos, #derechaContactanos {
-        width: 100%;
-        height: 35vh;
-    }
-
-    #izquierdaContactanos img, #derechaContactanos img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 20%; /* Reducir el ancho de las imágenes */
     }
 
     #centroContactanos {
+        margin-top: 3vh;
+        width: 60%; /* Aumentar el ancho del centro */
+        padding: 0 1rem; /* Añadimos un padding lateral para mejor ajuste en pantallas pequeñas */
+    }
+
+    .informacion {
+        width: 100%; /* Asegura que los campos de entrada ocupen todo el ancho disponible */
+    }
+
+    .custom-input-group {
+        width: 100%; /* Asegura que el grupo de entrada ocupe todo el ancho disponible */
+    }
+
+    .mb-3.text-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer {
+        background-color: #333;
+        color: #ffffff;
+        text-align: center;
+        position:relative;
+        bottom: 0;
         width: 100%;
-        padding: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #izquierdaContactanos, #derechaContactanos {
+        display: none; /* Oculta las imágenes cuando el ancho de la pantalla sea de 400px o menos */
+    }
+
+    #centroContactanos {
+        width: 100%; /* Asegura que el contenedor central ocupe todo el ancho disponible */
     }
 }
 

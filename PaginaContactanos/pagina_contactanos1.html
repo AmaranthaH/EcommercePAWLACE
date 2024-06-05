@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../PaginaContactanos/pagina_contactanos1.css"> 
     <link rel="stylesheet" href="../style/globalStyle.css">
 
-    <!-- Tus scripts -->
-    <script src="./pagina_contactanos1.js" defer async></script>
+    <!-- Scripts -->
+    <script src="../PaginaContactanos/pagina_contactanos1.js" defer async></script>
     <script src="../nosotras/navbar.js" defer async></script>
 
     <!-- Fuentes de Google -->
@@ -68,61 +68,64 @@
 
  
   <div class="container-fluid">
-      <div class="row">
+        <div class="row">
 
-          <div class="col-lg-4" id="izquierdaContactanos"></div>
+            <!--Imagen Izquierda-->
+            <div class="col-lg-4" id="izquierdaContactanos"></div>
 
+            <!--Contenido Centro-->
+            <div class="col-lg-4" id="centroContactanos">
+                <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formContactanos" class="mt-5"> 
+                    
+                    <div class="mb-3">
+                        <h2 class="text-center">Contáctanos</h2>
+                    </div>
 
-          <div class="col-lg-4" id="centroContactanos">
-              <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formContactanos" class="mt-5"> 
+                    <!--Nombre contacto-->
+                    <div class="mb-3">
+                        <input type="text" class="informacion form-control" id="contactoNombre" name="contactoNombre" required placeholder="Nombre Completo">
+                    </div>
 
-                <div class="mb-3">
-                    <h2 class="text-center">Contáctanos</h2>
-                </div>
+                    <!--Correo-->
+                    <div class="mb-3">
+                    <input type="email" id="contactoEmail" class="informacion form-control" name="contactoEmail" required placeholder="Correo Electronico">
+                    </div>
 
-                  <!--Nombre contacto-->
-                <div class="mb-3">
-                    <input type="text" class="informacion" id="contactoNombre" name="contactoNombre" required placeholder="Nombre Completo">
-                </div>
+                    <!--Telefono-->
+                    <div class="mb-3 custom-input-group">
+                        <span class="input-group-text" id="lada">+52</span>
+                        <input type="tel" id="contactoTelefono" class="informacion form-control" name="contactoTelefono" required placeholder="XXX XXX XXXX" minlength="10" maxlength="10">
+                    </div>
 
-                <!--Correo-->
-                <div class="mb-3">
-                  <input type="email" id="contactoEmail" class="informacion" name="contactoEmail" required placeholder="Correo Electronico">
-                </div>
+                    <!--Mensaje-->
+                    <div class="mb-3">
+                    <textarea id="contactoMensaje" class="informacion form-control" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
+                    </div>
 
-                <!--Telefono-->
-                  <div class="mb-3 custom-input-group">
-                    <span class="input-group-text" id="lada">+52</span>
-                      <input type="text" id="contactoTelefono" class="informacion form-control" id="contactoTelefono" name="contactoTelefono" required placeholder="XXX XXX XXXX">
-                  </div>
-
-                  <!--Mensaje-->
-                <div class="mb-3">
-                  <textarea id="contactoMensaje" class="informacion form-control" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
-                </div>
-
-                <div class="mb-3 text-center">
-                    <input class="Bottom btn btn-primary" type="submit" value="Enviar">
-                </div>
+                    <!--Boton Enviar-->
+                    <div class="mb-3 text-center">
+                        <input class="Bottom btn btn-primary" type="submit" id=boton value="Enviar">
+                    </div>
 
               </form>
 
-              <div class="paraIngresar">
-                  <label for="pregunta">¿Ya tienes una cuenta?    |</label>
-                  <a href="#Tienda">Ingresa</a>
-              </div>
-          </div>
+                <div class="text-center">
+                    <label for="pregunta">¿Ya tienes una cuenta?    |</label>
+                    <a href="#Tienda">Ingresa</a>
+                </div>
+            </div>
 
-          <div class="col-lg-4" id="derechaContactanos"></div>
+            <!--Imagen Derecha-->
+            <div class="col-lg-4" id="derechaContactanos"></div>
 
-      </div>
+        </div>
   </div>
   
-  <footer class="footer">
-      <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
-  </footer>
+    <footer class="footer">
+        <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
