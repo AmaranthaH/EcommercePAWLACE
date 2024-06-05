@@ -29,7 +29,6 @@ body{
     background-color:var(--fondo);
     font-size: 1em;
     font-family: "Montserrat", sans-serif;
-    padding: 90px 20px 0; /* nuesto menú estaría siempre flotando sin que intervenga con mi contenido */
 }
 
 /*Boton*/

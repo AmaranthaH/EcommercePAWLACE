@@ -4,114 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
+    <link rel="icon" type="image/png" href="../assets/LOGO.png">
 
-    <!-- Uso de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--Enlace de una pagina llamada FontAwesome, de iconos libres, es para poder tener nuestro menu de 3 lineas en un celular-->
     <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"> <!-- Agrega el CSS de Bootstrap -->
+
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="../PaginaContactanos/pagina_contactanos1.css"> 
+    <link rel="stylesheet" href="../style/globalStyle.css">
+
+    <!-- Tus scripts -->
     <script src="./pagina_contactanos1.js" defer async></script>
-    <script src="../nav1/index.js" defer async></script><!--Poner siempre debajo de fontawesome --> 
-    
-    <link rel="stylesheet" href="../style-global.css"> 
-    <link rel="stylesheet" href="./pagina_contactanos1.css">
-    <link rel="stylesheet" href="../nav1/Style-Nav.css"> 
-    <link rel="stylesheet" href="./pagina_contactanos1.css"> 
+    <script src="../nosotras/navbar.js" defer async></script>
 
-
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jacquard+24&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <header class = "header">
-        <nav class = "nav">
-            <a href="#" class="logo nav-link">
-                <img src="../nav1/Imagenes-nav/PAWLACE LOGO.1-Photoroom.png-Photoroom.png" alt="PAWLACE">
+        <!--NavBar-->
+        <nav class="header nav">
+            <a class="logo" href="../catalogo/catalogo.html">
+                <img src="../assets/PAWLACE LOGO.png" class="logo" alt="PAWLACE">
             </a>
-            <button class = "nav-toggle"> <!--Para mis barritas de mi celular-->
+
+            <button class="nav-toggle">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            <ul class = "nav-menu">
-                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Tienda</a></li>
-                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a></li>
-                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-link">Nosotras</a></li>
-                <li class="nav-menu-item"><a href="../PaginaContactanos/pagina_contactanos1.html" class="nav-menu-link nav-link">Contacto</a></li>
-                <!--Para el botón de buscar--> 
-                <li class ="nav-menu-item">
-                    <button class="nav-toggle-search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </li>   
-                <!--Para el botón de carrito-->   
-               <li class ="nav-menu-item" >
-                    <a href="../carrito/carrito.html">
-                        <button class="nav-toggle-cart" >
-                                <i class="fa-solid fa-cart-shopping" ></i>
-                        </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="../catalogo/catalogo.html" class="nav-menu-link nav-link">Catálogo</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="../PawAmigo/pawamigo.html" class="nav-menu-link nav-link">Conoce a tu PawAmigo</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="../nosotras/nosotras.html" class="nav-menu-link nav-link">Nosotras</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="../PaginaContactanos/pagina_contactanos1.html" class="nav-menu-link nav-link">Contacto</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="../addproducts/addproducts.html" class="nav-menu-link nav-link">Añadir Producto</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="../carrito/carrito.html" class="nav-menu-link nav-link">
+                        <img src="../assets/shopping_cart_24dp.svg" class="cambiar" alt="cambiar">
                     </a>
                 </li>
-                <!--Para el botón de perfil-->        
-                <li class ="nav-menu-item">   
-                    <button class ="nav-toggle-user">
-                        <i class="fa-solid fa-user"></i>
-                    </button>
+                <li class="nav-menu-item">
+                    <a href="../bienvenidaRregistro/welcome.html" class="nav-menu-link nav-link">
+                        <img src="../assets/account_circle_24dp.svg" class="cambiar" alt="cambiar">
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-lg-4" id="izquierdaContactanos">
-                <img src="./imagenes_pagina_contactanos/Perrito-izquierdo.jpg" alt="Imagen Izquierda" class="img-fluid">
-            </div>
+ 
+  <div class="container-fluid">
+      <div class="row">
 
-            <div class="col-lg-4" id="centroContactanos">
-                <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formContactanos" class="mt-5"> 
+          <div class="col-lg-4" id="izquierdaContactanos"></div>
+
+
+          <div class="col-lg-4" id="centroContactanos">
+              <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formContactanos" class="mt-5"> 
+
+                <div class="mb-3">
                     <h2 class="text-center">Contáctanos</h2>
-                    
-                    <!--Nombre contacto-->
-                    <div class="mb-3">
-                        <input class="informacion form-control" type="text" id="contactoNombre" name="contactoNombre" required placeholder="Nombre Completo">
-                    </div>
-
-                    <!--Correo-->
-                    <div class="mb-3">
-                        <input type="email" class="informacion form-control" id="contactoEmail" name="contactoEmail" required placeholder="Correo Electrónico">
-                    </div>
-
-                    <!--Telefono-->
-                    <div class="mb-3 custom-input-group">
-                        <span class="input-group-text" id="lada">+52</span>
-                        <input type="text" class="informacion form-control" id="contactoTelefono" name="contactoTelefono" required placeholder="Teléfono">
-                    </div>
-                    
-                    <!--Mensaje-->
-                    <div class="mb-3">
-                        <textarea id="contactoMensaje" class="informacion form-control" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
-                    </div>
-
-                    <div class="mb-3 text-center">
-                        <input class="Bottom btn btn-primary" type="submit" value="Enviar">
-                    </div>
-                    
-                </form>
-
-                <div class="text-center">
-                    <label for="pregunta">¿Ya tienes una cuenta?</label>
-                    <a href="#Tienda">Ingresa</a>
                 </div>
-            </div>
 
-            <div class="col-lg-4" id="derechaContactanos">
-                <img src="./imagenes_pagina_contactanos/Perrito-derecho.jpg" alt="Imagen Derecha" class="img-fluid">
-            </div>
-        </div>
-    </div>
+                  <!--Nombre contacto-->
+                <div class="mb-3">
+                    <input type="text" class="informacion" id="contactoNombre" name="contactoNombre" required placeholder="Nombre Completo">
+                </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+                <!--Correo-->
+                <div class="mb-3">
+                  <input type="email" id="contactoEmail" class="informacion" name="contactoEmail" required placeholder="Correo Electronico">
+                </div>
+
+                <!--Telefono-->
+                  <div class="mb-3 custom-input-group">
+                    <span class="input-group-text" id="lada">+52</span>
+                      <input type="text" id="contactoTelefono" class="informacion form-control" id="contactoTelefono" name="contactoTelefono" required placeholder="XXX XXX XXXX">
+                  </div>
+
+                  <!--Mensaje-->
+                <div class="mb-3">
+                  <textarea id="contactoMensaje" class="informacion form-control" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
+                </div>
+
+                <div class="mb-3 text-center">
+                    <input class="Bottom btn btn-primary" type="submit" value="Enviar">
+                </div>
+
+              </form>
+
+              <div class="paraIngresar">
+                  <label for="pregunta">¿Ya tienes una cuenta?    |</label>
+                  <a href="#Tienda">Ingresa</a>
+              </div>
+          </div>
+
+          <div class="col-lg-4" id="derechaContactanos"></div>
+
+      </div>
+  </div>
+  
+  <footer class="footer">
+      <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
