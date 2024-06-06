@@ -6,11 +6,11 @@ const prices = {
     'M': 120.00,
     'G': 130.00,
     'XG': 130.00,
-    'XXG': 150.0
+    'XXG': 150.00
 };
 
 // Cantidad actual de productos
-let currentQuantity = 0;
+let currentQuantity = 1;
 
 // Talla seleccionada
 let currentSize = 'M'; // Cambié la talla inicial a 'M' para que coincida con los precios definidos
@@ -18,8 +18,8 @@ let currentSize = 'M'; // Cambié la talla inicial a 'M' para que coincida con l
 // Función para cambiar la cantidad de productos
 function changeNumber(amount) {
     currentQuantity += amount;
-    if (currentQuantity < 0) {
-        currentQuantity = 0;
+    if (currentQuantity < 1) {
+        currentQuantity = 1;
     }
     document.getElementById('numberDisplay').innerText = currentQuantity;
     updatePrice();
@@ -40,6 +40,10 @@ function updatePrice() {
 
 // Actualizar el precio inicial
 updatePrice();
+
+// Inicializar el número de productos
+document.getElementById('numberDisplay').innerText = currentQuantity;
+
 
 // Color inicial del texto
 let selectedColor = 'black'; 
