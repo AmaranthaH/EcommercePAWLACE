@@ -60,6 +60,24 @@ p {
     font-size: 1.5em;
 }
 
+  /* Estilos para tamaños de pantalla pequeños */
+@media (max-width: 786px) {
+    .bottom {
+         margin: 10px;
+         padding-top: 15px;
+         padding-bottom: 8px;
+         gap: 15px;
+         margin-bottom: 15px;
+     }
+    .col-sm-9 {
+         flex: 0 0 50%;
+         max-width: 50%;
+     }
+ }
+
+
+
+
 /* Responsive design para móviles */
 @media (max-width: 768px) {
     body {
@@ -111,4 +129,4 @@ p {
         margin-top: 0;
     }
 
-   
+
