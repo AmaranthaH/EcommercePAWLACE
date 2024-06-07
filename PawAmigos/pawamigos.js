@@ -4,7 +4,7 @@ const animals = {
   "felinos": {
       nombre: "Felinos", img :'./assets/felino.png', consejos:["Cepilla a tu amigo felino regularmente para evitar bolas de pelo y mantener su pelaje sano.", " Mantén a tu gato en interiores o supervisado en exteriores para protegerlo de peligros.", "Recuerda respetar el espacio y personalidad de tu amigo, cada gatito es único y necesita su propio tiempo y atención.", "La limpieza es importante. No olvides mantener la casa de arena limpia, cambiándola regularmente para evitar malos olores y problemas de salud.","Evita darle comida de humanos, proporciona alimentos balanceados y adecuados para su edad y salud."]},
   "aves": {
-      nombre: "Aves", img: "./assets/aves.png", consejos:["Nuestras queridas mascotas necesitan espacio! El tamaño de la jaula debe permitir que las aves se muevan libremente y extiendan sus alas sin restricciones. Asegúrate de que la jaula sea lo suficientemente grande para la especie de tu ave.", "No los dejes solitos. Las aves son conocidas por andar en parvadas, ¡así que una compañía la haría muy feliz! El tener mínimo dos aves juntas disminuye su tristeza y previene enfermedades.", " Proporciona una dieta equilibrada que incluya semillas, frutas, verduras y, en algunos casos, pellets formulados para aves ¡Yummy! También asegúrate de que siempre tenga agua fresca y de cambiarla diaramente para evitar bacterias.", "Lleva a tus mascotas a un veterinario especializado en aves para chequeos regulares. Observa cualquier signo de enfermedad como cambios en el apetito, comportamiento letárgico, o plumas desordenadas. Como dato curioso, si ves a alguna ave comerse sus huevos, no es por que se quiera comer a sus hijos, es por que le hace falta calcio.", " Incluye varias perchas de diferentes tamaños y texturas para prevenir problemas en las patas. Proporciona juguetes para estimular su mente y prevenir el aburrimiento. ¡Diviértete con tu mascota y enseñale trucos! Le ayudará a estimular su mente."]},
+      nombre: "Aves", img: "./assets/aves.png", consejos:["¡Nuestras queridas mascotas necesitan espacio! El tamaño de la jaula debe permitir que las aves se muevan libremente y extiendan sus alas sin restricciones. Asegúrate de que la jaula sea lo suficientemente grande para la especie de tu ave.", "No los dejes solitos. Las aves son conocidas por andar en parvadas, ¡así que una compañía la haría muy feliz! El tener mínimo dos aves juntas disminuye su tristeza y previene enfermedades.", " Proporciona una dieta equilibrada que incluya semillas, frutas, verduras y, en algunos casos, pellets formulados para aves ¡Yummy! También asegúrate de que siempre tenga agua fresca y de cambiarla diaramente para evitar bacterias.", "Lleva a tus mascotas a un veterinario especializado en aves para chequeos regulares. Observa cualquier signo de enfermedad como cambios en el apetito, comportamiento letárgico, o plumas desordenadas. Como dato curioso, si ves a alguna ave comerse sus huevos, no es por que se quiera comer a sus hijos, es por que le hace falta calcio.", " Incluye varias perchas de diferentes tamaños y texturas para prevenir problemas en las patas. Proporciona juguetes para estimular su mente y prevenir el aburrimiento. ¡Diviértete con tu mascota y enseñale trucos! Le ayudará a estimular su mente."]},
   "pericos": {
       nombre: "Pericos", img:'./assets/perico.png', consejos:["¿Sabías que los pericos se pueden enamorar de ti? Sí, como lo escuchas, los pericos escogen a una persona. Pero, cuidado, una vez que se enamoran suelen ser muy posesivos y celosos si alguien se le acerca. Por lo que es importante detectar a su alma gemela para tener precauciones cerca de ellos. ¡Estas aves pueden vivir hasta 80 años!"]
   },
@@ -57,7 +57,7 @@ const animals = {
       nombre: "Conejos", img: "./assets/conejo.png", consejos:["Los conejos necesitan tener compañeros de su misma especie, ya que los que viven solitarios, sufren más de depresión, ansiedad y se aburren con más facilidad. Lo ideal, es mantenerlos en parejas debidamente esterilizados o en pequeños grupos.", "La combinación perfecta es de un macho y una hembra, ya que realizar parejas de dos hembras o dos machos tienen mayor probabilidad de fracaso. En todo caso, lo mejor es que ambos estén castrados.", "Los conejos se deben vacunar principalmente de dos patologías frecuente en ellos.", "La primera es la mixomatosis, una enfermedad transmitida por las pulgas y mosquitos y debe colocarse una vacuna cada 6 meses.", "La segunda patología es la fiebre vírica hemorrágica clásica y nueva, transmitida por insectos o contacto directo con conejos infectados."]
   }, 
   "peces": {
-      nombre: "Peces", img: "./assets/peces.png", consejos: ["Deben de tener un habitad adecuada, la cual debe de ser de buen tamaño, procurar mantener el agua de los peces en perfecto estado ya que la calidad del agua va a determinar el buen estado de salud del pez.", "e recomienda cambiar el 30% del agua de la pecera un par de veces por semana. Es esencial que su agua tenga una temperatura e iluminación adecuada. Además de algunas cosas como bombas de aire y filtros."]
+      nombre: "Peces", img: "./assets/peces.png", consejos: ["Deben de tener un habitat adecuada, la cual debe de ser de buen tamaño, procurar mantener el agua de los peces en perfecto estado ya que la calidad del agua va a determinar el buen estado de salud del pez.", "Se recomienda cambiar el 30% del agua de la pecera un par de veces por semana. Es esencial que su agua tenga una temperatura e iluminación adecuada. Además de algunas cosas como bombas de aire y filtros."]
   }
   }
 
@@ -69,11 +69,13 @@ const animals = {
       infoImage.src = animals[animal].img;
       infoContent.innerHTML = `
         <h2>${animals[animal].nombre}</h2>
-        <p>Bienvenido a la sección ${animals[animal].nombre}.</p>
-        <h3>Consejos:</h3>
-        <ul class= "tips">
-          ${animals[animal].consejos.map(consejo => `<li>${consejo}</li>`).join('')}
+        <p>¡Maravíllate conociendo la información de ${animals[animal].nombre} !</p>
+        <p>Pawtips:</p>
+        <ul class= "tip">
+          ${animals[animal].consejos.map(consejo => `<li id="list">${consejo}</li>`).join('')}
         </ul>
       `;
     }
+    
+
     

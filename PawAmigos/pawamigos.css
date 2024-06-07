@@ -1,9 +1,12 @@
-h3 {
+p {
     font-weight:bold ;
 }
-
-.bottom-group{
-    padding-top: 8px;
+.body { 
+    text-align: justify;
+}
+.Bottom{
+    margin: 10px;
+    padding-top: 15px;
     padding-bottom: 8px;
     gap:35;
     margin-bottom:25px;
@@ -13,27 +16,28 @@ h3 {
     width: 300px;
     height: auto;
     margin-right: 30px;
-    border-radius: 25%;
+    border-radius: 10%;
 }
 #infoContent{
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: -50px;
+    margin-right: -100px;
     margin-bottom: 20px;
     font-size: 0.75 em;
+    padding:0.5px; 
 }
-.tips {
+.tip {
     list-style-type:none;
-    padding: 0;
+    padding: 5;
 }
 
-.tips p {
+.tip p {
     padding: 1em;
     border-radius: 8px;
     margin: 10px 0;
     position: relative;
 }
 
-.tips p:before {
+.tip p:before {
     content: '🐾';
     position: absolute;
     left: -30px;
@@ -41,15 +45,19 @@ h3 {
     font-size: 1.5em;
 }
 
+#list { 
+    padding: 0.2em;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: relative; 
+    list-style-image: url(assets/perro.png);
+}
 
-/* Footer */
-.footer, footer {
-    background-color: #333333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    margin-top: auto;
+#list p:before{
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    font-size: 1.5em;
 }
 
 /* Responsive design para móviles */
