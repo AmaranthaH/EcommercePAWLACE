@@ -14,9 +14,9 @@
 
 .image-perrito {
     /* Ajusta la imagen para que no se salga del contenedor */
-    max-width: 69%; 
+    max-width: 100%; 
     /* Mantiene la proporción de aspecto original */
-    height: auto; 
+    height: 100%; 
 }
 
 

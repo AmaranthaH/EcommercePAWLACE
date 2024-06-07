@@ -23,7 +23,7 @@
     /* Ajusta la imagen para que no se salga del contenedor */
    
     /* Mantiene la proporción de aspecto original */
-    height: auto; 
+    height: 100vh; 
     max-width: 60%;
     order: 2; /*
 
