@@ -1,0 +1,109 @@
+
+h2{
+    text-align: center;
+}
+
+#outputText{
+    text-align: left;
+}
+
+#decrementButton, #incrementButton{
+    background-color:var(--botones);
+    color:var(--fondo);
+    border-radius: 1em;
+    padding: 5px; 
+    width: 3em;
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+}
+
+#numberDisplay{
+    background-color:var(--botones);
+    color:var(--fondo);
+    padding: 1em; 
+    width: 1em;
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+}
+
+
+#decrementButton:hover, #incrementButton:hover{
+    background-color:var(--navbar); 
+    color:var(--negro);
+    
+}
+
+#carrito1, #carrito2{
+    
+    background-color:var(--botones);
+    color:var(--fondo);
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+    border-radius: 10px;
+    
+}
+
+#carrito1:hover, #carrito2:hover{
+    background-color:var(--navbar); 
+    color:var(--negro);
+    
+}
+.botones-container {
+    display: flex;
+    justify-content:center;
+}
+
+.size-button{
+    width: 4.3em;
+    height: 4.3em;
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    background-color: var(--navbar); /* Color de fondo azul */
+    color: black; /* Color del texto blanco */
+    font-size: .8em; /* Tamaño del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    outline: none; /* Elimina el contorno al hacer clic */
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+
+}
+
+
+#color {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    height: 7em;
+    width: 9em;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+
+.red { background-color: red; }
+.blue { background-color: blue; }
+.green { background-color: green; }
+.yellow { background-color: yellow; }
+.purple { background-color: purple; }
+.pink { background-color: pink; }
+.orange { background-color: orange; }
+.cafe { background-color: brown; }
+.celeste { background-color: lightblue; }
+.gray { background-color: gray; }
+/* Nuevos colores */
+.teal { background-color: teal; }
+.cyan { background-color: cyan; }
+.magenta { background-color: magenta; }
+.lime { background-color: lime; }
+.indigo { background-color: indigo; }
+.olive { background-color: olive; }
+.navy { background-color: navy; }
+.maroon { background-color: maroon; }
+.fuchsia { background-color: fuchsia; }
+.salmon { background-color: salmon; }
+.white { background-color: white; } /* Cambiar el color del texto para que se vea en blanco */
+.black { background-color: black; }
+
+#textInput{
+    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+    border-radius:1em;
+}
