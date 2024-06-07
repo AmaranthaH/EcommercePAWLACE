@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
 
+    <!-- Enlaces a los estilos y scripts externos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script> <!--Enlace de una pagina llamada FontAwesome, de iconos libres, es para poder tener nuestro menu de 3 lineas en un celular-->
+    <link href="https://kit.fontawesome.com/24bdc7cf23.js" rel="stylesheet" crossorigin="anonymous">
 
+    <!-- Enlaces a las fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jacquard+24&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
+    <!-- Enlaces a tus archivos de estilos y scripts -->
     <link rel="stylesheet" href="./carrito.css"> 
     <link rel="stylesheet" href="../style/globalStyle.css"> 
-    <!--<link rel="stylesheet" href="./pagina_contactanos1.css"> -->
-    <script src="./carrito.js" defer async></script>
+    <script src="./carrito.js"></script>
 </head>
 
 <body>
     
- <!--NavBar-->
+ <!-- Barra de navegación -->
  <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -31,6 +33,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
+                <!-- Enlaces a las diferentes secciones de tu página -->
                 <li class="nav-item">
                     <a class="nav-link" href="../catalogo/catalogo.html">Catálogo</a>
                 </li>
@@ -43,90 +46,53 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../PaginaContactanos/pagina_contactanos1.html">Contáctanos</a>
                 </li>
-                <li class="nav-menu-item"><a href="../carrito/carrito.html" class="nav-menu-link nav-link">
-                    <img src="../assets/shopping_cart_24dp.svg"class = "cambiar" alt="Carrito de compras">
-                </a></li>
-                <li class="nav-menu-item"><a href="../bienvenidaRregistro/welcome.html" class="nav-menu-link nav-link">
-                    <img src="../assets/account_circle_24dp.svg"class = "cambiar" alt="Cuenta de usuario">
-                </a></li>
+                <!-- Íconos para el carrito y la cuenta de usuario -->
+                <li class="nav-menu-item">
+                    <a href="../carrito/carrito.html" class="nav-menu-link nav-link">
+                        <img src="../assets/shopping_cart_24dp.svg"class = "cambiar" alt="Carrito de compras">
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="../bienvenidaRregistro/welcome.html" class="nav-menu-link nav-link">
+                        <img src="../assets/account_circle_24dp.svg"class = "cambiar" alt="Cuenta de usuario">
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
-  </nav>
+</nav>
     
-       
-    <div class="container grid-container">
-
-        <div class="grid-item item" id="izquierdaCarrito">
-            <div class="circle">
-                <img src="./imagenes/pata.png" alt="PAWLACE" id="imagenCarrito">
-            </div>
+<!-- Contenido principal -->
+<div class="container grid-container">
+    <div class="grid-item item" id="izquierdaCarrito">
+        <!-- Contenido izquierdo del carrito de compras -->
+        <div class="circle">
+            <img src="./imagenes/pata.png" alt="PAWLACE" id="imagenCarrito">
         </div>
-        
-        
-        <div class="grid-item item" id="derechaCarrito">
-            <h2>Carrito de Compras</h2>
-            
-            <table id="carritoTable">
-                <thead>
-                    <tr>
-                        <th id="productoCTitulo">Producto</th>
-                        <th id="nombreCTitulo">Nombre</th>
-                        <th id="precioCTitulo">Precio</th>
-                        <th id="cantidadCTitulo">Cantidad</th>
-                        <th id="eliminarCTitulo">Eliminar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="imagenArticuloCarrito"><img src="./imagenes/imagenRandomDeEjemplo.jpg" alt="PAWLACE" id="imagenCarrito"></td>
-                        <td data-cell="Nombre" id="nombreProducto">Nombre de producto</td>
-                        <td data-cell="Precio" id="precio">$15</td>
-                        <td data-cell="Cantidad" id="cantidad">
-                            <button class="Bottom " id="btnMenos">-</button>
-                            <button class="Bottom" id="btnCantidad">1</button>
-                            <button class="Bottom" id="btnMas">+</button>
-                        </td>
-                        <td id="eliminarCarrito">
-                            <button class="Bottom" id="eliminarDeCarrito">Eliminar</button>
-                        </td>
-                        
-                    </tr>
-                    
-                </tbody>
-                <tfoot>
-                    <tr id="totales">
-                        <td colspan="3" id="precioTotalTotal">
-                            <strong>Total:</strong>
-                        </td>
-                        <td id="precioTotal">cantidad de precio total</td>
-                    </tr>
-                    <tr id="procederPago">
-                        <td colspan="4">
-                            <button class="Bottom" id="procederPagoBtn">Proceder al Pago</button>
-                        </td>
-                    </tr>
-                    
-                    
-                    
-                </tfoot>
-            </table>
-        </div>
-        
-        
-        
     </div>
+        
+    <div class="grid-item item" id="derechaCarrito">
+        <!-- Contenido derecho del carrito de compras -->
+        <div class="container">
+            <br>
+            <h2>Tu Carrito de Compras</h2>
+            <div id="cartItems">
+                <!-- Aquí se mostrarán los artículos del carrito -->
+            </div>
+            <p>Total: $<span id="totalPrice">0.00</span></p>
+            <button id="checkoutButton" class="btn btn-primary">Proceder al Pago</button>
+            <button id="emptyCartButton" class="btn btn-primary">Vaciar Carrito</button>
+        </div>
+    </div>
+</div>
 
-    <br>
-    <br>
-    <br>
-    
-    <footer class="footer">
-        <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
-      </footer>
+<!-- Pie de página -->
+<footer class="footer">
+    <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
+</footer>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+<!-- Scripts al final del cuerpo -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
 

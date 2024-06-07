@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="../style/globalStyle.css">
    <link rel="stylesheet" href="./bandanas.css">
     <script src="./bandanas.js" defer></script>
-
+    <script src="../carrito/carrito.js" defer></script>
+  
 </head>
 <body>
 
@@ -67,7 +68,8 @@
                 </div>
                 <br>
                 <div class="botones-container">
-                    <input class="btn btn-primary d-none d-lg-block" id="carrito1" type="submit" value="Añadir al carrito">
+                    
+                    <input class="btn agregar-carrito btn-primary d-none d-lg-block" id="carrito1" type="submit" value="Añadir al carrito">
                 </div>
                 <div>
                     <a href="../PawAmigo/pawamigo.html" id="linkToOtherPage" class="btn btn-link">Conoce a tu PawAmigo</a>
@@ -78,6 +80,8 @@
             <div class="p-3" id="lista-precios"> 
                 <h3 id="itemName">Nombre de la Bandana</h3>
                 <p id="itemPrice">Precio: $0.00 MXN</p>
+                <p id="itemCategory">Categoría: </p> 
+                <br>
                 <div class="container text-center">
                     <div class="row">
                         <div class="col-sm-5 col-md-6">Tallas</div>
@@ -170,7 +174,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="botones-container"> <input class="btn btn-primary d-block d-lg-none" id="carrito2" type="submit" value="Añadir al carrito"></div>
+                    <div class="botones-container"> <input class="btn btn-primary d-block d-lg-none" id="carrito2" type="submit" value="Añadir al carrito" onclick="addToCart()"></div>
                 </div> 
             </div> 
         </div> 
