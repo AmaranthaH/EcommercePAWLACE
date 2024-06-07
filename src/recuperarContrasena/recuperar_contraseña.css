@@ -63,13 +63,12 @@
 
 
 @media only screen and (max-width: 768px) {
-     /* Cambia a una sola columna en dispositivos móviles */
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Cambia a una sola columna en dispositivos móviles */
     }
-    /* Hace que el texto "olvidar contraseña" aparezca debajo del formulario en dispositivos móviles */
-    .iniciarSesion {
-        order: 3; 
+
+    .olvideContraseña {
+        order: 3; /* Hace que el texto "olvidar contraseña" aparezca debajo del formulario en dispositivos móviles */
     }
+
 }
-  
