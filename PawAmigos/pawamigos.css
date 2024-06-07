@@ -60,20 +60,38 @@ p {
     font-size: 1.5em;
 }
 
-  /* Estilos para tamaños de pantalla pequeños */
-@media (max-width: 786px) {
-    .bottom {
-         margin: 10px;
-         padding-top: 15px;
-         padding-bottom: 8px;
-         gap: 15px;
-         margin-bottom: 15px;
-     }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #infoContent {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .col-sm-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
     .col-sm-9 {
-         flex: 0 0 50%;
-         max-width: 50%;
-     }
- }
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .col-sm-2 {
+        flex: 0 0 30%; /* Ajusta el ancho de la columna */
+        max-width: 30%;
+    }
+    
+    .col-sm-9 {
+        flex: 0 0 70%; /* Ajusta el ancho de la columna */
+        max-width: 70%;
+    }
+}
 
 
 
