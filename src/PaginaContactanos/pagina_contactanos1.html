@@ -54,81 +54,67 @@
     </div>
 </nav>
 
-    
-    <div class="container grid-container">
+<div class="container-fluid" id="contenidoPagina">
+    <div class="row">
 
-        <div class="grid-item item" id="izquierdaContactanos"></div>
-        
+        <!--Imagen Izquierda-->
+        <div class="col-lg-4" id="izquierdaContactanos"></div>
 
-        <div class="grid-item item" id="centroContactanos">
-            <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formContactanos" > 
-                <h2>Contáctanos
-                </h2>
-              <p><br> </p> 
-                <input type="text" 
-                class="informacion" id="contactoNombre" name="contactoNombre" required placeholder="Nombre Completo">
-                <p><br>
-                </p>
-
-                <input type="email" id="contactoEmail" class="informacion" name="contactoEmail" required placeholder="Correo Electronico">
-                 <p><br>
-                </p>
-
-            <div class="input-wrapper">
-                <input type="lada" 
-                class="informacion" 
-                id="lada" name="lada" required placeholder="+52">
-
-                <input type="telefono" 
-                id="contactoTelefono" class="informacion"
-                name="contactoTelefono"
-                required placeholder="XXX XXX XXXX">
-            </div>
+        <!--Contenido Centro-->
+        <div class="col-lg-4" id="centroContactanos">
+            <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formContactanos" class="mt-5"> 
                 
-                <p><br>
-                </p>
-                <textarea id="contactoMensaje" class="informacion" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
-                <p><br>
-                    <br>
-                </p>
-                <div class="Bottom-enviar">
-                <input class="Bottom" type="submit" value="Enviar">
-            </div>
-            </form>
-<br>
-            <div class="paraIngresar">
+                <div class="mb-3">
+                    <h2 class="text-center">Contáctanos</h2>
+                </div>
+
+                <!--Nombre contacto-->
+                <div class="mb-3">
+                    <input type="text" class="informacion form-control" id="contactoNombre" name="contactoNombre" required placeholder="Nombre Completo">
+                </div>
+
+                <!--Correo-->
+                <div class="mb-3">
+                <input type="email" id="contactoEmail" class="informacion form-control" name="contactoEmail" required placeholder="Correo Electronico">
+                </div>
+
+                <!--Telefono-->
+                <div class="mb-3 custom-input-group">
+                    <span class="input-group-text" id="lada">+52</span>
+                    <input type="tel" id="contactoTelefono" class="informacion form-control" name="contactoTelefono" required placeholder="XXX XXX XXXX" minlength="10" maxlength="10">
+                </div>
+
+                <!--Mensaje-->
+                <div class="mb-3">
+                <textarea id="contactoMensaje" class="informacion form-control" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
+                </div>
+
+                <!--Boton Enviar-->
+                <div class="mb-3 text-center">
+                    <input class="Bottom btn btn-primary" type="submit" id=boton value="Enviar">
+                </div>
+
+          </form>
+
+            <div class="text-center">
                 <label for="pregunta">¿Ya tienes una cuenta?    |</label>
                 <a href="#Tienda">Ingresa</a>
             </div>
-
         </div>
 
-    
-        <div class="grid-item item" id="derechaContactanos"></div>
-        
+        <!--Imagen Derecha-->
+        <div class="col-lg-4" id="derechaContactanos"></div>
 
     </div>
-    
-    <footer class="footer">
-        <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
-      </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <footer class="footer" id="footer">
+        <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
+    </footer>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-
-<!--
-    .grid-container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    gap:20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Divide la página en tres partes iguales */
-    grid-gap: 0; /* Elimina cualquier espacio entre las áreas */
-
-}
--->
