@@ -34,10 +34,9 @@ function selectSize(size) {
 // Función para actualizar el precio
 function updatePrice() {
     const unitPrice = prices[currentSize];
-    const totalPrice = (unitPrice * currentQuantity).toFixed(2);
+    const totalPrice = (unitPrice).toFixed(2); // Solo mostramos el precio por unidad
     document.getElementById('itemPrice').innerText = `Precio: $${totalPrice}`;
 }
-
 // Actualizar el precio inicial
 updatePrice();
 
