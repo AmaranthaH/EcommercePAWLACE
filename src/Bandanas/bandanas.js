@@ -74,6 +74,9 @@ function selectColor(color) {
     if (color === 'white') {
         outputText.style.color = 'white'; // Cambiar el color del texto a blanco
         outputDiv.style.backgroundColor = 'black'; // Cambiar el color de fondo del div a negro
+    } else if (color === 'yellow') {
+        outputText.style.color = 'yellow'; // Cambiar el color del texto a amarillo
+        outputDiv.style.backgroundColor = 'black'; // Cambiar el color de fondo del div a negro
     } else {
         outputText.style.color = color; // Restaurar el color del texto al predeterminado
         outputDiv.style.backgroundColor = '#FFF7F0'; // Restaurar el color de fondo del div al predeterminado

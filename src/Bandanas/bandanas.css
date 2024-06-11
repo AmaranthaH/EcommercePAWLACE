@@ -3,10 +3,11 @@
 }
 
 #messageContainer {
-    background-color: #4CAF50; /* Color verde */
-    color: white; /* Texto en color blanco */
-    padding: 10px 10px; /* Espaciado interno */
+    color: green;
+    background-color:greenyellow;
+    padding: 10px; /* Espaciado interno */
     margin-bottom: 10px; /* Espacio inferior */
+    text-align: center;
 }
 
 
