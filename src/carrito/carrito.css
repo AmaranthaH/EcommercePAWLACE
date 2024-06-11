@@ -78,16 +78,16 @@ html, body {
     padding: 20px 0;
 }
 
-.btn-primary {
-    background-color: var(--botones);
-    color: var(--fondo);
-    box-shadow: 0 5px 2px rgba(112, 112, 112, 0.54);
-    border-radius: 10px;
+.Bottom.btn-primary {
+    padding: 8px;
+    width: 10em;
+    display: inline-block; /* Cambia display a inline-block */
+    border: none; /* Elimina el borde del botón */
+    transition: background-color 0.5s;
 }
 
-.btn-primary:hover {
-    background-color: var(--navbar);
-    color: var(--negro);
+.Bottom.btn-primary:hover {
+    background-color:#89D5C9;
 }
 
 .footer {
@@ -131,3 +131,5 @@ html, body {
 .cart-item p span {
     font-weight: bold;
 }
+
+

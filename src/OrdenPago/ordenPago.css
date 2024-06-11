@@ -1,11 +1,5 @@
 
 
-.container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 .informacion{
     margin-bottom: 10px;
@@ -13,6 +7,24 @@
 
 
 
-#Btn-enviar{
-    margin-top: 10px;
+.pagarBtn {
+    margin-top: 20px; /* Aquí especificas el margen que deseas */
 }
+
+
+.Bottom.btn-primary {
+    padding: 8px;
+    width: 10em;
+    display: inline-block; /* Cambia display a inline-block */
+}
+
+.Bottom.btn-primary:hover {
+    background-color:#89D5C9;
+}
+
+
+
+
+
+
+
