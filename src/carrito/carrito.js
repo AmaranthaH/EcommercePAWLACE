@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         itemElement.innerHTML = `
             <img src="${item.image}" alt="${item.name}">
             <h4>${item.name}</h4>
-            
+
             <p>Texto: ${item.text}</p>
             <p>Color: <span style="color:${item.color};">${item.color}</span></p>
             <p>Fuente de letra: ${item.font}</p>
@@ -66,7 +66,18 @@ document.querySelectorAll('.agregar-carrito').forEach(button => {
         }
 
         localStorage.setItem('cart', JSON.stringify(cart));
-        alert('Producto agregado al carrito');
+
+        // Dentro de la función que agrega un producto al carrito
+        const messageContainer = document.getElementById('messageContainer'); // Obtener el contenedor del mensaje
+        messageContainer.innerHTML = '<p class="success-message">Producto agregado al carrito</p>'; // Agregar el mensaje al contenedor
+        messageContainer.classList.remove('hidden'); // Mostrar el contenedor del mensaje
+
+        // Hacer que el mensaje desaparezca después de 3 segundos
+        setTimeout(() => {
+            messageContainer.innerHTML = ''; // Limpiar el contenido del contenedor de mensajes
+            messageContainer.classList.add('hidden'); // Ocultar el contenedor del mensaje nuevamente
+        }, 1500); // 3000 milisegundos = 3 segundos
+
     });
 });
 

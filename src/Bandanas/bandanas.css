@@ -1,3 +1,14 @@
+.hidden {
+    display: none;
+}
+
+#messageContainer {
+    background-color: #4CAF50; /* Color verde */
+    color: white; /* Texto en color blanco */
+    padding: 10px 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
 
 h2{
     text-align: center;
@@ -107,3 +118,5 @@ h2{
     box-shadow: 0 5px 2px rgba(112,112,112,0.54);
     border-radius:1em;
 }
+
+

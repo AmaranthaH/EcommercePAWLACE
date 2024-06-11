@@ -7,16 +7,12 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+.informacion{
+    margin-bottom: 10px;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+
+
+#Btn-enviar{
+    margin-top: 10px;
 }

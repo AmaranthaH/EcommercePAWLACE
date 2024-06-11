@@ -21,7 +21,48 @@
 
 </head>
 <body>
-    <div class="container mt-5">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/PAWLACE.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Enlaces a las diferentes secciones de tu página -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../catalogo/catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PawAmigo/pawamigos.html">Conoce a tu PawAmigo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../nosotras/nosotras.html">Nosotras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PaginaContactanos/pagina_contactanos1.html">Contáctanos</a>
+                    </li>
+                    <!-- Íconos para el carrito y la cuenta de usuario -->
+                    <li class="nav-menu-item">
+                        <a href="../carrito/carrito.html" class="nav-menu-link nav-link">
+                            <img src="../assets/shopping_cart_24dp.svg"class = "cambiar" alt="Carrito de compras">
+                        </a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="../bienvenidaRregistro/welcome.html" class="nav-menu-link nav-link">
+                            <img src="../assets/account_circle_24dp.svg"class = "cambiar" alt="Cuenta de usuario">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+    <div class="informacion container mt-5">
         <h2 >Dirección de Envío</h2>
         <form>
             <div class="row">
@@ -106,7 +147,7 @@
                         <label for="cv">CV</label>
                         <input type="text" class="form-control" id="cv" placeholder="CV" maxlength="4">
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button class="Bottom" id="Btn-enviar">Enviar</button>
                 </div>
             </div>
         </form>
