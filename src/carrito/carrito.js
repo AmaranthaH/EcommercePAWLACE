@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('cart-item');
         itemElement.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px;">
+            <img src="${item.image}" alt="${item.name}">
             <h4>${item.name}</h4>
             
             <p>Texto: ${item.text}</p>
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function emptyCart() {
     localStorage.removeItem('cart');
-    alert('El carrito ha sido vaciado');
     document.getElementById('cartItems').innerHTML = '';
     document.getElementById('totalPrice').textContent = '0.00';
 }
@@ -70,3 +69,7 @@ document.querySelectorAll('.agregar-carrito').forEach(button => {
         alert('Producto agregado al carrito');
     });
 });
+
+function redirectToPayment() {
+    window.location.href = "../OrdenPago/ordenPago.html";
+}

@@ -1,7 +1,21 @@
 /* Contenido de otro-estilos.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 5fr; /* Una parte mucho más grande que la otra */
+    grid-template-columns: 1fr 3fr; /* Una parte mucho más grande que la otra */
+    flex: 1;
     margin-top: -10px;
     margin-left: -20px;
     margin-right: -20px;
@@ -32,35 +46,13 @@
     height: auto; /* Altura automática para mantener la relación de aspecto */
 }
 
-
-#derechaCarrito {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-
-#carritoTable {
-    width: auto; /* La tabla ocupa todo el ancho disponible */
-    text-align: left; /* Alinea el texto a la izquierda dentro de la tabla */
-    margin: 10px; /* Margen de 10px en todas las áreas alrededor de la tabla */
-    border-collapse: separate; /* Separa los bordes de las celdas */
-    font-family: "Montserrat", sans-serif;
-    height: auto; /* Restauramos la altura automática para tamaños de pantalla grandes */
-}
-
-#imagenArticuloCarrito{
-    max-width: 100%; /* Hace que la imagen sea responsive */
-    height: auto; /* Mantiene la proporción de aspecto de la imagen */
-    width: 40%; /* Ocupa el 100% del ancho del contenedor padre */
-    max-height: 200px; /* Establece el límite máximo de altura */
-}
 #derechaCarrito {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 20px;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
 .container-right {
@@ -86,20 +78,55 @@
 }
 
 .btn-primary {
-    background-color:var(--botones);
-    color:var(--fondo);
-    box-shadow: 0 5px 2px rgba(112,112,112,0.54);
+    background-color: var(--botones);
+    color: var(--fondo);
+    box-shadow: 0 5px 2px rgba(112, 112, 112, 0.54);
     border-radius: 10px;
 }
 
 .btn-primary:hover {
-    background-color:var(--navbar); 
-    color:var(--negro);
+    background-color: var(--navbar);
+    color: var(--negro);
 }
 
-footer {
-    background-color: #333; /* Color negro de fondo */
-    color: #fff;
+.footer {
     text-align: center;
     padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+
+/* Estilos para los elementos del carrito que se agregan */
+.cart-item {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos del carrito */
+    align-items: center; /* Centra verticalmente los elementos del carrito */
+    flex-direction: column;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.cart-item img {
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.cart-item h4 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cart-item p {
+    margin: 3px 0;
+    font-size: 1em;
+    justify-content: center;
+}
+
+.cart-item p span {
+    font-weight: bold;
 }
