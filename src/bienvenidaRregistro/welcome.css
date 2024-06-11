@@ -1,6 +1,3 @@
-.saludo {
-    color: #D95043;
-}
 
 .grid-container {
    
@@ -11,30 +8,6 @@
     /*align-items: center; */
 }
 
-#izquierdaWelcome{
-    /* Centra horizontalmente la imagen */
-    text-align: center; 
-}
-
-.image-perrito {
-    /* Ajusta la imagen para que no se salga del contenedor */
-    max-width: 100%; 
-    /* Mantiene la proporción de aspecto original */
-    height: 100vh; 
-}
-
-
-#centroWelcome{
-    /* Añade un poco de espacio alrededor del formulario */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center; 
-    /*margin: auto;*/
-   /*margin-top: -50px 5cm;*/
- 
-}
-
 .image-patita {
     
     width: 100px; 
@@ -43,40 +16,3 @@
     align-self: center;
 }
 
-
-
-/* Estilo para los botones */
-.Registrarte .Bottom,
-.Login .Bottom {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 1rem 0;
-}
-
-.Registrarte .Bottom {
-    background-color: #D95043;
-    color: #fff;
-}
-
-.Login .Bottom {
-    background-color: #D95043;
-    color: #fff;
-}
-
-@media only screen and (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Cambia a una sola columna en dispositivos móviles */
-    }
-
-    .olvideContraseña {
-        order: 3; /* Hace que el texto "olvidar contraseña" aparezca debajo del formulario en dispositivos móviles */
-    }
-
-   
-
-
-}

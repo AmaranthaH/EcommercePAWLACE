@@ -1,47 +1,4 @@
-.grid-container {
-   
-    /*display: grid;
-     /* Divide la página en dos columnas de igual ancho */
-    /*grid-template-columns: 1fr 1fr;
-    /* Centra verticalmente los elementos */
-    /*align-items: center; */
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: -20px;
-    margin-left: -20px;
-    margin-right: -20px;
-}
-
-#izquierdaInicioSesion {
-    
-    /* Centra horizontalmente la imagen */
-    text-align: center; 
-}
-
-.image-perrito {
-    /* Ajusta la imagen para que no se salga del contenedor */
-   
-    /* Mantiene la proporción de aspecto original */
-    height: 100vh; 
-    max-width: 60%;
-    order: 2; /*
-
-   /* max-width: 100%; /* Ajusta la imagen para que no se salga del contenedor */
-   /* height: auto; /* Mantiene la proporción de aspecto original */
-}
-
-
-#centroInicioSesion {
-    /* Añade un poco de espacio alrededor del formulario */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center; 
-    /*margin: auto;*/
-   /*margin-top: -50px 5cm;*/
- 
-}
 
 .image-patita {
     
@@ -50,11 +7,7 @@
     margin-bottom: 20px; 
     align-self: center;
 }
-.form {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
+
 
 .informacion {
     width: 100%;
@@ -62,40 +15,31 @@
     margin-bottom: 15px; 
 }
 
-.Bottom-enviar {
-    text-align: center;
     
-       
-}
 .Bottom {
     width: 250px; 
     height: 50px;
     font-size: 1.3rem;
 }
 
-.olvideContraseña {
-    text-align: center;
-    margin-top: 20px; 
-    font-size: 1.3rem;
-}
+
 
 h1 {
     color: var(--botones);
 }
 
 /* Media queries para tablet y dispositivos móviles */
-
-@media only screen and (max-width: 768px) {
-    
-    .grid-container {
-        grid-template-columns: 1fr; 
-    }
-    /* Cambia a una sola columna en dispositivos móviles */
-    .olvideContraseña {
-        order: 3; /* Hace que el texto "olvidar contraseña" aparezca debajo del formulario en dispositivos móviles */
-    }
-
-   
-
-
+#successMessage, #errorMessage {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+#successMessage {
+    color: green;
+    background-color:greenyellow;
+}
+#errorMessage {
+    color: red;
+    background-color:pink;
 }
