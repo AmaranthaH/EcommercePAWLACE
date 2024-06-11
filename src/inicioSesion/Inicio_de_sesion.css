@@ -36,8 +36,8 @@ h1 {
     text-align: center;
 }
 #successMessage {
-    color: green;
-    background-color:greenyellow;
+    color:white;
+    background-color:rgb(3, 180, 68);
 }
 #errorMessage {
     color: red;

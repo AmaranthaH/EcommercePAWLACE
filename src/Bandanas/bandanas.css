@@ -3,8 +3,8 @@
 }
 
 #messageContainer {
-    color: green;
-    background-color:greenyellow;
+    color:white;
+    background-color:rgb(3, 180, 68);
     padding: 10px; /* Espaciado interno */
     margin-bottom: 10px; /* Espacio inferior */
     text-align: center;
