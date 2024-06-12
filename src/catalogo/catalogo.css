@@ -183,7 +183,16 @@
     max-width: 25%;
     padding: 0.5rem;
 }
-
+star{ 
+    font-size: 1 em;
+    color: var(--navbar);
+    transition:color 0.3s;
+    cursor:pointer;
+}
+.star:hover,
+.star.checked {
+    color:gold
+}
 @media (max-width: 768px) {
     .col-md-3 {
         flex: 0 0 50%;
