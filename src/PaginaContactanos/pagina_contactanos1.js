@@ -1,56 +1,71 @@
-//Modificado
-document.getElementById('formContactanos').addEventListener('submit', function(event) {
+document.getElementById('formContactanos').addEventListener('submit', async function(event) {
     event.preventDefault(); // Evita que el formulario se envíe de manera predeterminada
     
     // Obtener los valores de entrada
     var contactoNombre = document.getElementById('contactoNombre').value.trim();
     var contactoEmail = document.getElementById('contactoEmail').value.trim();
-    var lada = document.getElementById('lada').value.trim();
     var contactoTelefono = document.getElementById('contactoTelefono').value.trim();
     var contactoMensaje = document.getElementById('contactoMensaje').value.trim();
    
-    // Validar los tipos de entrada y realizar correcciones si es necesario
-    if (contactoNombre === '') {
-        alert('Por favor, introduce tu nombre.');
+    // Validar el nombre completo para que solo contenga letras y espacios
+    let letters = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+    if (contactoNombre === '' || !contactoNombre.match(letters)) {
+        mostrarAlerta('Por favor, introduce solo letras en el nombre.', 'error');
         return;
     }
+
     if (contactoEmail === '') {
-        alert('Por favor, introduce tu correo electrónico.');
+        mostrarAlerta('Por favor, introduce tu correo electrónico.', 'error');
         return;
     }
-  
+
     if (!validateEmail(contactoEmail)) {
-        alert('Por favor, introduce un correo electrónico válido.');
-        return;
-    }
-    if (lada === '') {
-        alert('Por favor, introduce la lada.');
+        mostrarAlerta('Por favor, introduce un correo electrónico válido.', 'error');
         return;
     }
 
     if (contactoTelefono === '') {
-        alert('Por favor, introduce tu teléfono de contacto.');
+        mostrarAlerta('Por favor, introduce tu teléfono de contacto.', 'error');
         return;
     }
 
     // Validar que el número de teléfono tenga exactamente 10 dígitos
     if (contactoTelefono.length !== 10) {
-        alert('El número de teléfono debe contener exactamente 10 dígitos.');
+        mostrarAlerta('El número de teléfono debe contener exactamente 10 dígitos.', 'error');
         return;
     }
 
     if (!validarTelefono(contactoTelefono)) {
-        alert('Por favor, introduce un número de teléfono válido.');
+        mostrarAlerta('Por favor, introduce un número de teléfono válido.', 'error');
         return;
     }
 
     if (contactoMensaje === '') {
-        alert('Por favor, introduce un comentario.');
+        mostrarAlerta('Por favor, introduce un comentario.', 'error');
         return;
     }
 
     // Si todas las validaciones pasan, se envía el formulario
-    this.submit();
+    try {
+        const formData = new FormData(this);
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: formData,
+            headers: {
+                "Accept": 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            this.reset();
+            mostrarAlerta('Gracias por contactarnos, te escribiremos pronto', 'success');
+        } else {
+            mostrarAlerta('Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.', 'error');
+        }
+    } catch (error) {
+        console.error("Error al enviar el formulario:", error);
+        mostrarAlerta('Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.', 'error');
+    }
 });
 
 // Función para validar el formato del correo electrónico
@@ -66,44 +81,38 @@ function validarTelefono(telefono) {
     return regex.test(telefono);
 }
 
-// Obtener el campo de teléfono
-var telefonoInput = document.getElementById('contactoTelefono');
+// Función para mostrar alertas en el DOM
+function mostrarAlerta(mensaje, tipo) {
+    const alerta = document.createElement('div');
+    alerta.classList.add('alert');
+    alerta.classList.add(`alert-${tipo}`);
+    alerta.textContent = mensaje;
 
-// Agregar un evento de escucha para validar la entrada y permitir solo números
+    const formContainer = document.getElementById('centroContactanos');
+    formContainer.insertBefore(alerta, formContainer.firstChild);
+
+    // Desvanecer la alerta después de 3 segundos
+    setTimeout(() => {
+        alerta.remove();
+    }, 4000);
+}
+
+// Validar entrada del nombre para permitir solo letras y espacios en tiempo real
+document.getElementById('contactoNombre').addEventListener('input', function(event) {
+    let valor = this.value;
+    let valorSoloLetras = valor.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, '');
+    this.value = valorSoloLetras;
+});
+
+// Validar entrada del teléfono para permitir solo números en tiempo real
+var telefonoInput = document.getElementById('contactoTelefono');
 telefonoInput.addEventListener('input', function(event) {
     // Obtener el valor actual del campo de teléfono
     var valor = telefonoInput.value;
     // Reemplazar cualquier caracter no numérico con una cadena vacía
     var valorNumerico = valor.replace(/\D/g, '');
-    // Asignar el valor numérico nuevamente al campo de teléfono, respetando el formato original
+    // Asignar el valor numérico nuevamente al campo de teléfono
     telefonoInput.value = valorNumerico;
 });
 
-const form1 = document.querySelector('#formContactanos'); // Corregido querySelector
-form1.addEventListener('submit', handleSubmit);
 
-async function handleSubmit(event) {
-    event.preventDefault();
-
-    // Validar la longitud del número de teléfono nuevamente antes de enviar el formulario
-    var contactoTelefono = document.getElementById('contactoTelefono').value.trim();
-    if (contactoTelefono.length !== 10) {
-        alert('Por favor, introduce un número de teléfono válido.');
-        return;
-    }
-
-    const form2 = new FormData(this);
-    const response = await fetch(this.action, {
-        method: this.method,
-        body: form2,
-        headers: {
-            "Accept": 'application/json' // Corregido Accept
-        }
-    });
-
-    if (response.ok) {
-        const responseData = await response.json(); // Convertir respuesta a JSON
-        form1.reset();
-        alert("Gracias por contactarnos, te escribiremos pronto");
-    }
-}

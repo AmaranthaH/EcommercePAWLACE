@@ -4,22 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script> <!--Enlace de una pagina llamada FontAwesome, de iconos libres, es para poder tener nuestro menu de 3 lineas en un celular-->
-
+    <script src="https://kit.fontawesome.com/24bdc7cf23.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jacquard+24&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="../PaginaContactanos/pagina_contactanos1.css"> 
     <link rel="stylesheet" href="../style/globalStyle.css">
-    <script src="./pagina_contactanos1.js" defer async></script>
-
+    <script src="./pagina_contactanos1.js" defer></script>
 </head>
 
 <body>
-
   <!--NavBar-->
   <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
@@ -35,7 +30,7 @@
                     <a class="nav-link" href="../catalogo/catalogo.html">Catálogo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../PawAmigo/pawamigos.html">Conoce a tu PawAmigo</a>
+                    <a class="nav-link" href="../PawAmigo/pawamigo.html">Conoce a tu PawAmigo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../nosotras/nosotras.html">Nosotras</a>
@@ -44,10 +39,10 @@
                     <a class="nav-link" href="../PaginaContactanos/pagina_contactanos1.html">Contáctanos</a>
                 </li>
                 <li class="nav-menu-item"><a href="../carrito/carrito.html" class="nav-menu-link nav-link">
-                    <img src="../assets/shopping_cart_24dp.svg"class = "cambiar" alt="Carrito de compras">
+                    <img src="../assets/shopping_cart_24dp.svg"class="cambiar" alt="Carrito de compras">
                 </a></li>
                 <li class="nav-menu-item"><a href="../bienvenidaRregistro/welcome.html" class="nav-menu-link nav-link">
-                    <img src="../assets/account_circle_24dp.svg"class = "cambiar" alt="Cuenta de usuario">
+                    <img src="../assets/account_circle_24dp.svg"class="cambiar" alt="Cuenta de usuario">
                 </a></li>
             </ul>
         </div>
@@ -56,14 +51,12 @@
 
 <div class="container-fluid" id="contenidoPagina">
     <div class="row">
-
         <!--Imagen Izquierda-->
         <div class="col-lg-4" id="izquierdaContactanos"></div>
 
         <!--Contenido Centro-->
         <div class="col-lg-4" id="centroContactanos">
             <form action="https://formspree.io/f/mdoqjkkn" method="post" id="formContactanos" class="mt-5"> 
-                
                 <div class="mb-3">
                     <h2 class="text-center">Contáctanos</h2>
                 </div>
@@ -75,7 +68,7 @@
 
                 <!--Correo-->
                 <div class="mb-3">
-                <input type="email" id="contactoEmail" class="informacion form-control" name="contactoEmail" required placeholder="Correo Electronico">
+                    <input type="email" id="contactoEmail" class="informacion form-control" name="contactoEmail" required placeholder="Correo Electronico">
                 </div>
 
                 <!--Telefono-->
@@ -86,33 +79,26 @@
 
                 <!--Mensaje-->
                 <div class="mb-3">
-                <textarea id="contactoMensaje" class="informacion form-control" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
+                    <textarea id="contactoMensaje" class="informacion form-control" name="contactoMensaje" rows="5" required placeholder="Comentarios"></textarea>
                 </div>
 
                 <!--Boton Enviar-->
                 <div class="mb-3 text-center">
-                    <input class="Bottom btn btn-primary" type="submit" id=boton value="Enviar">
+                    <input class="Bottom btn btn-primary" type="submit" id="boton" value="Enviar">
                 </div>
+            </form>
 
-          </form>
-
-            <div class="text-center">
-                <label for="pregunta">¿Ya tienes una cuenta?    |</label>
-                <a href="#Tienda">Ingresa</a>
-            </div>
+           
         </div>
 
         <!--Imagen Derecha-->
         <div class="col-lg-4" id="derechaContactanos"></div>
-
     </div>
 
     <footer class="footer" id="footer">
         <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
     </footer>
 </div>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
