@@ -29,7 +29,6 @@ p {
     list-style-type:none;
     padding: 5;
 }
-
 .tip p {
     padding: 1em;
     border-radius: 8px;
@@ -59,92 +58,136 @@ p {
     top: 10px;
     font-size: 1.5em;
 }
-
-
 /* Estilos responsivos */
 @media (max-width: 768px) {
-    #infoContent {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    .col-sm-2 {
-        flex: 0 0 100%;
+    /* Estilos para dispositivos con pantalla de 768px de ancho o menos */
+
+    .col-lg-2, .col-lg-4, .col-lg-6 {
+        flex: 0 0 100%; /* Hacer que las columnas ocupen todo el ancho */
         max-width: 100%;
     }
-    
-    .col-sm-9 {
-        flex: 0 0 100%;
-        max-width: 100%;
+
+    #infoImage {
+        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+        max-width: 100%; /* Se ajusta el ancho máximo */
+        margin-right: 0; /* Se elimina el margen derecho */
+        border-radius: 0; /* Se elimina el borde redondeado */
+    }
+
+    .tip p {
+        padding: 0.5em; /* Se reduce el padding del párrafo */
+        margin: 5px 0; /* Se reduce el margen del párrafo */
+        font-size: 0.8em; /* Se reduce el tamaño de fuente */
+    }
+
+    .tip p:before {
+        font-size: 1em; /* Se reduce el tamaño del icono */
+        left: -20px; /* Se ajusta la posición horizontal del icono */
+        top: 6px; /* Se ajusta la posición vertical del icono */
+    }
+
+    #list {
+        margin-left: 0; /* Se elimina el margen izquierdo de la lista */
+        padding-left: 15px; /* Se ajusta el padding de la lista */
+    }
+
+    #infoContent{
+        margin-left: 20px;
+        margin-right: -100px;
+        margin-bottom: 20px;
+        font-size: 0.75 em;
+        padding:0.5px; 
     }
 }
-
-
 /* Estilos para tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .col-sm-2 {
+    .col-lg-2 {
         flex: 0 0 30%; /* Ajusta el ancho de la columna */
         max-width: 30%;
     }
     
-    .col-sm-9 {
-        flex: 0 0 70%; /* Ajusta el ancho de la columna */
-        max-width: 70%;
+    .col-lg-6 {
+        flex: 0 0 50%; /* Ajusta el ancho de la columna */
+        max-width: 50%;
+    }
+
+    .col-lg-4 {
+        flex: 0 0 20%; /* Ajusta el ancho de la columna */
+        max-width: 20%;
+    }
+
+    #infoImage {
+        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+        max-width: 500px; /* Se limita el ancho máximo de la imagen */
+        margin-right: 0; /* Se elimina el margen derecho */
+        border-radius: 15%;
+    }
+
+    .tip p {
+        padding: 0.8em; /* Ajusta el padding del párrafo */
+        margin: 8px 0; /* Ajusta el margen del párrafo */
+        font-size: 0.9em; /* Ajusta el tamaño de fuente del párrafo */
+    }
+
+    .tip p:before {
+        font-size: 1.2em; /* Ajusta el tamaño de fuente del icono */
+        left: -25px; /* Ajusta la posición horizontal del icono */
+        top: 8px; /* Ajusta la posición vertical del icono */
+    }
+
+    #list {
+        margin-left: 0; /* Elimina el margen izquierdo de la lista */
+        padding-left: 20px; /* Agrega un padding a la izquierda de la lista */
+        list-style-image: url(assets/perro.png);
+    }
+
+    #infoContent{
+        margin-left: 20px;
+        margin-right: -100px;
+        margin-bottom: 20px;
+        font-size: 0.75 em;
+        padding:0.5px; 
     }
 }
 
 
-
-
-/* Responsive design para móviles */
-@media (max-width: 768px) {
-    body {
-        padding-top: 70px;
+/* Estilos para tabletas en modo retrato (1024x1366) */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+    .tip p {
+        padding: 0.8em;
+        margin: 8px 0;
+        font-size: 0.9em;
     }
 
-    .header {
-        height: 60px;
+    .tip p:before {
+        font-size: 1.2em;
+        left: -25px;
+        top: 8px;
     }
 
-    .logo {
-        width: 3em;
+    #list {
+        margin-left: 0;
+        padding-left: 20px;
     }
 
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-        background-color: var(--navbar);
-        position: fixed;
-        left: 0;
-        top: 60px;
-        width: 100%;
-        padding: 20px 0;
-        height: calc(60% - 60px);
-        overflow-y: auto;
-        left: 100%;
-        transition: left 0.3s;
+    .col-lg-2 {
+        flex: 0 0 25%; /* Ajusta el ancho de la columna */
+        max-width: 25%;
+    }
+    
+    .col-lg-6 {
+        flex: 0 0 50%; /* Ajusta el ancho de la columna */
+        max-width: 50%;
     }
 
-    .nav-menu-item {
-        line-height: 70px;
+    .col-lg-4 {
+        flex: 0 0 33.33%; /* Ajusta el ancho de la columna */
+        max-width: 33.33%;
     }
 
-    .nav-menu-link:hover {
-        background: none;
-        color: var(--fondo);
+    #infoImage {
+        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+        max-width: 700px; /* Se limita el ancho máximo de la imagen */
+        margin-right: 0; /* Se elimina el margen derecho */
     }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-menu-visible {
-        left: 0;
-    }
-
-    .container {
-        flex-direction: column;
-        margin-top: 0;
-    }
-
 }
