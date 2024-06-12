@@ -1,34 +1,57 @@
-p {
-    font-weight:bold ;
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
 }
-.body { 
+
+.container {
+    padding-bottom: 10px;
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+p {
+    font-weight: bold;
+}
+
+.body {
     text-align: justify;
 }
-.Bottom{
-    margin: 10px;
+
+.Bottom {
+    margin-top: 10px;
     padding-top: 15px;
     padding-bottom: 8px;
-    gap:35;
-    margin-bottom:25px;
-
+    gap: 35;
+    margin-bottom: 30px;
 }
-#infoImage { 
-    width: 300px;
+
+#infoImage {
+    width: 100%;
     height: auto;
-    margin-right: 30px;
+    margin-right: 0;
     border-radius: 10%;
 }
-#infoContent{
-    margin-left: -50px;
-    margin-right: -100px;
-    margin-bottom: 20px;
-    font-size: 0.75 em;
-    padding:0.5px; 
+
+#infoContent {
+    margin: 0;
+    font-size: 0.9em;
+    padding: 0.5px;
 }
+
 .tip {
-    list-style-type:none;
+    list-style-type: none;
     padding: 5;
 }
+
 .tip p {
     padding: 1em;
     border-radius: 8px;
@@ -44,115 +67,68 @@ p {
     font-size: 1.5em;
 }
 
-#list { 
+#list {
     padding: 0.2em;
-    margin-left: 0px;
-    margin-right: 0px;
-    position: relative; 
+    margin: 0;
+    position: relative;
     list-style-image: url(assets/perro.png);
 }
 
-#list p:before{
+#list p:before {
     position: absolute;
     left: -30px;
     top: 10px;
     font-size: 1.5em;
 }
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    /* Estilos para dispositivos con pantalla de 768px de ancho o menos */
 
-    .col-lg-2, .col-lg-4, .col-lg-6 {
-        flex: 0 0 100%; /* Hacer que las columnas ocupen todo el ancho */
+/* Estilos responsivos */
+@media (max-width: 760px) {
+    #infoImage {
+        margin-right: 0;
+    }
+
+    .tip p {
+        padding: 0.5em;
+        margin: 5px 0;
+        font-size: 0.8em;
+    }
+
+    .tip p:before {
+        font-size: 1em;
+        left: -20px;
+        top: 6px;
+    }
+
+    #infoContent {
+        margin: 0;
+        font-size: 0.75em;
+    }
+
+    .btn-group {
+        display: block;
+    }
+
+    .btn-group-vertical .btn {
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .btn-group-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 761px) and (max-width: 1024px) {
+    #infoImage {
         max-width: 100%;
     }
 
-    #infoImage {
-        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-        max-width: 100%; /* Se ajusta el ancho máximo */
-        margin-right: 0; /* Se elimina el margen derecho */
-        border-radius: 0; /* Se elimina el borde redondeado */
-    }
-
-    .tip p {
-        padding: 0.5em; /* Se reduce el padding del párrafo */
-        margin: 5px 0; /* Se reduce el margen del párrafo */
-        font-size: 0.8em; /* Se reduce el tamaño de fuente */
-    }
-
-    .tip p:before {
-        font-size: 1em; /* Se reduce el tamaño del icono */
-        left: -20px; /* Se ajusta la posición horizontal del icono */
-        top: 6px; /* Se ajusta la posición vertical del icono */
-    }
-
-    #list {
-        margin-left: 0; /* Se elimina el margen izquierdo de la lista */
-        padding-left: 15px; /* Se ajusta el padding de la lista */
-    }
-
-    #infoContent{
-        margin-left: 20px;
-        margin-right: -100px;
-        margin-bottom: 20px;
-        font-size: 0.75 em;
-        padding:0.5px; 
-    }
-}
-/* Estilos para tabletas */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .col-lg-2 {
-        flex: 0 0 30%; /* Ajusta el ancho de la columna */
-        max-width: 30%;
-    }
-    
-    .col-lg-6 {
-        flex: 0 0 50%; /* Ajusta el ancho de la columna */
-        max-width: 50%;
-    }
-
-    .col-lg-4 {
-        flex: 0 0 20%; /* Ajusta el ancho de la columna */
-        max-width: 20%;
-    }
-
-    #infoImage {
-        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-        max-width: 500px; /* Se limita el ancho máximo de la imagen */
-        margin-right: 0; /* Se elimina el margen derecho */
-        border-radius: 15%;
-    }
-
-    .tip p {
-        padding: 0.8em; /* Ajusta el padding del párrafo */
-        margin: 8px 0; /* Ajusta el margen del párrafo */
-        font-size: 0.9em; /* Ajusta el tamaño de fuente del párrafo */
-    }
-
-    .tip p:before {
-        font-size: 1.2em; /* Ajusta el tamaño de fuente del icono */
-        left: -25px; /* Ajusta la posición horizontal del icono */
-        top: 8px; /* Ajusta la posición vertical del icono */
-    }
-
-    #list {
-        margin-left: 0; /* Elimina el margen izquierdo de la lista */
-        padding-left: 20px; /* Agrega un padding a la izquierda de la lista */
-        list-style-image: url(assets/perro.png);
-    }
-
-    #infoContent{
-        margin-left: 20px;
-        margin-right: -100px;
-        margin-bottom: 20px;
-        font-size: 0.75 em;
-        padding:0.5px; 
-    }
-}
-
-
-/* Estilos para tabletas en modo retrato (1024x1366) */
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
     .tip p {
         padding: 0.8em;
         margin: 8px 0;
@@ -165,29 +141,89 @@ p {
         top: 8px;
     }
 
-    #list {
-        margin-left: 0;
-        padding-left: 20px;
+    #infoContent {
+        margin: 0;
+        font-size: 0.75em;
     }
 
-    .col-lg-2 {
-        flex: 0 0 25%; /* Ajusta el ancho de la columna */
-        max-width: 25%;
-    }
-    
-    .col-lg-6 {
-        flex: 0 0 50%; /* Ajusta el ancho de la columna */
-        max-width: 50%;
+    .btn-group-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 
-    .col-lg-4 {
-        flex: 0 0 33.33%; /* Ajusta el ancho de la columna */
-        max-width: 33.33%;
+    .btn-group-vertical .btn {
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .tip p {
+        padding: 0.8em;
+        margin: 8px 0;
+        font-size: 0.9em;
     }
 
-    #infoImage {
-        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-        max-width: 700px; /* Se limita el ancho máximo de la imagen */
-        margin-right: 0; /* Se elimina el margen derecho */
+    .tip p:before {
+        font-size: 1.2em;
+        left: -25px;
+        top: 8px;
+    }
+
+    #infoContent {
+        margin: 0;
+        font-size: 0.75em;
+    }
+
+    .Bottom {
+        margin-bottom: 30px;
+    }
+
+    .btn-group-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-group-vertical .btn {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-bottom: 5px;
+        text-align: center;
+        margin-bottom: 30px;
+        
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: none;
+    }
+
+    .Bottom {
+        margin-bottom: 30px;
+    }
+
+    .btn-group-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+    }
+
+    .btn-group-vertical .btn {
+        width: 100%;  /* Asegurar que los botones ocupen todo el ancho disponible */
+        min-width: 150px;
+        text-align: center;
+        margin-bottom: 30px;
     }
 }
