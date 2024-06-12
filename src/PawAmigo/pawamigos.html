@@ -50,90 +50,90 @@
         </div>
     </div>
 </nav>
-<!--Para los botones-->
-  <div class="container text-center">
+<!-- Content -->
+  <div class="container text-center mt-4">
     <div class="row">
-      <div class="col-sm-2">
-
-        <div class="bottom-group" role="group" aria-label="Vertical button group">
-          <button type="button" class="Bottom" id="caninos" onclick="showInfo('caninos')">Caninos</button>
-          <button type="button" class="Bottom" id="felinos" onclick="showInfo('felinos')">Felinos</button>
-          <div class="btn-group" role="group">
-            <button type="button" class="Bottom dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="aves" onclick="showInfo('aves')">
-              Aves
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" id="loros" onclick="showInfo('loros')">Loros</a></li>
-              <li><a class="dropdown-item" href="#" id="pericos" onclick="showInfo('pericos')">Pericos</a></li>
-              <li><a class="dropdown-item" href="#" id="canarios" onclick="showInfo('canarios')">Canarios</a></li>
-            </ul>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="Bottom dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="reptiles" onclick="showInfo('reptiles')">
-              Reptiles
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" id="tortuga" onclick="showInfo('tortuga')">Tortuga de Agua</a></li>
-              <li><a class="dropdown-item" href="#" id="iguana" onclick="showInfo('iguana')">Iguana</a></li>
-              <li><a class="dropdown-item" href="#" id="camaleon" onclick="showInfo('camaleon')">Camaleón</a></li>
-            </ul>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="Bottom dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="roedores" onclick="showInfo('roedores')">
-              Roedores
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" id="guinea-pig" onclick="showInfo('cuyos')">Cuyos o cobayas</a></li>
-              <li><a class="dropdown-item" href="#" id="hamster" onclick="showInfo('hamster')">Hámster</a></li>
-              <li><a class="dropdown-item" href="#" id="chinchilla" onclick="showInfo('chinchilla')">Chinchilla</a></li>
-              <li><a class="dropdown-item" href="#" id="ardilla" onclick="showInfo('ardilla')">Ardilla</a></li>
-            </ul>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="Bottom dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="otros" onclick="showInfo('otros')">
-              Otros
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" id="mapache" onclick="showInfo('mapache')">Mapache</a></li>
-              <li><a class="dropdown-item" href="#" id="huron" onclick="showInfo('huron')">Hurón</a></li>
-              <li><a class="dropdown-item" href="#" id="conejo" onclick="showInfo('conejo')">Conejo</a></li>
-              <li><a class="dropdown-item" href="#" id="minipig" onclick="showInfo('minipig')">Mini Pig</a></li>
-              <li><a class="dropdown-item" href="#" id="peces" onclick="showInfo('peces')">Peces</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-<!-- división de columnas para imagen  -->
-      <div class="col-sm-9" >
-        <div class="row">
-            <div class="col-4 col-sm-6">
-                <img src="./assets/pawtips2.png" id="infoImage">
-            </div>
-<!-- división de columnas para texto -->
-            <div class="col-8 col-sm-6" >
-                <div class="content" id="infoContent">
-                    <h2> Pawtips </h2>
-                    <ul class="tip">
-                        <li>
-                            <p> Nos da mucho gusto que quieras conocer más acerca de tu Pawamigo, en esta sección encontrás algunos datos interesantes acerca de aquellos PawAmigos que son más comunes.  </p>
-                        </li>
-                        <li>
-                          <p> Esperamos que sea información útil para ti y para tu PawAmigo. Si hay alguna especie que consideres que debería estar en esta lista, por favor ponte en contacto con nosotras para hacernoslo saber, déjanos tus comentarios en el formulario. </p>
-                        </li>
-                        <li>
-                          <p>Gracias por tu interés y amor en los PawAmigos. </p>
-                        </li>
+        <!-- Buttons Column -->
+        <div class="col-sm-12 col-md-3 mb-4">
+            <div class="bottom-group" role="group" aria-label="Vertical button group">
+                <button type="button" class="Bottom btn btn-primary mb-2" id="caninos" onclick="showInfo('caninos')">Caninos</button>
+                <button type="button" class="Bottom btn btn-primary mb-2" id="felinos" onclick="showInfo('felinos')">Felinos</button>
+                <div class="btn-group mb-2" role="group">
+                    <button type="button" class="Bottom btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="aves">
+                        Aves
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" id="loros" onclick="showInfo('loros')">Loros</a></li>
+                        <li><a class="dropdown-item" href="#" id="pericos" onclick="showInfo('pericos')">Pericos</a></li>
+                        <li><a class="dropdown-item" href="#" id="canarios" onclick="showInfo('canarios')">Canarios</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group mb-2" role="group">
+                    <button type="button" class="Bottom btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="reptiles">
+                        Reptiles
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" id="tortuga" onclick="showInfo('tortuga')">Tortuga de Agua</a></li>
+                        <li><a class="dropdown-item" href="#" id="iguana" onclick="showInfo('iguana')">Iguana</a></li>
+                        <li><a class="dropdown-item" href="#" id="camaleon" onclick="showInfo('camaleon')">Camaleón</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group mb-2" role="group">
+                    <button type="button" class="Bottom btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="roedores">
+                        Roedores
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" id="guinea-pig" onclick="showInfo('cuyos')">Cuyos o cobayas</a></li>
+                        <li><a class="dropdown-item" href="#" id="hamster" onclick="showInfo('hamster')">Hámster</a></li>
+                        <li><a class="dropdown-item" href="#" id="chinchilla" onclick="showInfo('chinchilla')">Chinchilla</a></li>
+                        <li><a class="dropdown-item" href="#" id="ardilla" onclick="showInfo('ardilla')">Ardilla</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group mb-2" role="group">
+                    <button type="button" class="Bottom btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="otros">
+                        Otros
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" id="mapache" onclick="showInfo('mapache')">Mapache</a></li>
+                        <li><a class="dropdown-item" href="#" id="huron" onclick="showInfo('huron')">Hurón</a></li>
+                        <li><a class="dropdown-item" href="#" id="conejo" onclick="showInfo('conejo')">Conejo</a></li>
+                        <li><a class="dropdown-item" href="#" id="minipig" onclick="showInfo('minipig')">Mini Pig</a></li>
+                        <li><a class="dropdown-item" href="#" id="peces" onclick="showInfo('peces')">Peces</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+        <!-- Content Column -->
+        <div class="col-sm-12 col-md-9">
+            <div class="row">
+                <!-- Image Column -->
+                <div class="col-sm-12 col-md-6 mb-4">
+                  <img src="./assets/pawtips2.png" id="infoImage" class="img-fluid custom-rounded" width="300" height="350">
+                </div>
+                <!-- Text Column -->
+                <div class="col-sm-12 col-md-6">
+                    <div class="content" id="infoContent">
+                        <h2>Pawtips</h2>
+                        <ul class="tip">
+                            <li>
+                                <p>Nos da mucho gusto que quieras conocer más acerca de tu Pawamigo, en esta sección encontrarás algunos datos interesantes acerca de aquellos PawAmigos que son más comunes.</p>
+                            </li>
+                            <li>
+                                <p>Esperamos que sea información útil para ti y para tu PawAmigo. Si hay alguna especie que consideres que debería estar en esta lista, por favor ponte en contacto con nosotras para hacérnoslo saber, déjanos tus comentarios en el formulario.</p>
+                            </li>
+                            <li>
+                                <p>Gracias por tu interés y amor en los PawAmigos.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-
+</div>        
    
 <footer class="footer" id="footer">
-  <p>Derechos de autor © 2024 Paw Lace. Todos los derechos reservados.</p>
+  <p>Derechos de autor ©️ 2024 Paw Lace. Todos los derechos reservados.</p>
 </footer>
 
 
@@ -141,4 +141,3 @@
 </body>
 
 </html>
-
