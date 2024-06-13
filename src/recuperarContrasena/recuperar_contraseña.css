@@ -1,10 +1,38 @@
 .grid-container {
-   
     display: grid;
-     /* Divide la página en dos columnas de igual ancho */
     grid-template-columns: 1fr 1fr;
-    /* Centra verticalmente los elementos */
-    /*align-items: center; */
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+#centroRecuperarContraseña {
+    padding: 25px;
+}
+
+#izquierdaRecuperarContraseña {
+      /* Centra horizontalmente la imagen */
+      text-align: center; 
+}
+
+.image-perrito {
+    /* Ajusta la imagen para que no se salga del contenedor */
+   
+    /* Mantiene la proporción de aspecto original */
+    height: auto; 
+    max-width: 57%;
+    order: 2; /*
+
+   /* max-width: 100%; /* Ajusta la imagen para que no se salga del contenedor */
+   /* height: auto; /* Mantiene la proporción de aspecto original */
+}
+
+
+
+#centroRecuperarContraseña form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .image-patita {
@@ -14,7 +42,35 @@
     margin-bottom: 20px; 
     align-self: center;
 }
-
-.informacion {
-    width: 30em;
+.Bottom {
+    text-align: center;
 }
+
+.iniciarSesion{
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.input-wrapper, .iniciarSesion {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.input-wrapper input {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+     /* Cambia a una sola columna en dispositivos móviles */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    /* Hace que el texto "olvidar contraseña" aparezca debajo del formulario en dispositivos móviles */
+    .iniciarSesion {
+        order: 3; 
+    }
+}
+  
+  
