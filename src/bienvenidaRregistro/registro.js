@@ -60,14 +60,23 @@ signupForm.addEventListener('submit', (e) => {
     const isUserRegistered = Users.find(user => user.email === email);
 
     if (isUserRegistered) {
-        return alert('El usuario ya está registrado');
+        // Mostrar el mensaje de error
+        const errorMessage1 = document.getElementById('errorMessage1');
+        errorMessage1.style.display = 'block';
+        errorMessage1.innerText = 'El usuario ya esta registrado';
+        // Ocultar el mensaje de error después de 3 segundos
+        setTimeout(() => {
+            errorMessage1.style.display = 'none';
+        }, 3000);
+        return;
     }
 
     if (password === passwordValid) {
         // Agregar el usuario y mostrar mensaje de éxito
         Users.push({ name: name, nickname: nickname, email: email, password: password, telefono: telefono });
         localStorage.setItem('users', JSON.stringify(Users));
-        alert('¡Registro Exitoso!');
+       
+    
         // Redireccion al login si es necesario
     } else {
         // Establecer el mensaje de error si las contraseñas no coinciden y notificar
@@ -88,9 +97,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('passwordUser').value;
         const passwordValid = document.getElementById('passwordValid').value;
 
+
         // Validar que las contraseñas coincidan
         if (password !== passwordValid) {
-            alert('Las contraseñas no coinciden');
+           // Mostrar el mensaje de error
+                const errorMessage = document.getElementById('errorMessage');
+                errorMessage.style.display = 'block';
+                errorMessage.innerText = 'Las contraseñas no coinciden';
+                // Ocultar el mensaje de error después de 3 segundos
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                }, 3000);
             return;
         }
 
@@ -101,8 +118,14 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('userTelefono', telefono);
         localStorage.setItem('userPassword', password);
 
-        alert('Registro exitoso');
-        // Redireccionar a la página de inicio de sesión
-        window.location.href = '../inicioSesion/inicio_de_sesion.html';
+        const successMessage = document.getElementById('successMessage');
+        successMessage.style.display = 'block';
+        successMessage.innerText = 'Registro exitoso';
+        
+        // Redireccionar a la página de inicio de sesión después de 3 segundos
+        setTimeout(() => {
+            window.location.href = '../inicioSesion/inicio_de_sesion.html';
+        }, 2000);
+        
     });
 });

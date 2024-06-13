@@ -19,4 +19,24 @@
     text-align: center;
 }
 
+/* Media queries para tablet y dispositivos móviles */
+#successMessage, #errorMessage,#errorMessage1 {
+    display: none;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+#successMessage {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+#errorMessage,#errorMessage1 {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
 

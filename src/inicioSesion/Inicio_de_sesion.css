@@ -31,15 +31,20 @@ h1 {
 /* Media queries para tablet y dispositivos móviles */
 #successMessage, #errorMessage {
     display: none;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
     text-align: center;
 }
 #successMessage {
-    color:white;
-    background-color:rgb(3, 180, 68);
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
 }
 #errorMessage {
-    color: red;
-    background-color:pink;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
 }
+
