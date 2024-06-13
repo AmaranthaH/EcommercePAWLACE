@@ -81,20 +81,11 @@ function validarTelefono(telefono) {
     return regex.test(telefono);
 }
 
-
-
 // Función para mostrar alertas en el DOM
 function mostrarAlerta(mensaje, tipo) {
     const alerta = document.createElement('div');
     alerta.classList.add('alert');
-    
-    // Asignar clase según el tipo de alerta
-    if (tipo === 'error') {
-        alerta.classList.add('alert-danger'); // Clase Bootstrap para alerta roja
-    } else if (tipo === 'success') {
-        alerta.classList.add('alert-success'); // Clase Bootstrap para alerta verde
-    }
-
+    alerta.classList.add(`alert-${tipo}`);
     alerta.textContent = mensaje;
 
     const formContainer = document.getElementById('centroContactanos');
