@@ -131,6 +131,31 @@ body p {
     width: 100%;
 }
 
+/*Estilo alerta*/
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* Estilo para los márgenes alrededor del formulario */
+#centroContactanos {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 /*modificaciones por ancho de pagina*/
 @media (max-width: 770px){
     #centroContactanos{
