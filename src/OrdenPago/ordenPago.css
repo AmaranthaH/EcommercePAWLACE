@@ -1,0 +1,55 @@
+.hidden {
+    display: none;
+}
+
+#messageContainer {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+
+}
+
+#messageContainerAceptacion {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+
+}
+
+.informacion{
+    margin-bottom: 10px;
+}
+
+.pagarBtn {
+    margin-top: 20px; /* Aquí especificas el margen que deseas */
+}
+
+
+.Bottom.btn-primary {
+    padding: 8px;
+    width: 10em;
+    display: inline-block; /* Cambia display a inline-block */
+}
+
+.Bottom.btn-primary:hover {
+    background-color:#89D5C9;
+}
+
+
+
+
+
+
+

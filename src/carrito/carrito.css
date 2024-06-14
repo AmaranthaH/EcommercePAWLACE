@@ -1,0 +1,139 @@
+/* Contenido de otro-estilos.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    --bs-gutter-x: 0;
+  }
+  
+
+.page-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Una parte mucho más grande que la otra */
+    flex: 1;
+    margin-top: -10px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+#izquierdaCarrito {
+    position: relative;
+    width: 100%; /* Ancho del contenedor al 100% */
+    height: 100%;
+    padding-bottom: 100%; /* Establece la altura como un porcentaje del ancho para mantener la relación de aspecto 1:1 */
+    background-color: #89D5C9;
+}
+
+.circle {
+    width: 60%; /* Ancho del círculo en relación con el contenedor */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    position: absolute;
+    margin-top: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+}
+
+#imagenCarrito {
+    display: block;
+    width: 100%; /* Ancho de la imagen al 100% */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+}
+
+#derechaCarrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.container-right {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.carrito-header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.carrito-items {
+    padding: 20px;
+}
+
+.carrito-total {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.Bottom.btn-primary {
+    padding: 8px;
+    width: 10em;
+    display: inline-block; /* Cambia display a inline-block */
+    border: none; /* Elimina el borde del botón */
+    transition: background-color 0.5s;
+}
+
+.Bottom.btn-primary:hover {
+    background-color:#89D5C9;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+
+/* Estilos para los elementos del carrito que se agregan */
+.cart-item {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos del carrito */
+    align-items: center; /* Centra verticalmente los elementos del carrito */
+    flex-direction: column;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.cart-item img {
+    max-width: 40%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.cart-item h4 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cart-item p {
+    margin: 3px 0;
+    font-size: 1em;
+    justify-content: center;
+}
+
+.cart-item p span {
+    font-weight: bold;
+}
+
+

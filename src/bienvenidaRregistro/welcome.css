@@ -1,0 +1,18 @@
+
+.grid-container {
+   
+    display: grid;
+     /* Divide la página en dos columnas de igual ancho */
+    grid-template-columns: 1fr 1fr;
+    /* Centra verticalmente los elementos */
+    /*align-items: center; */
+}
+
+.image-patita {
+    
+    width: 100px; 
+    height: auto; 
+    margin-bottom: 20px; 
+    align-self: center;
+}
+

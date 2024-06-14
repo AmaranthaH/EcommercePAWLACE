@@ -1,0 +1,229 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    padding-bottom: 10px;
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+p {
+    font-weight: bold;
+}
+
+.body {
+    text-align: justify;
+}
+
+.Bottom {
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+    gap: 35;
+    margin-bottom: 30px;
+}
+
+#infoImage {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    border-radius: 10%;
+}
+
+#infoContent {
+    margin: 0;
+    font-size: 0.9em;
+    padding: 0.5px;
+}
+
+.tip {
+    list-style-type: none;
+    padding: 5;
+}
+
+.tip p {
+    padding: 1em;
+    border-radius: 8px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.tip p:before {
+    content: '🐾';
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    font-size: 1.5em;
+}
+
+#list {
+    padding: 0.2em;
+    margin: 0;
+    position: relative;
+    list-style-image: url(assets/perro.png);
+}
+
+#list p:before {
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    font-size: 1.5em;
+}
+
+/* Estilos responsivos */
+@media (max-width: 760px) {
+    #infoImage {
+        margin-right: 0;
+    }
+
+    .tip p {
+        padding: 0.5em;
+        margin: 5px 0;
+        font-size: 0.8em;
+    }
+
+    .tip p:before {
+        font-size: 1em;
+        left: -20px;
+        top: 6px;
+    }
+
+    #infoContent {
+        margin: 0;
+        font-size: 0.75em;
+    }
+
+    .btn-group {
+        display: block;
+    }
+
+    .btn-group-vertical .btn {
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .btn-group-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 761px) and (max-width: 1024px) {
+    #infoImage {
+        max-width: 100%;
+    }
+
+    .tip p {
+        padding: 0.8em;
+        margin: 8px 0;
+        font-size: 0.9em;
+    }
+
+    .tip p:before {
+        font-size: 1.2em;
+        left: -25px;
+        top: 8px;
+    }
+
+    #infoContent {
+        margin: 0;
+        font-size: 0.75em;
+    }
+
+    .btn-group-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-group-vertical .btn {
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .tip p {
+        padding: 0.8em;
+        margin: 8px 0;
+        font-size: 0.9em;
+    }
+
+    .tip p:before {
+        font-size: 1.2em;
+        left: -25px;
+        top: 8px;
+    }
+
+    #infoContent {
+        margin: 0;
+        font-size: 0.75em;
+    }
+
+    .Bottom {
+        margin-bottom: 30px;
+    }
+
+    .btn-group-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-group-vertical .btn {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-bottom: 5px;
+        text-align: center;
+        margin-bottom: 30px;
+        
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: none;
+    }
+
+    .Bottom {
+        margin-bottom: 30px;
+    }
+
+    .btn-group-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+    }
+
+    .btn-group-vertical .btn {
+        width: 100%;  /* Asegurar que los botones ocupen todo el ancho disponible */
+        min-width: 150px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
