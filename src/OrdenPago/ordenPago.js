@@ -208,5 +208,5 @@ function pago() {
             messageContainer.classList.add('hidden'); 
         }, 2000); 
 
-    window.location.href = "../catalogo/index.html";
+    window.location.href = "../catalogo/catalogo.html";
 }

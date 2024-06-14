@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Redireccionar a la página de usuario o panel de control después de un corto retraso
                 setTimeout(() => {
-                    window.location.href = '../catalogo/index.html';
+                    window.location.href = '../catalogo/catalogo.html';
                 }, 2000);
             } else {
                 // Mostrar el mensaje de error
